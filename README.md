@@ -182,7 +182,6 @@ I'm an **AI/ML Engineer** and **Software Developer** holding a **BSc (Hons) Comp
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/NightKing-V)
 
 **📍 Located in**: Piliyandala, Western Province, Sri Lanka  
-**📞 Contact**: +94 76 311 4242
 
 </div>
 
