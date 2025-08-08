@@ -38,6 +38,7 @@ I'm an **AI/ML Engineer** and **Software Developer** holding a **BSc (Hons) Comp
 ![CrewAI](https://img.shields.io/badge/CrewAI-4B8BBE?style=for-the-badge&logo=openai&logoColor=white)
 ![Groq](https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logo=groq&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
+[![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
 
 #### Frameworks & Technologies
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
@@ -81,6 +82,12 @@ I'm an **AI/ML Engineer** and **Software Developer** holding a **BSc (Hons) Comp
 - 🧠 Semantic resume-job matching using RAG technology
 - 📊 Automated candidate screening with similarity scoring
 - ⚡ Transforms traditional hiring processes
+
+### 🧠 [Brain Tumor Segmentation with U-Net](https://github.com/NightKing-V/TumorImageSegmentation)
+- 🎯 **Tech**: PyTorch, TensorFlow, OpenCV, Albumentations, Kaggle API
+- 🏥 Medical-grade U-Net for precise brain tumor detection on MRI scans
+- 📊 Achieved 90% binary accuracy on LGG MRI segmentation dataset
+- ⚡ Production-ready segmentation with pixel-level tumor boundary detection
 
 ### 👁️ [Vision Reasoning Surveillance System](https://github.com/NightKing-V/VisionReasoningSecuritySystem)
 - 🔍 **Tech**: PyTorch, LangChain, YOLO, Ollama, Streamlit
