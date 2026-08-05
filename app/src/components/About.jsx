@@ -93,7 +93,7 @@ export default function About() {
             </div>
           </div>
 
-          <div style={styles.actions}>
+          <div className="about-actions" style={styles.actions}>
             <button className="btn-neon" onClick={() => handleScrollTo('contact')}>
               <Mail size={18} />
               Let's Connect

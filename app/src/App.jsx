@@ -33,7 +33,7 @@ export default function App() {
 
       {/* Futuristic Neon Footer */}
       <footer style={styles.footer}>
-        <div className="container" style={styles.footerContainer}>
+        <div className="container footer-container" style={styles.footerContainer}>
           <p style={styles.footerText}>
             © {new Date().getFullYear()} VALENTENO LENORA. ALL RIGHTS RESERVED.
           </p>
@@ -109,7 +109,7 @@ const styles = {
 // Add responsive style tags for footer
 const responsiveFooterCSS = `
 @media (max-width: 768px) {
-  footer div[style*="footerContainer"] {
+  .footer-container {
     flex-direction: column !important;
     text-align: center !important;
     gap: 1.25rem !important;

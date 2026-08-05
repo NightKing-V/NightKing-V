@@ -297,7 +297,8 @@ body {
   #about {
     text-align: center !important;
   }
-  #about div[style*="actions"] {
+  .about-actions {
+    display: flex !important;
     justify-content: center !important;
   }
   #about div[style*="detailsGrid"] {
