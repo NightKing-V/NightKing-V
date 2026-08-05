@@ -317,6 +317,7 @@ body {
     scroll-snap-type: x mandatory !important;
     -webkit-overflow-scrolling: touch !important;
     gap: 1.5rem !important;
+    padding-top: 0.75rem !important;
     padding-bottom: 1.5rem !important;
     padding-left: 0.25rem !important;
     padding-right: 0.25rem !important;
@@ -364,6 +365,28 @@ body {
   }
 
   .tech-terminal-container {
+    display: none !important;
+  }
+
+  /* Mobile Contact Row style - Icons only side-by-side */
+  .contact-links-container {
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    flex-wrap: wrap !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .contact-link-node {
+    width: 54px !important;
+    height: 54px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .contact-text {
     display: none !important;
   }
 }

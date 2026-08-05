@@ -28,7 +28,7 @@ export default function Education() {
           Education
         </h2>
 
-        <div className="mobile-scroll-container" style={styles.grid}>
+        <div style={styles.grid}>
           {degrees.map((item, idx) => (
             <div 
               key={idx} 

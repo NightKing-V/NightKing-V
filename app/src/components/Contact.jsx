@@ -63,32 +63,32 @@ export default function Contact() {
             I'm always open to discussing AI/ML projects, full-stack collaborations, research opportunities, or even bass sessions. Reach out via any of the secure nodes below:
           </p>
 
-          <div style={styles.linksContainer}>
+          <div className="contact-links-container" style={styles.linksContainer}>
             <a 
               href="mailto:valentenocavlenora@gmail.com" 
-              className="btn-neon"
+              className="btn-neon contact-link-node"
               style={styles.contactBtn}
             >
               <Mail size={18} />
-              <span>valentenocavlenora@gmail.com</span>
+              <span className="contact-text">valentenocavlenora@gmail.com</span>
             </a>
             
             <a 
               href="https://linkedin.com/in/valentenolenora" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn-neon btn-neon-pink"
+              className="btn-neon btn-neon-pink contact-link-node"
               style={styles.contactBtn}
             >
               <Linkedin size={18} />
-              <span>linkedin.com/in/valentenolenora</span>
+              <span className="contact-text">linkedin.com/in/valentenolenora</span>
             </a>
 
             <a 
               href="https://github.com/NightKing-V" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn-neon"
+              className="btn-neon contact-link-node"
               style={{ ...styles.contactBtn, borderColor: 'var(--neon-purple)', color: 'var(--neon-purple)' }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = 'var(--neon-purple)';
@@ -102,7 +102,7 @@ export default function Contact() {
               }}
             >
               <Github size={18} />
-              <span>github.com/NightKing-V</span>
+              <span className="contact-text">github.com/NightKing-V</span>
             </a>
 
             {/* WhatsApp Integration */}
@@ -110,7 +110,7 @@ export default function Contact() {
               href="https://wa.me/94763114242" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn-neon"
+              className="btn-neon contact-link-node"
               style={{ ...styles.contactBtn, borderColor: '#39ff14', color: '#39ff14' }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = '#39ff14';
@@ -124,7 +124,7 @@ export default function Contact() {
               }}
             >
               <Whatsapp size={18} />
-              <span>WhatsApp: +94 76 311 4242</span>
+              <span className="contact-text">WhatsApp: +94 76 311 4242</span>
             </a>
           </div>
 
