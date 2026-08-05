@@ -129,7 +129,7 @@ export default function About() {
 
       </div>
 
-      <div style={styles.scrollDown} onClick={() => handleScrollTo('tech')}>
+      <div className="about-scroll-down" style={styles.scrollDown} onClick={() => handleScrollTo('tech')}>
         <span style={styles.scrollLabel}>SCROLL TO INITIALIZE SYSTEM</span>
         <ArrowDown size={16} className="bounce" />
       </div>

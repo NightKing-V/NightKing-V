@@ -351,4 +351,19 @@ body {
   .mobile-filters-scroll button {
     flex: 0 0 auto !important;
   }
+
+  /* Center title underline pseudo-element */
+  .section-title::after {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* Hide scroll indicator and diagnostic console */
+  .about-scroll-down {
+    display: none !important;
+  }
+
+  .tech-terminal-container {
+    display: none !important;
+  }
 }
