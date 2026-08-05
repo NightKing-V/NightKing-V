@@ -7,18 +7,16 @@ export default function Publications() {
       title: 'Musical Chord Recognition using Deep Learning',
       publisher: 'NSRSIT\'25 Conference Journal',
       description: 'Coauthored and published research covering time-frequency feature extraction and deep learning models (RNN, Bi-LSTM) to perform chord classification from audio files, achieving +80% accuracy on real-world datasets.',
-      actionLabel: 'Read Research Paper',
-      actionUrl: 'https://github.com/NightKing-V/', // Fallback, normally direct link
       icon: <FileText size={22} style={{ color: 'var(--neon-cyan)' }} />,
       color: 'var(--neon-cyan)',
     },
     {
       type: 'package',
-      title: 'accordo.ai - Music Information Retrieval PyPI Package',
+      title: 'accordoai - Music Information Retrieval PyPI Package',
       publisher: 'Python Package Index (PyPI)',
       description: 'Developed and published the official PyPI library which exposes pre-trained deep learning classification models and audio helper utilities for the developer community.',
       actionLabel: 'View PyPI Package',
-      actionUrl: 'https://pypi.org/project/accordo.ai/',
+      actionUrl: 'https://pypi.org/project/accordoai/',
       icon: <Package size={22} style={{ color: 'var(--neon-pink)' }} />,
       color: 'var(--neon-pink)',
     },
@@ -65,29 +63,31 @@ export default function Publications() {
 
               <p style={styles.description}>{item.description}</p>
 
-              <div style={styles.actions}>
-                <a 
-                  href={item.actionUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn-neon"
-                  style={{
-                    color: item.color,
-                    borderColor: item.color,
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = item.color;
-                    e.currentTarget.style.color = item.color === 'var(--neon-pink)' ? '#fff' : '#000';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'transparent';
-                    e.currentTarget.style.color = item.color;
-                  }}
-                >
-                  <ExternalLink size={16} />
-                  {item.actionLabel}
-                </a>
-              </div>
+              {item.type !== 'paper' && (
+                <div style={styles.actions}>
+                  <a 
+                    href={item.actionUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn-neon"
+                    style={{
+                      color: item.color,
+                      borderColor: item.color,
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = item.color;
+                      e.currentTarget.style.color = item.color === 'var(--neon-pink)' ? '#fff' : '#000';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'transparent';
+                      e.currentTarget.style.color = item.color;
+                    }}
+                  >
+                    <ExternalLink size={16} />
+                    {item.actionLabel}
+                  </a>
+                </div>
+              )}
 
             </div>
           ))}
