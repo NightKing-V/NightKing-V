@@ -53,7 +53,7 @@ export default function About() {
   return (
     <section id="about" className="section" style={styles.section}>
       <div className="container">
-        <div style={styles.grid}>
+        <div className="about-grid" style={styles.grid}>
         
         {/* Left Column - Content */}
         <div style={styles.content}>
@@ -331,7 +331,7 @@ const extraCSS = `
   animation: bounce 1.8s infinite ease-in-out;
 }
 @media (max-width: 991px) {
-  #about .container {
+  .about-grid {
     grid-template-columns: 1fr !important;
     gap: 3rem !important;
   }
