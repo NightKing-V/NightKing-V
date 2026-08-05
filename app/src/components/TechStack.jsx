@@ -204,7 +204,7 @@ export default function TechStack() {
         </div>
 
         {/* Layout Grid - Badges (Left) vs Skill Scanner (Right) */}
-        <div style={styles.dashboard}>
+        <div className="tech-dashboard" style={styles.dashboard}>
           
           {/* Left Panel - Glowing Skills Grid */}
           <div style={styles.skillsGridArea}>
@@ -256,7 +256,7 @@ export default function TechStack() {
           </div>
 
           {/* Right Panel - Sticky Skill Analyzer / Terminal */}
-          <div style={styles.terminalContainer}>
+          <div className="tech-terminal-container" style={styles.terminalContainer}>
             <div className="glass-card" style={styles.terminal}>
               <div className="scanline" style={{ animation: 'scan 4s linear infinite', opacity: 0.3 }}></div>
               
@@ -564,10 +564,10 @@ const styles = {
 
 const interactiveTechCSS = `
 @media (max-width: 991px) {
-  #tech div[style*="dashboard"] {
+  .tech-dashboard {
     grid-template-columns: 1fr !important;
   }
-  #tech div[style*="terminalContainer"] {
+  .tech-terminal-container {
     position: static !important;
     margin-top: 1.5rem;
   }

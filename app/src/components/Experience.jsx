@@ -64,15 +64,16 @@ export default function Experience() {
           Professional Experience
         </h2>
 
-        <div style={styles.timeline}>
+        <div className="timeline-container" style={styles.timeline}>
           {/* Central Line */}
-          <div style={styles.centerLine}></div>
+          <div className="timeline-center-line" style={styles.centerLine}></div>
 
           {experiences.map((exp, idx) => {
             const isHovered = hoveredIdx === idx;
             return (
               <div 
                 key={idx} 
+                className={`timeline-item ${idx % 2 === 1 ? 'timeline-item-right' : 'timeline-item-left'}`}
                 style={{
                   ...styles.timelineItem,
                   ...(idx % 2 === 1 ? styles.timelineItemRight : {}),
@@ -83,6 +84,7 @@ export default function Experience() {
                 
                 {/* Connector Dot */}
                 <div 
+                  className="timeline-dot"
                   style={{
                     ...styles.dot,
                     borderColor: exp.color,
@@ -93,6 +95,7 @@ export default function Experience() {
 
                 {/* Date Label */}
                 <div 
+                  className={`timeline-date-container ${idx % 2 === 1 ? 'timeline-date-container-right' : 'timeline-date-container-left'}`}
                   style={{
                     ...styles.dateContainer,
                     ...(idx % 2 === 1 ? styles.dateContainerLeft : {}),
@@ -267,21 +270,27 @@ const styles = {
   },
 };
 
-// Add responsive stylesheet adjustments for single-column timelines on mobile
+// Add responsive stylesheet adjustments for single-column timelines on mobile using explicit classes
 const responsiveTimelineCSS = `
 @media (max-width: 991px) {
-  #experience div[style*="timelineItem"] {
+  .timeline-item {
     width: 100% !important;
     left: 0 !important;
     padding: 0 0 2rem 2rem !important;
   }
-  #experience div[style*="centerLine"] {
+  .timeline-item-right {
+    align-self: flex-start !important;
+    padding: 0 0 2rem 2rem !important;
+  }
+  .timeline-center-line {
     left: 7px !important;
+    transform: none !important;
   }
-  #experience div[style*="dot"] {
+  .timeline-dot {
     left: 0px !important;
+    right: auto !important;
   }
-  #experience div[style*="dateContainer"] {
+  .timeline-date-container, .timeline-date-container-right, .timeline-date-container-left {
     position: static !important;
     width: auto !important;
     margin-bottom: 0.5rem !important;
