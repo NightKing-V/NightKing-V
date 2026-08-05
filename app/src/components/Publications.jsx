@@ -30,7 +30,7 @@ export default function Publications() {
           Publications & Contributions
         </h2>
 
-        <div style={styles.grid}>
+        <div className="mobile-scroll-container" style={styles.grid}>
           {contributions.map((item, idx) => (
             <div 
               key={idx} 

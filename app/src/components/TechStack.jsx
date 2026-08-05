@@ -172,7 +172,7 @@ export default function TechStack() {
         </h2>
 
         {/* Interactive Filters */}
-        <div style={styles.filters}>
+        <div className="mobile-filters-scroll" style={styles.filters}>
           <button
             onClick={() => { setSelectedCategory('all'); setActiveSkill(null); }}
             style={{

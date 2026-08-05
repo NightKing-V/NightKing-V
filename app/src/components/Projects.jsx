@@ -166,7 +166,7 @@ export default function Projects() {
         </h2>
 
         {/* Filter Controls */}
-        <div style={styles.filters}>
+        <div className="mobile-filters-scroll" style={styles.filters}>
           <button
             onClick={() => setFilter('all')}
             style={{
@@ -203,7 +203,7 @@ export default function Projects() {
         </div>
 
         {/* Project Grid */}
-        <div style={styles.grid}>
+        <div className="mobile-scroll-container" style={styles.grid}>
           {filteredProjects.map((proj, idx) => (
             <div 
               key={idx} 
