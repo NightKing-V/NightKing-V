@@ -277,6 +277,8 @@ const responsiveTimelineCSS = `
     width: 100% !important;
     left: 0 !important;
     padding: 0 0 2rem 2rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
   }
   .timeline-item-right {
     align-self: flex-start !important;

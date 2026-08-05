@@ -277,11 +277,15 @@ body {
 
 /* Responsive fixes & Mobile optimizations */
 @media (max-width: 768px) {
+  .section {
+    padding: 40px 0 !important;
+  }
+
   .section-title {
     font-size: 2rem !important;
     text-align: center !important;
     display: block !important;
-    margin: 0 auto 2.5rem auto !important;
+    margin: 0 auto 1.5rem auto !important;
     width: fit-content;
   }
   
@@ -324,13 +328,15 @@ body {
     scroll-snap-align: start !important;
   }
   
-  /* Horizontal scroll for Tech / Projects filter lists */
+  /* Horizontal scroll for Tech / Projects filter lists with margins for spacing */
   .mobile-filters-scroll {
     display: flex !important;
     overflow-x: auto !important;
     white-space: nowrap !important;
     gap: 0.5rem !important;
     padding-bottom: 0.75rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 2rem !important;
     width: 100% !important;
     -webkit-overflow-scrolling: touch !important;
     scrollbar-width: none;

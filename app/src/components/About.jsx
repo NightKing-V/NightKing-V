@@ -52,7 +52,8 @@ export default function About() {
 
   return (
     <section id="about" className="section" style={styles.section}>
-      <div className="container" style={styles.grid}>
+      <div className="container">
+        <div style={styles.grid}>
         
         {/* Left Column - Content */}
         <div style={styles.content}>
@@ -132,7 +133,8 @@ export default function About() {
         <span style={styles.scrollLabel}>SCROLL TO INITIALIZE SYSTEM</span>
         <ArrowDown size={16} className="bounce" />
       </div>
-    </section>
+    </div>
+  </section>
   );
 }
 
