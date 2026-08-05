@@ -247,32 +247,34 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div style={styles.cardFooter}>
-                <a 
-                  href={proj.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn-neon"
-                  style={{
-                    ...styles.actionLink,
-                    width: '100%',
-                    justifyContent: 'center',
-                    color: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
-                    borderColor: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
-                    e.currentTarget.style.color = proj.category === 'work' ? '#fff' : '#000';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'transparent';
-                    e.currentTarget.style.color = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
-                  }}
-                >
-                  <Github size={16} />
-                  Explore Repository
-                </a>
-              </div>
+              {proj.category !== 'work' && (
+                <div style={styles.cardFooter}>
+                  <a 
+                    href={proj.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn-neon"
+                    style={{
+                      ...styles.actionLink,
+                      width: '100%',
+                      justifyContent: 'center',
+                      color: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
+                      borderColor: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
+                      e.currentTarget.style.color = proj.category === 'work' ? '#fff' : '#000';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'transparent';
+                      e.currentTarget.style.color = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
+                    }}
+                  >
+                    <Github size={16} />
+                    Explore Repository
+                  </a>
+                </div>
+              )}
 
             </div>
           ))}
