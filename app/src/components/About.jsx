@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Mail, FileText, ArrowDown } from 'lucide-react';
+import { Mail, ArrowDown } from 'lucide-react';
 import portraitImg from '../assets/valenteno portrait upper torso.png';
 
 export default function About() {
@@ -96,13 +96,6 @@ export default function About() {
             <button className="btn-neon" onClick={() => handleScrollTo('contact')}>
               <Mail size={18} />
               Let's Connect
-            </button>
-            <button 
-              className="btn-neon btn-neon-pink" 
-              onClick={() => window.open('/CV_ValentenoLenora.pdf', '_blank')}
-            >
-              <FileText size={18} />
-              View CV
             </button>
           </div>
         </div>
@@ -260,7 +253,7 @@ const styles = {
     borderRadius: '12px',
     overflow: 'hidden',
     position: 'relative',
-    aspectRatio: '0.85',
+    aspectRatio: '1414 / 2000',
     border: '1px solid rgba(255,255,255,0.05)',
   },
   image: {

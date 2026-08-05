@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Mail, MapPin, Send, MessageSquare } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 const Linkedin = ({ size = 24, ...props }) => (
   <svg
@@ -35,156 +34,105 @@ const Github = ({ size = 24, ...props }) => (
   </svg>
 );
 
+const Whatsapp = ({ size = 24, ...props }) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.729-1.463L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.518 0 10.007-4.48 10.01-10.002.002-2.675-1.03-5.19-2.909-7.07C16.69 1.645 14.18 1.01 11.51 1.01c-5.522 0-10.01 4.482-10.011 10.006-.001 1.748.46 3.454 1.335 4.962L1.758 20.37l4.889-1.216zM17.5 14.38c-.299-.149-1.762-.87-2.035-.97-.273-.1-.471-.149-.669.149-.198.3-.769.95-.943 1.149-.173.199-.347.224-.646.074-.3-.15-1.264-.466-2.41-1.484-.892-.796-1.493-1.78-1.667-2.079-.174-.3-.019-.461.13-.61.134-.133.3-.347.449-.521.149-.173.198-.298.298-.497.1-.199.05-.373-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.762-.719 2.01-1.412.248-.694.248-1.289.173-1.411-.074-.122-.272-.198-.57-.347z"/>
+  </svg>
+);
+
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('');
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setStatus('sending');
-    
-    // Simulate contact form submission
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setStatus(''), 3000);
-    }, 1500);
-  };
-
   return (
     <section id="contact" className="section" style={styles.section}>
-      <div className="container">
+      <div className="container" style={styles.centeredWrapper}>
         
         <h2 className="section-title">
           Let's Connect
         </h2>
 
-        <div style={styles.grid}>
-          {/* Left Column - Contact Info */}
-          <div style={styles.infoCol}>
-            <div className="glass-card" style={styles.infoCard}>
-              <div className="scanline"></div>
-              
-              <h3 style={styles.subtitle}>Let's build something intelligent.</h3>
-              <p style={styles.description}>
-                I'm always open to discussing AI/ML projects, full-stack collaborations, research opportunities, or even bass sessions. Drop me a line!
-              </p>
+        <div className="glass-card" style={styles.infoCard}>
+          <div className="scanline"></div>
+          
+          <h3 style={styles.subtitle}>Let's build something intelligent.</h3>
+          <p style={styles.description}>
+            I'm always open to discussing AI/ML projects, full-stack collaborations, research opportunities, or even bass sessions. Reach out via any of the secure nodes below:
+          </p>
 
-              <div style={styles.linksContainer}>
-                <a 
-                  href="mailto:valentenocavlenora@gmail.com" 
-                  className="btn-neon"
-                  style={styles.contactBtn}
-                >
-                  <Mail size={18} />
-                  <span>valentenocavlenora@gmail.com</span>
-                </a>
-                
-                <a 
-                  href="https://linkedin.com/in/valentenolenora" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn-neon btn-neon-pink"
-                  style={styles.contactBtn}
-                >
-                  <Linkedin size={18} />
-                  <span>linkedin.com/in/valentenolenora</span>
-                </a>
+          <div style={styles.linksContainer}>
+            <a 
+              href="mailto:valentenocavlenora@gmail.com" 
+              className="btn-neon"
+              style={styles.contactBtn}
+            >
+              <Mail size={18} />
+              <span>valentenocavlenora@gmail.com</span>
+            </a>
+            
+            <a 
+              href="https://linkedin.com/in/valentenolenora" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-neon btn-neon-pink"
+              style={styles.contactBtn}
+            >
+              <Linkedin size={18} />
+              <span>linkedin.com/in/valentenolenora</span>
+            </a>
 
-                <a 
-                  href="https://github.com/NightKing-V" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn-neon"
-                  style={{ ...styles.contactBtn, borderColor: 'var(--neon-purple)', color: 'var(--neon-purple)' }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'var(--neon-purple)';
-                    e.currentTarget.style.color = '#fff';
-                    e.currentTarget.style.boxShadow = '0 0 15px rgba(138, 43, 226, 0.4)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'transparent';
-                    e.currentTarget.style.color = 'var(--neon-purple)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
-                >
-                  <Github size={18} />
-                  <span>github.com/NightKing-V</span>
-                </a>
-              </div>
+            <a 
+              href="https://github.com/NightKing-V" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-neon"
+              style={{ ...styles.contactBtn, borderColor: 'var(--neon-purple)', color: 'var(--neon-purple)' }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--neon-purple)';
+                e.currentTarget.style.color = '#fff';
+                e.currentTarget.style.boxShadow = '0 0 15px rgba(138, 43, 226, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = 'var(--neon-purple)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <Github size={18} />
+              <span>github.com/NightKing-V</span>
+            </a>
 
-              <div style={styles.locationContainer}>
-                <MapPin size={16} style={{ color: 'var(--neon-cyan)', marginRight: '8px' }} />
-                <span style={styles.locationText}>
-                  Based in: <strong>Piliyandala, Western Province, Sri Lanka</strong>
-                </span>
-              </div>
-            </div>
+            {/* WhatsApp Integration */}
+            <a 
+              href="https://wa.me/94763114242" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-neon"
+              style={{ ...styles.contactBtn, borderColor: '#39ff14', color: '#39ff14' }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#39ff14';
+                e.currentTarget.style.color = '#000';
+                e.currentTarget.style.boxShadow = '0 0 15px rgba(57, 255, 20, 0.5)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = '#39ff14';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <Whatsapp size={18} />
+              <span>WhatsApp: +94 76 311 4242</span>
+            </a>
           </div>
 
-          {/* Right Column - Contact Form */}
-          <div style={styles.formCol}>
-            <form onSubmit={handleSubmit} className="glass-card" style={styles.formCard}>
-              <div className="scanline"></div>
-              
-              <div style={styles.formHeader}>
-                <MessageSquare size={18} style={{ color: 'var(--neon-cyan)', marginRight: '8px' }} />
-                <h3 style={styles.formTitle}>Send a Message</h3>
-              </div>
-
-              <div style={styles.inputGroup}>
-                <label style={styles.label}>Name</label>
-                <input 
-                  type="text" 
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="e.g. John Doe"
-                  style={styles.input}
-                />
-              </div>
-
-              <div style={styles.inputGroup}>
-                <label style={styles.label}>Email Address</label>
-                <input 
-                  type="email" 
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="e.g. john@example.com"
-                  style={styles.input}
-                />
-              </div>
-
-              <div style={styles.inputGroup}>
-                <label style={styles.label}>Your Message</label>
-                <textarea 
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="5"
-                  placeholder="Type your message here..."
-                  style={{ ...styles.input, resize: 'vertical' }}
-                />
-              </div>
-
-              <button 
-                type="submit" 
-                className="btn-neon" 
-                style={{ ...styles.submitBtn, width: '100%', justifyContent: 'center' }}
-                disabled={status === 'sending'}
-              >
-                <Send size={16} />
-                {status === 'sending' ? 'Sending Link...' : status === 'success' ? 'Transmission Successful!' : 'Send Message'}
-              </button>
-            </form>
+          <div style={styles.locationContainer}>
+            <MapPin size={16} style={{ color: 'var(--neon-cyan)', marginRight: '8px' }} />
+            <span style={styles.locationText}>
+              Based in: <strong>Piliyandala, Western Province, Sri Lanka</strong>
+            </span>
           </div>
         </div>
 
@@ -197,20 +145,16 @@ const styles = {
   section: {
     paddingBottom: '120px',
   },
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1.1fr',
-    gap: '3rem',
-    width: '100%',
-    alignItems: 'start',
-  },
-  infoCol: {
+  centeredWrapper: {
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'center',
+    width: '100%',
   },
   infoCard: {
     padding: '2.5rem',
-    height: '100%',
+    maxWidth: '600px',
+    width: '100%',
   },
   subtitle: {
     fontSize: '1.4rem',
@@ -218,12 +162,14 @@ const styles = {
     color: '#fff',
     marginBottom: '1rem',
     letterSpacing: '-0.02em',
+    textAlign: 'center',
   },
   description: {
     fontSize: '0.95rem',
     color: 'var(--text-muted)',
     lineHeight: '1.6',
     marginBottom: '2rem',
+    textAlign: 'center',
   },
   linksContainer: {
     display: 'flex',
@@ -236,10 +182,12 @@ const styles = {
     borderRadius: '10px',
     fontSize: '0.9rem',
     justifyContent: 'flex-start',
+    width: '100%',
   },
   locationContainer: {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     borderTop: '1px solid rgba(255, 255, 255, 0.05)',
     paddingTop: '1.5rem',
   },
@@ -247,71 +195,4 @@ const styles = {
     fontSize: '0.9rem',
     color: 'var(--text-muted)',
   },
-  formCol: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  formCard: {
-    padding: '2.5rem',
-  },
-  formHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: '1.5rem',
-    borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
-    paddingBottom: '0.75rem',
-  },
-  formTitle: {
-    fontSize: '1.25rem',
-    fontWeight: '700',
-    color: '#fff',
-  },
-  inputGroup: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0.5rem',
-    marginBottom: '1.5rem',
-  },
-  label: {
-    fontSize: '0.8rem',
-    fontFamily: 'var(--font-mono)',
-    color: 'var(--text-muted)',
-    letterSpacing: '1px',
-    textTransform: 'uppercase',
-  },
-  input: {
-    background: 'rgba(0, 0, 0, 0.4)',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
-    borderRadius: '8px',
-    padding: '0.8rem 1rem',
-    color: '#fff',
-    fontFamily: 'var(--font-main)',
-    fontSize: '0.95rem',
-    outline: 'none',
-    transition: 'all 0.3s ease',
-  },
-  submitBtn: {
-    transition: 'all 0.3s ease',
-  },
 };
-
-// Add styles for input focus effects
-const inputFocusCSS = `
-#contact input:focus, #contact textarea:focus {
-  border-color: var(--neon-cyan) !important;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.15) !important;
-  background: rgba(0, 0, 0, 0.6) !important;
-}
-@media (max-width: 991px) {
-  #contact .container > div {
-    grid-template-columns: 1fr !important;
-    gap: 2.5rem !important;
-  }
-}
-`;
-if (typeof document !== 'undefined') {
-  const style = document.createElement('style');
-  style.appendChild(document.createTextNode(inputFocusCSS));
-  document.head.appendChild(style);
-}
-export { inputFocusCSS };
