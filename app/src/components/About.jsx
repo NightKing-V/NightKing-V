@@ -65,121 +65,121 @@ export default function About() {
     <section id="about" className="section" style={styles.section}>
       <div className="container">
         <div className="about-grid" style={styles.grid}>
-        
-        {/* Left Column - Content */}
-        <div style={styles.content}>
-          <div style={styles.tagline}>
-            <span className="pulsing-dot" style={{ marginRight: '8px' }}></span>
-            SYSTEM ONLINE // READY TO INITIALIZE
-          </div>
-          
-          <h1 style={styles.name}>
-            VALENTENO LENORA
-          </h1>
-          
-          <div style={styles.typingContainer}>
-            <span style={styles.typingStatic}>I am a </span>
-            <span className="neon-text-gradient" style={styles.typingDynamic}>
-              {typingText}
-            </span>
-            <span style={styles.cursor}>|</span>
-          </div>
 
-          <p style={styles.bio}>
-            Currently developing AI systems at <strong>AiRentoSoft</strong> and <strong>WaveSkill</strong>, with expertise spanning Agentic Systems, Deep Learning, Machine Learning, and scalable infrastructure. My dual-degree background in <strong>Computer Science (First Class Honours)</strong> and <strong>Information Systems (4th Year)</strong> provides both technical depth in AI/ML and a business systems perspective.
-          </p>
-
-          <div style={styles.detailsGrid}>
-            <div className="glass-card" style={styles.detailCard}>
-              <h3 style={styles.detailTitle}>🔬 Research Focus</h3>
-              <p style={styles.detailText}>
-                RAG Systems, Agentic AI, AI Automation, ML/DL with Mathematical Optimization, and Sinhala Machine Translation.
-              </p>
+          {/* Left Column - Content */}
+          <div style={styles.content}>
+            <div style={styles.tagline}>
+              <span className="pulsing-dot" style={{ marginRight: '8px' }}></span>
+              SYSTEM ONLINE // READY TO INITIALIZE
             </div>
-            <div className="glass-card" style={{ ...styles.detailCard, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderLeft: '3px solid var(--neon-pink)' }}>
-              <div>
-                <h3 style={styles.detailTitle}>🎵 Fun Fact</h3>
+
+            <h1 style={styles.name}>
+              VALENTENO LENORA
+            </h1>
+
+            <div style={styles.typingContainer}>
+              <span style={styles.typingStatic}>I am a </span>
+              <span className="neon-text-gradient" style={styles.typingDynamic}>
+                {typingText}
+              </span>
+              <span style={styles.cursor}>|</span>
+            </div>
+
+            <p style={styles.bio}>
+              Currently developing AI systems at <strong>AiRentoSoft</strong> and <strong>WaveSkill</strong>, with expertise spanning Agentic Systems, Deep Learning, Machine Learning, and scalable infrastructure. My dual-degree background in <strong>Computer Science (First Class Honours)</strong> and <strong>Information Systems (4th Year)</strong> provides both technical depth in AI/ML and a business systems perspective.
+            </p>
+
+            <div style={styles.detailsGrid}>
+              <div className="glass-card" style={styles.detailCard}>
+                <h3 style={styles.detailTitle}>🔬 Research Focus</h3>
                 <p style={styles.detailText}>
-                  I'm also a bassist and a professional musician when not coding! Performing with bands is my creative catalyst.
+                  RAG Systems, Agentic AI, AI Automation, ML/DL with Mathematical Optimization, and Sinhala Machine Translation.
                 </p>
               </div>
-              <a href="#/music" className="funfact-link" style={styles.funFactLink}>
-                View Stage Gallery &rarr;
-              </a>
-            </div>
-          </div>
-
-          <div className="about-actions" style={styles.actions}>
-            <button className="btn-neon" onClick={() => handleScrollTo('contact')}>
-              <Mail size={18} />
-              Let's Connect
-            </button>
-          </div>
-        </div>
-
-        {/* Right Column - Profile Image */}
-        <div style={styles.imageColumn}>
-          <div style={styles.cyberFrame}>
-            {/* Cyberpunk corner brackets */}
-            <div style={{ ...styles.bracket, top: 0, left: 0, borderTop: '3px solid var(--neon-cyan)', borderLeft: '3px solid var(--neon-cyan)' }}></div>
-            <div style={{ ...styles.bracket, top: 0, right: 0, borderTop: '3px solid var(--neon-cyan)', borderRight: '3px solid var(--neon-cyan)' }}></div>
-            <div style={{ ...styles.bracket, bottom: 0, left: 0, borderBottom: '3px solid var(--neon-cyan)', borderLeft: '3px solid var(--neon-cyan)' }}></div>
-            <div style={{ ...styles.bracket, bottom: 0, right: 0, borderBottom: '3px solid var(--neon-cyan)', borderRight: '3px solid var(--neon-cyan)' }}></div>
-            
-            <div style={styles.imageWrapper}>
-              {images.map((img, idx) => (
-                <img 
-                  key={idx}
-                  src={img} 
-                  alt={`Valenteno Lenora Portrait ${idx + 1}`} 
-                  style={{
-                    ...styles.image,
-                    position: idx === 0 ? 'relative' : 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    opacity: currentImageIndex === idx ? 1 : 0,
-                    transition: 'opacity 0.8s ease-in-out',
-                    zIndex: currentImageIndex === idx ? 1 : 0,
-                  }}
-                />
-              ))}
-              <div style={{ ...styles.imageOverlay, zIndex: 2 }}></div>
-              
-              {/* Carousel navigation dots */}
-              <div style={styles.carouselDots}>
-                {images.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setCurrentImageIndex(idx)}
-                    style={{
-                      ...styles.dot,
-                      backgroundColor: currentImageIndex === idx ? 'var(--neon-cyan)' : 'rgba(255, 255, 255, 0.3)',
-                      boxShadow: currentImageIndex === idx ? '0 0 8px var(--neon-cyan)' : 'none',
-                    }}
-                    aria-label={`Go to slide ${idx + 1}`}
-                  />
-                ))}
+              <div className="glass-card" style={{ ...styles.detailCard, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderLeft: '3px solid var(--neon-pink)' }}>
+                <div>
+                  <h3 style={styles.detailTitle}>🎵 Fun Fact</h3>
+                  <p style={styles.detailText}>
+                    I'm also a professional musician when not coding! Performing music is my creative catalyst.
+                  </p>
+                </div>
+                <a href="#/music" className="funfact-link" style={styles.funFactLink}>
+                  View Stage Gallery &rarr;
+                </a>
               </div>
             </div>
-            
-            {/* Status indicators */}
-            <div style={styles.statusBox}>
-              <span style={styles.statusLabel}>STATUS</span>
-              <span style={styles.statusValue}>ACTIVE</span>
+
+            <div className="about-actions" style={styles.actions}>
+              <button className="btn-neon" onClick={() => handleScrollTo('contact')}>
+                <Mail size={18} />
+                Let's Connect
+              </button>
             </div>
           </div>
+
+          {/* Right Column - Profile Image */}
+          <div style={styles.imageColumn}>
+            <div style={styles.cyberFrame}>
+              {/* Cyberpunk corner brackets */}
+              <div style={{ ...styles.bracket, top: 0, left: 0, borderTop: '3px solid var(--neon-cyan)', borderLeft: '3px solid var(--neon-cyan)' }}></div>
+              <div style={{ ...styles.bracket, top: 0, right: 0, borderTop: '3px solid var(--neon-cyan)', borderRight: '3px solid var(--neon-cyan)' }}></div>
+              <div style={{ ...styles.bracket, bottom: 0, left: 0, borderBottom: '3px solid var(--neon-cyan)', borderLeft: '3px solid var(--neon-cyan)' }}></div>
+              <div style={{ ...styles.bracket, bottom: 0, right: 0, borderBottom: '3px solid var(--neon-cyan)', borderRight: '3px solid var(--neon-cyan)' }}></div>
+
+              <div style={styles.imageWrapper}>
+                {images.map((img, idx) => (
+                  <img
+                    key={idx}
+                    src={img}
+                    alt={`Valenteno Lenora Portrait ${idx + 1}`}
+                    style={{
+                      ...styles.image,
+                      position: idx === 0 ? 'relative' : 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      opacity: currentImageIndex === idx ? 1 : 0,
+                      transition: 'opacity 0.8s ease-in-out',
+                      zIndex: currentImageIndex === idx ? 1 : 0,
+                    }}
+                  />
+                ))}
+                <div style={{ ...styles.imageOverlay, zIndex: 2 }}></div>
+
+                {/* Carousel navigation dots */}
+                <div style={styles.carouselDots}>
+                  {images.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentImageIndex(idx)}
+                      style={{
+                        ...styles.dot,
+                        backgroundColor: currentImageIndex === idx ? 'var(--neon-cyan)' : 'rgba(255, 255, 255, 0.3)',
+                        boxShadow: currentImageIndex === idx ? '0 0 8px var(--neon-cyan)' : 'none',
+                      }}
+                      aria-label={`Go to slide ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Status indicators */}
+              <div style={styles.statusBox}>
+                <span style={styles.statusLabel}>STATUS</span>
+                <span style={styles.statusValue}>ACTIVE</span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
+        <div className="about-scroll-down" style={styles.scrollDown} onClick={() => handleScrollTo('tech')}>
+          <span style={styles.scrollLabel}>SCROLL TO INITIALIZE SYSTEM</span>
+          <ArrowDown size={16} className="bounce" />
+        </div>
       </div>
-
-      <div className="about-scroll-down" style={styles.scrollDown} onClick={() => handleScrollTo('tech')}>
-        <span style={styles.scrollLabel}>SCROLL TO INITIALIZE SYSTEM</span>
-        <ArrowDown size={16} className="bounce" />
-      </div>
-    </div>
-  </section>
+    </section>
   );
 }
 

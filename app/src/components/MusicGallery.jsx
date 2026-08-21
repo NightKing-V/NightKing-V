@@ -6,7 +6,7 @@ const musicImages = [
   '/images/music/EWF09246.jpg',
   '/images/music/DIS08505.jpg',
   '/images/music/1000369920-01.jpeg',
-  '/images/music/NPW06711.jpg',
+  '/images/music/DIS07655.jpg',
   '/images/music/1000386690-01.jpeg',
   '/images/music/IMG_20240304_124902_304.jpg',
   '/images/music/IMG_20240421_091050_269.jpg',
