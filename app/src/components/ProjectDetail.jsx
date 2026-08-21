@@ -45,7 +45,7 @@ export default function ProjectDetail({ projectId }) {
   const borderGradient = isWork ? 'var(--glass-border-pink)' : 'var(--glass-border)';
 
   return (
-    <section className="section" style={styles.section}>
+    <section className="section secondary-page" style={styles.section}>
       <div className="container">
         
         {/* Back Link */}
@@ -534,6 +534,11 @@ const styleRules = `
   div[style*="metaRow"] {
     flex-direction: column !important;
     gap: 0.75rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .secondary-page {
+    padding-top: 130px !important;
   }
 }
 `;

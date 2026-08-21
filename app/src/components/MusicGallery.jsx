@@ -69,7 +69,7 @@ export default function MusicGallery() {
   };
 
   return (
-    <section className="section" style={styles.section}>
+    <section className="section secondary-page" style={styles.section}>
       <div className="container" style={styles.container}>
         
         {/* Navigation row */}
@@ -324,19 +324,28 @@ const styleRules = `
 }
 @media (max-width: 768px) {
   .instagram-discover-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    grid-auto-rows: 200px !important;
-    gap: 8px !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: 160px !important;
+    gap: 6px !important;
+  }
+  .secondary-page {
+    padding-top: 110px !important;
+  }
+  .container {
+    padding: 0 1rem !important;
   }
 }
 @media (max-width: 480px) {
   .instagram-discover-grid {
-    grid-template-columns: 1fr !important;
-    grid-auto-rows: 250px !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: 110px !important;
+    gap: 4px !important;
   }
-  .instagram-tile {
-    grid-column: span 1 !important;
-    grid-row: span 1 !important;
+  .secondary-page {
+    padding-top: 100px !important;
+  }
+  .container {
+    padding: 0 6px !important;
   }
 }
 `;
