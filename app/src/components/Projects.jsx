@@ -23,6 +23,7 @@ export default function Projects() {
   const projectList = [
     // Work Projects
     {
+      id: 'vehicledamage',
       title: 'Vehicle Damage Detection System',
       category: 'work',
       tech: ['YOLO', 'Kaggle', 'Weights & Biases', 'FastAPI', 'React', 'Hugging Face', 'PyTorch'],
@@ -30,6 +31,7 @@ export default function Projects() {
       link: 'https://github.com/NightKing-V/',
     },
     {
+      id: 'airento',
       title: 'AiRentoSoft System',
       category: 'work',
       tech: ['React', 'Node.js', '.NET', 'Retel.ai', 'OCR'],
@@ -44,6 +46,7 @@ export default function Projects() {
       link: 'https://github.com/NightKing-V/',
     },
     {
+      id: 'sinhalatts',
       title: 'Sinhala TTS Model',
       category: 'work',
       tech: ['Coqui VITS', 'Kaggle', 'PyTorch'],
@@ -51,6 +54,7 @@ export default function Projects() {
       link: 'https://github.com/NightKing-V/',
     },
     {
+      id: 'togo',
       title: 'TOGO - AI Shopping Assistant',
       category: 'work',
       tech: ['FastAPI', 'PostgreSQL', 'CrewAI', 'LangGraph'],
@@ -81,6 +85,7 @@ export default function Projects() {
       link: 'https://github.com/NightKing-V/Chord-Classification-Model-accordo.ai-',
     },
     {
+      id: 'univize',
       title: 'Univize - University Social App',
       category: 'personal',
       tech: ['Next.js', 'Django', 'FastAPI', 'React', 'Node.js', 'MongoDB', 'PostgreSQL', 'Neo4j', 'Redis', 'Azure'],
@@ -247,32 +252,56 @@ export default function Projects() {
                 </div>
               </div>
 
-              {proj.category !== 'work' && (
+              {(proj.id || (proj.link && proj.link !== 'https://github.com/NightKing-V/')) && (
                 <div style={styles.cardFooter}>
-                  <a 
-                    href={proj.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="btn-neon"
-                    style={{
-                      ...styles.actionLink,
-                      width: '100%',
-                      justifyContent: 'center',
-                      color: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
-                      borderColor: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
-                      e.currentTarget.style.color = proj.category === 'work' ? '#fff' : '#000';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'transparent';
-                      e.currentTarget.style.color = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
-                    }}
-                  >
-                    <Github size={16} />
-                    Explore Repository
-                  </a>
+                  {proj.id ? (
+                    <a 
+                      href={`#/project/${proj.id}`} 
+                      className="btn-neon"
+                      style={{
+                        ...styles.actionLink,
+                        width: '100%',
+                        justifyContent: 'center',
+                        color: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
+                        borderColor: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
+                        e.currentTarget.style.color = proj.category === 'work' ? '#fff' : '#000';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = 'transparent';
+                        e.currentTarget.style.color = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
+                      }}
+                    >
+                      See More Info
+                    </a>
+                  ) : (
+                    <a 
+                      href={proj.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn-neon"
+                      style={{
+                        ...styles.actionLink,
+                        width: '100%',
+                        justifyContent: 'center',
+                        color: 'var(--neon-cyan)',
+                        borderColor: 'var(--neon-cyan)',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = 'var(--neon-cyan)';
+                        e.currentTarget.style.color = '#000';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = 'transparent';
+                        e.currentTarget.style.color = 'var(--neon-cyan)';
+                      }}
+                    >
+                      <Github size={16} />
+                      Explore Repository
+                    </a>
+                  )}
                 </div>
               )}
 

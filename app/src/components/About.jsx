@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Mail, ArrowDown } from 'lucide-react';
-import portraitImg from '../assets/valenteno portrait upper torso.png';
+import img1 from '../assets/images/self/maincorousel/valenteno portrait upper torso.png';
+import img2 from '../assets/images/self/maincorousel/2.png';
+import img3 from '../assets/images/self/maincorousel/3.png';
 
 export default function About() {
+  const images = [img1, img2, img3];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [typingText, setTypingText] = useState('AI/ML Engineer');
   const titles = [
     'AI/ML Engineer 🤖',
@@ -44,6 +48,13 @@ export default function About() {
     const timeout = setTimeout(type, delay);
     return () => clearTimeout(timeout);
   }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [images.length]);
 
   const handleScrollTo = (id) => {
     const el = document.getElementById(id);
@@ -111,12 +122,41 @@ export default function About() {
             <div style={{ ...styles.bracket, bottom: 0, right: 0, borderBottom: '3px solid var(--neon-cyan)', borderRight: '3px solid var(--neon-cyan)' }}></div>
             
             <div style={styles.imageWrapper}>
-              <img 
-                src={portraitImg} 
-                alt="Valenteno Lenora Portrait" 
-                style={styles.image}
-              />
-              <div style={styles.imageOverlay}></div>
+              {images.map((img, idx) => (
+                <img 
+                  key={idx}
+                  src={img} 
+                  alt={`Valenteno Lenora Portrait ${idx + 1}`} 
+                  style={{
+                    ...styles.image,
+                    position: idx === 0 ? 'relative' : 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    opacity: currentImageIndex === idx ? 1 : 0,
+                    transition: 'opacity 0.8s ease-in-out',
+                    zIndex: currentImageIndex === idx ? 1 : 0,
+                  }}
+                />
+              ))}
+              <div style={{ ...styles.imageOverlay, zIndex: 2 }}></div>
+              
+              {/* Carousel navigation dots */}
+              <div style={styles.carouselDots}>
+                {images.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentImageIndex(idx)}
+                    style={{
+                      ...styles.dot,
+                      backgroundColor: currentImageIndex === idx ? 'var(--neon-cyan)' : 'rgba(255, 255, 255, 0.3)',
+                      boxShadow: currentImageIndex === idx ? '0 0 8px var(--neon-cyan)' : 'none',
+                    }}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
             
             {/* Status indicators */}
@@ -314,6 +354,29 @@ const styles = {
   },
   scrollLabel: {
     transition: 'color 0.3s ease',
+  },
+  carouselDots: {
+    position: 'absolute',
+    bottom: '15px',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    display: 'flex',
+    gap: '8px',
+    zIndex: 10,
+    background: 'rgba(0,0,0,0.5)',
+    padding: '6px 12px',
+    borderRadius: '20px',
+    backdropFilter: 'blur(4px)',
+    border: '1px solid rgba(255,255,255,0.05)',
+  },
+  dot: {
+    width: '8px',
+    height: '8px',
+    borderRadius: '50%',
+    border: 'none',
+    padding: 0,
+    cursor: 'pointer',
+    transition: 'all 0.3s ease',
   },
 };
 

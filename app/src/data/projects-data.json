@@ -1,0 +1,94 @@
+{
+  "vehicledamage": {
+    "title": "Vehicle Damage Detection System",
+    "category": "work",
+    "role": "AI/ML Engineer - Intern",
+    "company": "AiRentoSoft Pvt. Ltd.",
+    "timeline": "March 2026 - Present",
+    "tech": ["YOLO", "Kaggle", "Weights & Biases", "FastAPI", "React", "Hugging Face", "PyTorch"],
+    "description": "Computer vision system utilizing YOLO models with a FastAPI wrapper hosted on Hugging Face Spaces. Models pre-trained on custom image datasets, versioned and deployed using MLOps tools. Live mobile app on Google Play Store and Apple App Store supporting real-time vehicle inspection.",
+    "deliverables": [
+      "Developed a vehicle damage detection system using YOLO deep learning models, FastAPI wrapper, and a mobile application.",
+      "Pre-trained models on specialized image datasets, versioning and deploying them using MLOps tools like Weights & Biases.",
+      "Further developed and integrated the live mobile app to support new inspection features, published in the Play Store and App Store."
+    ],
+    "screenshots": [
+      "/images/projects/vehicledamage/damagemobileapp-appstore.png",
+      "/images/projects/vehicledamage/damagemobileapp-playstore.png"
+    ]
+  },
+  "airento": {
+    "title": "AiRentoSoft System",
+    "category": "work",
+    "role": "AI/ML Engineer - Intern",
+    "company": "AiRentoSoft Pvt. Ltd.",
+    "timeline": "March 2026 - Present",
+    "tech": ["React", "Node.js", ".NET", "Retel.ai", "OCR", "Azure DevOps"],
+    "description": "Integrated AI-driven features including document and card scanning using OCR models in web and mobile apps. Managed and enhanced the Retel.ai AI Caller Agent for customer inquiry automation. Scaled React web applications, reservations plugins, and .NET APIs, managing documentation in Azure DevOps.",
+    "deliverables": [
+      "Collaborated in developing and implementing new features including AI integrations across web and mobile systems.",
+      "Worked on the React web application, Reservations Plugin, .NET API, and developed the 2.0 version of the mobile application.",
+      "Released system documentation in Azure DevOps and collaborated with developers, business support, and QA teams via Jira sprints.",
+      "Added AI-integrated features like document scanning and card scanning using custom OCR models.",
+      "Managed and configured the AI Caller Agent on Retel.ai to meet client requirements."
+    ],
+    "screenshots": [
+      "/images/projects/airento/airentomobile-appstore.png",
+      "/images/projects/airento/airentomobile-playstore.png"
+    ]
+  },
+  "sinhalatts": {
+    "title": "Sinhala TTS Model",
+    "category": "work",
+    "role": "AI/ML Engineer - Freelance",
+    "company": "WaveSkill Pvt. Ltd.",
+    "timeline": "December 2025 - Present",
+    "tech": ["Coqui VITS", "Kaggle", "PyTorch"],
+    "description": "Research-focused custom Text-to-Speech (TTS) model supporting the Sinhala language. Built a Sinhala speech dataset from scratch and trained the VITS model on Kaggle dual T4 GPUs. Achieved high-fidelity research-level speech output ready for product pitches.",
+    "deliverables": [
+      "Developed a research-purpose private TTS model supporting the Sinhala language.",
+      "Created a private dataset from scratch formatted for VITS neural networks.",
+      "Trained the speech model using Kaggle dual T4 GPUs, achieving research-level quality.",
+      "Utilized outputs for product pitching, gaining support for further funded development."
+    ],
+    "screenshots": [
+      "/images/projects/sinhalatts/hfrepo.png"
+    ]
+  },
+  "togo": {
+    "title": "TOGO - AI Shopping Assistant",
+    "category": "work",
+    "role": "AI/ML Engineer - Freelance",
+    "company": "WaveSkill Pvt. Ltd.",
+    "timeline": "December 2025 - Present",
+    "tech": ["FastAPI", "PostgreSQL", "CrewAI", "LangGraph"],
+    "description": "Agentic shopping assistant designed for a baby care products e-commerce website. Implemented features for intelligent product search, QnA based on store policies, and automated customer support.",
+    "deliverables": [
+      "Developed an Agentic Shopping Assistant for a baby care products e-commerce website (TOGO).",
+      "Implemented multi-agent orchestration for product search and interactive QnA using store policies.",
+      "Engineered real-time customer support capabilities, deployed live on the TOGO website."
+    ],
+    "screenshots": [
+      "/images/projects/togo/togowebsitechat.png"
+    ]
+  },
+  "univize": {
+    "title": "Univize - University Social App",
+    "category": "personal",
+    "role": "Lead Developer & System Designer",
+    "company": "University of Sri Jayewardenepura",
+    "timeline": "2024",
+    "tech": ["Django", "FastAPI", "Next.js", "Neo4j", "PostgreSQL", "MongoDB", "Redis", "Azure", "GitHub Actions", "Azure Bicep"],
+    "description": "University social platform featuring media sharing, direct messaging, interactive forums, and collaborative academic threads. Implemented containerized microservices hosted on Azure with automated CI/CD pipelines via GitHub Actions and Azure Bicep.",
+    "deliverables": [
+      "Developed a social application for university students with features including media sharing, direct messaging, and forum-based discussions.",
+      "Led the development team in system design, project scheduling, testing, and deployment.",
+      "Used Azure as the hosting platform with services like container registries, secret management, and containerized apps.",
+      "Developed the backend backed by Django and FastAPI with a polyglot database architecture: PostgreSQL, MongoDB, Neo4J, and Redis.",
+      "Built full CI/CD pipelines using GitHub Actions and Azure Bicep scripts for automated infrastructure provisioning."
+    ],
+    "screenshots": [
+      "/images/projects/univize/page.png"
+    ]
+  }
+}

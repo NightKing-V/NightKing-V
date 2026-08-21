@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import ThreeBackground from './components/ThreeBackground';
 import Header from './components/Header';
 import About from './components/About';
@@ -7,8 +8,22 @@ import Projects from './components/Projects';
 import Publications from './components/Publications';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import ProjectDetail from './components/ProjectDetail';
 
 export default function App() {
+  const [currentHash, setCurrentHash] = useState(window.location.hash);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const isProjectDetail = currentHash.startsWith('#/project/');
+  const projectId = isProjectDetail ? currentHash.replace('#/project/', '') : null;
+
   return (
     <div style={styles.appContainer}>
       {/* 3D Background Canvas */}
@@ -22,13 +37,19 @@ export default function App() {
 
       {/* Main Pages Content */}
       <main style={styles.main}>
-        <About />
-        <TechStack />
-        <Experience />
-        <Projects />
-        <Publications />
-        <Education />
-        <Contact />
+        {isProjectDetail ? (
+          <ProjectDetail projectId={projectId} />
+        ) : (
+          <>
+            <About />
+            <TechStack />
+            <Experience />
+            <Projects />
+            <Publications />
+            <Education />
+            <Contact />
+          </>
+        )}
       </main>
 
       {/* Futuristic Neon Footer */}
