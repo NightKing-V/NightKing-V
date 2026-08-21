@@ -1,19 +1,35 @@
 import { useState, useEffect } from 'react';
-import { ArrowLeft, ZoomIn, X, ChevronLeft, ChevronRight, Music } from 'lucide-react';
+import { ArrowLeft, ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const musicImages = [
-  { url: '/images/music/EWF08775.jpg', caption: 'Bass Solo Live Performance' },
-  { url: '/images/music/EWF09246.jpg', caption: 'Stage Vibes & Groove' },
-  { url: '/images/music/DIS08505.jpg', caption: 'Live Concert Setup' },
-  { url: '/images/music/1000369920-01.jpeg', caption: 'Under the Spotlights' },
-  { url: '/images/music/NPW06711.jpg', caption: 'Rocking the Bass Riffs' },
-  { url: '/images/music/1000386690-01.jpeg', caption: 'Gigging with the Band' },
-  { url: '/images/music/IMG_20240304_124902_304.jpg', caption: 'Backstage rehearsal moments' },
-  { url: '/images/music/IMG_20240421_091050_269.jpg', caption: 'Festival Stage Energy' },
-  { url: '/images/music/1000166773-01.jpeg', caption: 'Deep in the Groove' },
-  { url: '/images/music/download~2.png', caption: 'Bassist Profile' },
-  { url: '/images/music/IMG_5604~2.jpg', caption: 'Bass Guitar Details' },
-  { url: '/images/music/IMG_5615~4.jpg', caption: 'Live Show Rhythms' }
+  '/images/music/EWF08775.jpg',
+  '/images/music/EWF09246.jpg',
+  '/images/music/DIS08505.jpg',
+  '/images/music/1000369920-01.jpeg',
+  '/images/music/NPW06711.jpg',
+  '/images/music/1000386690-01.jpeg',
+  '/images/music/IMG_20240304_124902_304.jpg',
+  '/images/music/IMG_20240421_091050_269.jpg',
+  '/images/music/1000166773-01.jpeg',
+  '/images/music/download~2.png',
+  '/images/music/IMG_5604~2.jpg',
+  '/images/music/IMG_5615~4.jpg'
+];
+
+// Instagram Discover-style dynamic spans (col/row dimensions)
+const tileLayouts = [
+  { col: 1, row: 1 }, // 0: Standard
+  { col: 1, row: 2 }, // 1: Tall
+  { col: 1, row: 1 }, // 2: Standard
+  { col: 2, row: 2 }, // 3: Large Square
+  { col: 1, row: 1 }, // 4: Standard
+  { col: 1, row: 1 }, // 5: Standard
+  { col: 1, row: 2 }, // 6: Tall
+  { col: 1, row: 1 }, // 7: Standard
+  { col: 2, row: 1 }, // 8: Wide
+  { col: 1, row: 1 }, // 9: Standard
+  { col: 1, row: 1 }, // 10: Standard
+  { col: 1, row: 1 }  // 11: Standard
 ];
 
 export default function MusicGallery() {
@@ -54,61 +70,51 @@ export default function MusicGallery() {
 
   return (
     <section className="section" style={styles.section}>
-      <div className="container">
+      <div className="container" style={styles.container}>
         
-        {/* Back navigation */}
+        {/* Navigation row */}
         <div style={styles.headerNav}>
           <a href="#about" className="btn-neon" style={styles.backBtn}>
             <ArrowLeft size={16} /> Back to Portfolio
           </a>
           <span style={styles.projectIdText}>
-            ARCHIVE // STAGE_GALLERY
+            ARCHIVE // STAGE_TILES
           </span>
         </div>
 
-        {/* Intro header */}
-        <div className="glass-card" style={styles.introCard}>
-          <div className="scanline"></div>
-          <div style={styles.titleRow}>
-            <Music size={28} style={{ color: 'var(--neon-pink)', marginRight: '12px' }} />
-            <h1 className="neon-text-gradient" style={styles.title}>VALENTENO LENORA // BASS ARCHIVES</h1>
-          </div>
-          <p style={styles.subtitle}>
-            Performing live music is my creative catalyst. When I am not designing neural networks, I am holding down the low end on stage as a bassist. The synergy of mathematical patterns in bass lines and the algorithmic flow of machine learning feed into each other, offering a unique avenue for creative problem solving.
-          </p>
-        </div>
-
-        {/* Dynamic Masonry Grid */}
-        <div className="music-gallery-grid" style={styles.grid}>
-          {musicImages.map((img, idx) => (
-            <div 
-              key={idx} 
-              className="glass-card music-card" 
-              style={styles.card}
-              onClick={() => setActiveImageIndex(idx)}
-            >
-              <div className="scanline"></div>
-              <div style={styles.imgWrapper}>
+        {/* Instagram Discover Grid */}
+        <div className="instagram-discover-grid" style={styles.grid}>
+          {musicImages.map((imgUrl, idx) => {
+            const layout = tileLayouts[idx] || { col: 1, row: 1 };
+            return (
+              <div 
+                key={idx} 
+                className="glass-card instagram-tile" 
+                style={{
+                  ...styles.tile,
+                  gridColumn: `span ${layout.col}`,
+                  gridRow: `span ${layout.row}`,
+                }}
+                onClick={() => setActiveImageIndex(idx)}
+              >
+                <div className="scanline"></div>
                 <img 
-                  src={img.url} 
-                  alt={img.caption} 
+                  src={imgUrl} 
+                  alt={`Stage performance moment ${idx + 1}`} 
                   style={styles.image}
                   loading="lazy"
                 />
                 
-                {/* Visual glitches and hover action */}
+                {/* Dark scanner gradient overlay */}
                 <div style={styles.imageOverlay}></div>
                 
-                <div className="gallery-hover-overlay" style={styles.hoverOverlay}>
-                  <ZoomIn size={24} style={{ color: '#fff', marginBottom: '6px' }} />
-                  <span style={styles.hoverText}>EXPAND IMAGE</span>
+                {/* Zoom overlay on hover */}
+                <div className="tile-hover-overlay" style={styles.hoverOverlay}>
+                  <ZoomIn size={24} style={{ color: '#fff' }} />
                 </div>
               </div>
-              <div style={styles.cardFooter}>
-                <p style={styles.captionText}>{img.caption}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>
@@ -121,12 +127,12 @@ export default function MusicGallery() {
               <X size={24} />
             </button>
             <img 
-              src={musicImages[activeImageIndex].url} 
-              alt={musicImages[activeImageIndex].caption} 
+              src={musicImages[activeImageIndex]} 
+              alt={`Expanded stage archive photo ${activeImageIndex + 1}`} 
               style={styles.lightboxImage}
             />
             <div style={styles.lightboxCounter}>
-              {musicImages[activeImageIndex].caption} ({activeImageIndex + 1} / {musicImages.length})
+              STAGE ARCHIVE // PHOTO_{activeImageIndex + 1} // {activeImageIndex + 1} OF {musicImages.length}
             </div>
             
             {/* Arrows */}
@@ -149,11 +155,16 @@ const styles = {
     paddingBottom: '80px',
     minHeight: '85vh',
   },
+  container: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    width: '100%',
+  },
   headerNav: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '2.5rem',
+    marginBottom: '2rem',
     flexWrap: 'wrap',
     gap: '1rem',
   },
@@ -172,52 +183,25 @@ const styles = {
     letterSpacing: '2px',
     color: 'rgba(255, 255, 255, 0.4)',
   },
-  introCard: {
-    padding: '2.5rem',
-    marginBottom: '3rem',
-    borderLeft: '4px solid var(--neon-pink)',
-  },
-  titleRow: {
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: '1rem',
-  },
-  title: {
-    fontSize: '2rem',
-    fontWeight: '800',
-    letterSpacing: '-0.02em',
-    margin: 0,
-  },
-  subtitle: {
-    color: 'var(--text-muted)',
-    fontSize: '1.05rem',
-    lineHeight: '1.6',
-    maxWidth: '850px',
-    margin: 0,
-  },
   grid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-    gap: '2rem',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridAutoRows: '260px',
+    gridAutoFlow: 'dense',
+    gap: '12px',
     width: '100%',
   },
-  card: {
+  tile: {
+    position: 'relative',
     cursor: 'pointer',
     overflow: 'hidden',
-    padding: '0.75rem',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    borderColor: 'rgba(255, 0, 127, 0.1)',
+    padding: 0,
+    borderRadius: '12px',
+    border: '1px solid rgba(255, 0, 127, 0.1)',
     transition: 'all 0.4s ease',
-  },
-  imgWrapper: {
-    position: 'relative',
-    borderRadius: '8px',
-    overflow: 'hidden',
-    border: '1px solid rgba(255, 255, 255, 0.05)',
-    aspectRatio: '4/3',
-    background: '#040508',
+    display: 'flex',
+    alignItems: 'stretch',
+    justifyContent: 'stretch',
   },
   image: {
     width: '100%',
@@ -231,7 +215,7 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    background: 'radial-gradient(circle, transparent 60%, rgba(5,6,11,0.5) 100%), linear-gradient(rgba(255, 0, 127, 0.03) 1px, transparent 1px)',
+    background: 'radial-gradient(circle, transparent 70%, rgba(5,6,11,0.5) 100%), linear-gradient(rgba(255, 0, 127, 0.02) 1px, transparent 1px)',
     backgroundSize: '100% 100%, 100% 5px',
     pointerEvents: 'none',
     zIndex: 2,
@@ -242,33 +226,13 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    background: 'rgba(5, 6, 11, 0.75)',
+    background: 'rgba(5, 6, 11, 0.65)',
     display: 'flex',
-    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     opacity: 0,
     transition: 'opacity 0.3s ease',
     zIndex: 3,
-  },
-  hoverText: {
-    fontFamily: 'var(--font-mono)',
-    fontSize: '0.75rem',
-    color: '#fff',
-    letterSpacing: '1px',
-  },
-  cardFooter: {
-    padding: '0.75rem 0.25rem 0.25rem 0.25rem',
-    borderTop: '1px solid rgba(255, 255, 255, 0.03)',
-    marginTop: '0.75rem',
-  },
-  captionText: {
-    margin: 0,
-    fontSize: '0.85rem',
-    color: 'var(--text-muted)',
-    fontFamily: 'var(--font-mono)',
-    letterSpacing: '0.5px',
-    textTransform: 'uppercase',
   },
   lightboxOverlay: {
     position: 'fixed',
@@ -296,7 +260,7 @@ const styles = {
     maxHeight: '80vh',
     objectFit: 'contain',
     borderRadius: '8px',
-    boxShadow: '0 0 40px rgba(255, 0, 127, 0.2)',
+    boxShadow: '0 0 40px rgba(255, 0, 127, 0.25)',
     border: '1px solid rgba(255, 0, 127, 0.2)',
   },
   lightboxCounter: {
@@ -339,17 +303,17 @@ const styles = {
   },
 };
 
-// Add CSS styling rules for card hover
+// Custom styles for hover and grids
 const styleRules = `
-.music-card:hover {
-  transform: translateY(-4px);
+.instagram-tile:hover {
+  transform: scale(1.015);
   border-color: var(--neon-pink) !important;
-  box-shadow: 0 0 20px rgba(255, 0, 127, 0.15) !important;
+  box-shadow: 0 0 25px rgba(255, 0, 127, 0.25) !important;
 }
-.music-card:hover img {
-  transform: scale(1.05);
+.instagram-tile:hover img {
+  transform: scale(1.04);
 }
-.music-card:hover .gallery-hover-overlay {
+.instagram-tile:hover .tile-hover-overlay {
   opacity: 1 !important;
 }
 .lightboxArrow:hover {
@@ -357,6 +321,23 @@ const styleRules = `
   color: #fff !important;
   box-shadow: 0 0 15px var(--neon-pink);
   border-color: var(--neon-pink) !important;
+}
+@media (max-width: 768px) {
+  .instagram-discover-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: 200px !important;
+    gap: 8px !important;
+  }
+}
+@media (max-width: 480px) {
+  .instagram-discover-grid {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 250px !important;
+  }
+  .instagram-tile {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
 }
 `;
 
