@@ -96,11 +96,16 @@ export default function About() {
                 RAG Systems, Agentic AI, AI Automation, ML/DL with Mathematical Optimization, and Sinhala Machine Translation.
               </p>
             </div>
-            <div className="glass-card" style={styles.detailCard}>
-              <h3 style={styles.detailTitle}>🎵 Fun Fact</h3>
-              <p style={styles.detailText}>
-                I'm also a bassist and a professional musician when not coding! Performing with bands is my creative catalyst.
-              </p>
+            <div className="glass-card" style={{ ...styles.detailCard, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderLeft: '3px solid var(--neon-pink)' }}>
+              <div>
+                <h3 style={styles.detailTitle}>🎵 Fun Fact</h3>
+                <p style={styles.detailText}>
+                  I'm also a bassist and a professional musician when not coding! Performing with bands is my creative catalyst.
+                </p>
+              </div>
+              <a href="#/music" className="funfact-link" style={styles.funFactLink}>
+                View Stage Gallery &rarr;
+              </a>
             </div>
           </div>
 
@@ -378,6 +383,19 @@ const styles = {
     cursor: 'pointer',
     transition: 'all 0.3s ease',
   },
+  funFactLink: {
+    fontFamily: 'var(--font-mono)',
+    fontSize: '0.8rem',
+    letterSpacing: '1px',
+    marginTop: '1rem',
+    display: 'inline-flex',
+    alignItems: 'center',
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    alignSelf: 'flex-start',
+    color: 'var(--neon-pink)',
+    transition: 'transform 0.3s ease',
+  },
 };
 
 // CSS animations for text cursor blinking and scroll bounce
@@ -409,6 +427,10 @@ const extraCSS = `
   #about div[style*="detailsGrid"] {
     grid-template-columns: 1fr !important;
   }
+}
+.funfact-link:hover {
+  transform: translateX(4px);
+  text-shadow: 0 0 8px var(--neon-pink);
 }
 `;
 if (typeof document !== 'undefined') {

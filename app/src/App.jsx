@@ -9,6 +9,7 @@ import Publications from './components/Publications';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import ProjectDetail from './components/ProjectDetail';
+import MusicGallery from './components/MusicGallery';
 
 export default function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash);
@@ -23,6 +24,7 @@ export default function App() {
 
   const isProjectDetail = currentHash.startsWith('#/project/');
   const projectId = isProjectDetail ? currentHash.replace('#/project/', '') : null;
+  const isMusicGallery = currentHash === '#/music';
 
   return (
     <div style={styles.appContainer}>
@@ -39,6 +41,8 @@ export default function App() {
       <main style={styles.main}>
         {isProjectDetail ? (
           <ProjectDetail projectId={projectId} />
+        ) : isMusicGallery ? (
+          <MusicGallery />
         ) : (
           <>
             <About />
