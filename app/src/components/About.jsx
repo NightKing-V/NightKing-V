@@ -3,16 +3,16 @@ import { Mail, ArrowDown } from 'lucide-react';
 import img1 from '../assets/images/self/maincorousel/valenteno portrait upper torso.png';
 import img2 from '../assets/images/self/maincorousel/2.png';
 import img3 from '../assets/images/self/maincorousel/3.png';
+import img4 from '../assets/images/self/maincorousel/4.png';
 
 export default function About() {
-  const images = [img1, img2, img3];
+  const images = [img1, img2, img3, img4];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [typingText, setTypingText] = useState('AI/ML Engineer');
   const titles = [
     'AI/ML Engineer 🤖',
     'Full Stack Developer 💻',
-    'Research & Innovation Driven 🔬',
-    'Music & Tech Passionate 🎵',
+    'Researcher & Innovater 🔬',
   ];
 
   useEffect(() => {
