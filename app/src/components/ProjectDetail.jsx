@@ -5,12 +5,14 @@ import projectsData from '../data/projects-data.json';
 export default function ProjectDetail({ projectId }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [isPortrait, setIsPortrait] = useState(false);
   const project = projectsData[projectId];
 
-  // Scroll to top when loading a project
+  // Scroll to top when loading a project or switching screenshot
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [projectId]);
+    setIsPortrait(false);
+  }, [projectId, activeImageIndex]);
 
   if (!project) {
     return (
@@ -56,82 +58,54 @@ export default function ProjectDetail({ projectId }) {
           </span>
         </div>
 
-        {/* Project Layout Grid */}
-        <div className="project-detail-grid" style={styles.grid}>
-          
-          {/* Left Column: Information */}
-          <div style={styles.infoCol}>
-            <div className={`glass-card ${isWork ? 'glass-card-pink' : ''}`} style={{ ...styles.infoCard, borderColor: borderGradient }}>
-              <div className="scanline"></div>
-              
-              <h1 style={styles.title}>{project.title}</h1>
-              
-              {/* Meta tags */}
-              <div style={styles.metaRow}>
-                <div style={styles.metaItem}>
-                  <Briefcase size={16} style={{ color: accentColor }} />
-                  <span style={styles.metaText}>{project.role}</span>
-                </div>
-                <div style={styles.metaItem}>
-                  <Building size={16} style={{ color: accentColor }} />
-                  <span style={styles.metaText}>{project.company}</span>
-                </div>
-                <div style={styles.metaItem}>
-                  <Calendar size={16} style={{ color: accentColor }} />
-                  <span style={styles.metaText}>{project.timeline}</span>
-                </div>
+        {/* Project Layout Single Column Document */}
+        <div style={styles.contentContainer}>
+          <div className={`glass-card ${isWork ? 'glass-card-pink' : ''}`} style={{ ...styles.mainCard, borderColor: borderGradient }}>
+            <div className="scanline"></div>
+            
+            {/* Title */}
+            <h1 style={styles.title}>{project.title}</h1>
+            
+            {/* Meta row */}
+            <div style={styles.metaRow}>
+              <div style={styles.metaItem}>
+                <Briefcase size={16} style={{ color: accentColor }} />
+                <span style={styles.metaText}>{project.role}</span>
               </div>
-
-              <div style={styles.divider}></div>
-
-              {/* Description */}
-              <h3 style={styles.sectionSubTitle}>OVERVIEW</h3>
-              <p style={styles.description}>{project.description}</p>
-
-              {/* Key Deliverables & Responsibilities */}
-              <h3 style={styles.sectionSubTitle}>KEY DELIVERABLES & CONTRIBUTION</h3>
-              <ul style={styles.deliverablesList}>
-                {project.deliverables.map((item, idx) => (
-                  <li key={idx} style={styles.deliverableItem}>
-                    <CheckCircle2 size={18} style={{ ...styles.checkIcon, color: accentColor }} />
-                    <span style={styles.deliverableText}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Tech Stack */}
-              <h3 style={styles.sectionSubTitle}>TECHNOLOGY MATRIX</h3>
-              <div style={styles.techWrapper}>
-                {project.tech.map((t, idx) => (
-                  <span 
-                    key={idx} 
-                    style={{
-                      ...styles.techTag,
-                      color: accentColor,
-                      borderColor: isWork ? 'rgba(255, 0, 127, 0.2)' : 'rgba(0, 255, 255, 0.2)',
-                    }}
-                  >
-                    {t}
-                  </span>
-                ))}
+              <div style={styles.metaItem}>
+                <Building size={16} style={{ color: accentColor }} />
+                <span style={styles.metaText}>{project.company}</span>
+              </div>
+              <div style={styles.metaItem}>
+                <Calendar size={16} style={{ color: accentColor }} />
+                <span style={styles.metaText}>{project.timeline}</span>
               </div>
             </div>
-          </div>
 
-          {/* Right Column: Screenshot Gallery */}
-          <div style={styles.galleryCol}>
-            <div className="glass-card" style={styles.galleryCard}>
-              <div className="scanline"></div>
-              
-              {/* Active Image Showcase */}
-              <div style={styles.mainImageWrapper} onClick={() => setIsLightboxOpen(true)}>
+            <div style={styles.divider}></div>
+
+            {/* Project Screenshot Showcase (Immediately after title) */}
+            <div style={styles.galleryContainer}>
+              <div 
+                style={{
+                  ...styles.mainImageWrapper,
+                  aspectRatio: isPortrait ? '10/16' : '16/9',
+                  maxWidth: isPortrait ? '380px' : '100%',
+                }} 
+                onClick={() => setIsLightboxOpen(true)}
+              >
                 <img 
                   src={project.screenshots[activeImageIndex]} 
                   alt={`${project.title} Screenshot ${activeImageIndex + 1}`} 
                   style={styles.mainImage}
+                  onLoad={(e) => {
+                    if (e.target.naturalHeight > e.target.naturalWidth) {
+                      setIsPortrait(true);
+                    }
+                  }}
                 />
                 
-                {/* Visual Glitch-inspired overlays */}
+                {/* Visual overlays */}
                 <div style={styles.imageOverlay}></div>
                 
                 {/* Lightbox button overlay */}
@@ -181,6 +155,40 @@ export default function ProjectDetail({ projectId }) {
                 </div>
               )}
             </div>
+
+            <div style={styles.divider}></div>
+
+            {/* Overview (Rendered after screenshots) */}
+            <h3 style={styles.sectionSubTitle}>OVERVIEW</h3>
+            <p style={styles.description}>{project.description}</p>
+
+            {/* Key Deliverables & Responsibilities */}
+            <h3 style={styles.sectionSubTitle}>KEY DELIVERABLES & CONTRIBUTION</h3>
+            <ul style={styles.deliverablesList}>
+              {project.deliverables.map((item, idx) => (
+                <li key={idx} style={styles.deliverableItem}>
+                  <CheckCircle2 size={18} style={{ ...styles.checkIcon, color: accentColor }} />
+                  <span style={styles.deliverableText}>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Tech Stack */}
+            <h3 style={styles.sectionSubTitle}>TECHNOLOGY MATRIX</h3>
+            <div style={styles.techWrapper}>
+              {project.tech.map((t, idx) => (
+                <span 
+                  key={idx} 
+                  style={{
+                    ...styles.techTag,
+                    color: accentColor,
+                    borderColor: isWork ? 'rgba(255, 0, 127, 0.2)' : 'rgba(0, 255, 255, 0.2)',
+                  }}
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -225,7 +233,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '2.5rem',
+    marginBottom: '2rem',
     flexWrap: 'wrap',
     gap: '1rem',
   },
@@ -242,19 +250,14 @@ const styles = {
     letterSpacing: '2px',
     color: 'rgba(255, 255, 255, 0.4)',
   },
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: '1.1fr 0.9fr',
-    gap: '2.5rem',
-    alignItems: 'start',
-  },
-  infoCol: {
+  contentContainer: {
+    maxWidth: '920px',
+    margin: '0 auto',
     width: '100%',
   },
-  infoCard: {
+  mainCard: {
     padding: '2.5rem',
     position: 'relative',
-    height: '100%',
   },
   title: {
     fontSize: '2.25rem',
@@ -267,7 +270,7 @@ const styles = {
   metaRow: {
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '1.25rem',
+    gap: '1.5rem',
     marginBottom: '1.5rem',
   },
   metaItem: {
@@ -283,76 +286,27 @@ const styles = {
   divider: {
     height: '1px',
     background: 'linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.02) 100%)',
-    marginBottom: '1.5rem',
+    margin: '2rem 0',
   },
-  sectionSubTitle: {
-    fontFamily: 'var(--font-mono)',
-    fontSize: '0.85rem',
-    letterSpacing: '1.5px',
-    color: '#fff',
-    marginBottom: '1rem',
-    fontWeight: '700',
-  },
-  description: {
-    color: 'var(--text-muted)',
-    fontSize: '1rem',
-    lineHeight: '1.6',
-    marginBottom: '2rem',
-  },
-  deliverablesList: {
-    listStyle: 'none',
-    padding: 0,
-    margin: '0 0 2rem 0',
-  },
-  deliverableItem: {
-    display: 'flex',
-    alignItems: 'flex-start',
-    gap: '12px',
-    marginBottom: '0.85rem',
-  },
-  checkIcon: {
-    flexShrink: 0,
-    marginTop: '2px',
-  },
-  deliverableText: {
-    color: 'var(--text-muted)',
-    fontSize: '0.95rem',
-    lineHeight: '1.5',
-  },
-  techWrapper: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '0.5rem',
-  },
-  techTag: {
-    fontSize: '0.75rem',
-    fontFamily: 'var(--font-mono)',
-    fontWeight: '500',
-    border: '1px solid',
-    padding: '0.25rem 0.75rem',
-    borderRadius: '30px',
-    background: 'rgba(0, 0, 0, 0.2)',
-  },
-  galleryCol: {
-    width: '100%',
-  },
-  galleryCard: {
-    padding: '1.5rem',
+  galleryContainer: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '1rem',
+    alignItems: 'center',
+    gap: '1.25rem',
+    width: '100%',
   },
   mainImageWrapper: {
     position: 'relative',
     borderRadius: '8px',
     overflow: 'hidden',
     border: '1px solid rgba(255, 255, 255, 0.05)',
-    aspectRatio: '16/10',
     cursor: 'pointer',
     background: '#040508',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    transition: 'all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1)',
+    width: '100%',
   },
   mainImage: {
     width: '100%',
@@ -420,7 +374,7 @@ const styles = {
     display: 'flex',
     gap: '0.75rem',
     flexWrap: 'wrap',
-    marginTop: '0.5rem',
+    justifyContent: 'center',
   },
   thumbnailBtn: {
     width: '80px',
@@ -437,6 +391,54 @@ const styles = {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
+  },
+  sectionSubTitle: {
+    fontFamily: 'var(--font-mono)',
+    fontSize: '0.85rem',
+    letterSpacing: '1.5px',
+    color: '#fff',
+    marginBottom: '1rem',
+    fontWeight: '700',
+  },
+  description: {
+    color: 'var(--text-muted)',
+    fontSize: '1rem',
+    lineHeight: '1.6',
+    marginBottom: '2rem',
+  },
+  deliverablesList: {
+    listStyle: 'none',
+    padding: 0,
+    margin: '0 0 2.5rem 0',
+  },
+  deliverableItem: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '12px',
+    marginBottom: '0.85rem',
+  },
+  checkIcon: {
+    flexShrink: 0,
+    marginTop: '2px',
+  },
+  deliverableText: {
+    color: 'var(--text-muted)',
+    fontSize: '0.95rem',
+    lineHeight: '1.5',
+  },
+  techWrapper: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '0.5rem',
+  },
+  techTag: {
+    fontSize: '0.75rem',
+    fontFamily: 'var(--font-mono)',
+    fontWeight: '500',
+    border: '1px solid',
+    padding: '0.25rem 0.75rem',
+    borderRadius: '30px',
+    background: 'rgba(0, 0, 0, 0.2)',
   },
   errorContainer: {
     display: 'flex',
@@ -509,9 +511,6 @@ const styles = {
 
 // Add CSS injection for hover actions & media queries
 const styleRules = `
-.project-detail-grid {
-  grid-template-columns: 1.1fr 0.9fr;
-}
 .mainImageWrapper:hover .image-hover-action {
   opacity: 1 !important;
 }
@@ -528,10 +527,13 @@ const styleRules = `
   color: #fff !important;
   box-shadow: 0 0 10px var(--neon-pink);
 }
-@media (max-width: 991px) {
-  .project-detail-grid {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
+@media (max-width: 576px) {
+  div[style*="mainCard"] {
+    padding: 1.5rem !important;
+  }
+  div[style*="metaRow"] {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
   }
 }
 `;
