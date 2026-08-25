@@ -72,6 +72,7 @@ My dual-degree background in **Computer Science (First Class Honours)** and **In
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![Ansible](https://img.shields.io/badge/ansible-%23000000.svg?style=for-the-badge&logo=ansible&logoColor=white)
+![Azure Bicep](https://img.shields.io/badge/Azure%20Bicep-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
 ![Weights & Biases](https://img.shields.io/badge/Weights%20%26%20Biases-FFBE00?style=for-the-badge&logo=weightsandbiases&logoColor=black)
 ![Roboflow](https://img.shields.io/badge/Roboflow-6706ce?style=for-the-badge&logo=roboflow&logoColor=white)
 

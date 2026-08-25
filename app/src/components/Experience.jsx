@@ -90,6 +90,7 @@ export default function Experience() {
                     borderColor: exp.color,
                     boxShadow: isHovered ? `0 0 15px ${exp.color}` : 'none',
                     backgroundColor: isHovered ? exp.color : 'var(--bg-primary)',
+                    ...(idx % 2 === 1 ? { left: '-7px', right: 'auto' } : {}),
                   }}
                 ></div>
 

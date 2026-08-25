@@ -72,6 +72,7 @@ export default function TechStack() {
         'GitHub Actions',
         'Terraform',
         'Ansible',
+        'Azure Bicep',
         'Weights & Biases (WandB)',
         'Roboflow',
       ],
@@ -145,6 +146,7 @@ export default function TechStack() {
     'GitHub Actions': { desc: 'CI/CD workflow automation, build pipelines, and automated package deploys.', projects: ['Accordo.ai', 'Univize / JConnect'], level: 85 },
     Terraform: { desc: 'Infrastructure as Code for provisioning and configuring cloud computing networks.', projects: ['Cloud Deployments'], level: 75 },
     Ansible: { desc: 'IT automation, machine provisioning, and server orchestration scripts.', projects: ['Server Configs'], level: 75 },
+    'Azure Bicep': { desc: 'Declarative language for provisioning Azure resources using infrastructure as code (IaC).', projects: ['Univize / JConnect'], level: 80 },
     'Weights & Biases (WandB)': { desc: 'MLOps model parameter logging, loss curve visualization, and validation.', projects: ['Vehicle Damage Detection System', 'Brain Tumour Detection Model'], level: 80 },
     Roboflow: { desc: 'Computer vision developer platform for dataset management, labeling, and model deployment workflows.', projects: ['Vehicle Damage Detection System'], level: 85 },
 
