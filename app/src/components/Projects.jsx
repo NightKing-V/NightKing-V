@@ -63,6 +63,7 @@ export default function Projects() {
       link: 'https://github.com/NightKing-V/',
     },
     {
+      id: 'fashionhub',
       title: 'FashionHub.ai - AI Shopping Assistant',
       category: 'work',
       tech: ['Next.js', 'FastAPI', 'Weaviate', 'Ollama', 'LangGraph', 'LangChain', 'Kafka', 'Groq', 'Gemini'],
