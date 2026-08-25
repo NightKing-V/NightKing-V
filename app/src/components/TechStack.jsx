@@ -38,6 +38,13 @@ export default function TechStack() {
       ],
     },
     {
+      id: 'ai-automation',
+      title: 'AI & Automation',
+      icon: <Terminal size={18} />,
+      color: 'var(--neon-pink)',
+      skills: ['n8n', 'Make', 'Retel.ai', 'Selenium', 'Playwright'],
+    },
+    {
       id: 'fullstack',
       title: 'FullStack Technologies',
       icon: <Code size={18} />,
@@ -66,8 +73,7 @@ export default function TechStack() {
         'Terraform',
         'Ansible',
         'Weights & Biases (WandB)',
-        'MLflow',
-        'n8n',
+        'Roboflow',
       ],
     },
     {
@@ -140,8 +146,14 @@ export default function TechStack() {
     Terraform: { desc: 'Infrastructure as Code for provisioning and configuring cloud computing networks.', projects: ['Cloud Deployments'], level: 75 },
     Ansible: { desc: 'IT automation, machine provisioning, and server orchestration scripts.', projects: ['Server Configs'], level: 75 },
     'Weights & Biases (WandB)': { desc: 'MLOps model parameter logging, loss curve visualization, and validation.', projects: ['Vehicle Damage Detection System', 'Brain Tumour Detection Model'], level: 80 },
-    MLflow: { desc: 'Machine learning lifecycle registry, metric tracking, and checkpoint logging.', projects: ['AI-Pasala'], level: 80 },
+    Roboflow: { desc: 'Computer vision developer platform for dataset management, labeling, and model deployment workflows.', projects: ['Vehicle Damage Detection System'], level: 85 },
+
+    // AI & Automation
     n8n: { desc: 'Visual workflow automation linking APIs, webhooks, databases, and agents.', projects: ['AI-Pasala'], level: 85 },
+    Make: { desc: 'Advanced automation platform for connecting apps and automating workflows without code.', projects: ['AiRentoSoft System'], level: 80 },
+    'Retel.ai': { desc: 'Conversational voice AI platform used to build and configure intelligent calling agents.', projects: ['AiRentoSoft System'], level: 85 },
+    Selenium: { desc: 'Browser automation tool for web scraping and end-to-end testing workflows.', projects: ['Business Leads Extraction Pipeline'], level: 88 },
+    Playwright: { desc: 'Modern end-to-end testing and web scraping framework for fast and reliable browser automation.', projects: ['Business Leads Extraction Pipeline'], level: 90 },
 
     // Databases
     MongoDB: { desc: 'NoSQL document storage for flexible schemas, e-commerce products, and social feeds.', projects: ['Accordo.ai', 'Stock Market API', 'FashionHub.ai', 'AI-Recruitment Platform', 'Univize / JConnect', 'PricePal'], level: 90 },
