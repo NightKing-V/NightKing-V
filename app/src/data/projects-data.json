@@ -37,6 +37,24 @@
       "/images/projects/airento/airentomobile-playstore.png"
     ]
   },
+  "businessleads": {
+    "title": "Business Leads Extraction Pipeline",
+    "category": "work",
+    "role": "AI/ML Engineer - Intern",
+    "company": "AiRentoSoft Pvt. Ltd.",
+    "timeline": "March 2026 - Present",
+    "tech": ["Playwright", "Selenium", "Python", "ETL"],
+    "description": "Automated pipeline to extract potential clients for US-based car rental businesses. Processed scraped data through custom ETL pipelines to deliver structured formats for sales and support.",
+    "deliverables": [
+      "Assisted in extracting business leads for potential USA-based car rental clients using automation scripts to improve business opportunities.",
+      "Developed web scraping workflows utilizing Playwright and Selenium to reliably collect lead data.",
+      "Processed scraped data through custom ETL pipelines to deliver structured formats for sales and support teams.",
+      "Collaborated with developers, business support, and QA teams via Jira within scheduled sprints."
+    ],
+    "screenshots": [
+      "/images/projects/businessleads/image.png"
+    ]
+  },
   "sinhalatts": {
     "title": "Sinhala TTS Model",
     "category": "work",

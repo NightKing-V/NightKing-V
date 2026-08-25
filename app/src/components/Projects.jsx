@@ -39,6 +39,7 @@ export default function Projects() {
       link: 'https://github.com/NightKing-V/',
     },
     {
+      id: 'businessleads',
       title: 'Business Leads Extraction Pipeline',
       category: 'work',
       tech: ['Playwright', 'Selenium', 'Python', 'ETL'],
