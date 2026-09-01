@@ -8,7 +8,7 @@ export default function Education() {
       institution: 'University of Plymouth, UK (NSBM Green University)',
       duration: '2022 - 2025',
       color: 'var(--neon-cyan)',
-      details: 'Completed advanced coursework in Artificial Intelligence, Software Engineering, Mathematical Optimization, and Databases. Achieved Top Academic standing.',
+      details: 'Completed advanced coursework in Artificial Intelligence, Software Engineering, Mathematical Optimization, and Databases. Achieved First Class Honours academic standing.',
     },
     {
       degree: 'BComp (Hons) Information Systems',
@@ -16,22 +16,38 @@ export default function Education() {
       institution: 'University of Sri Jayewardenepura',
       duration: '2023 - Present',
       color: 'var(--neon-pink)',
-      details: 'Focusing on enterprise information systems, IT infrastructure, management, and research in Sinhala machine translation models.',
+      details: 'Focusing on enterprise information systems, IT infrastructure, management, data analytics, and research in Sinhala machine translation models.',
+    },
+    {
+      degree: 'Diploma in Technology',
+      honours: 'Graduated',
+      institution: 'Esoft Metro Campus',
+      duration: '2019',
+      color: 'var(--neon-purple)',
+      details: 'Fundamental training in software engineering, computing architectures, programming logic, and IT system essentials.',
+    },
+    {
+      degree: 'G.C.E. Advanced Level - Math Stream',
+      honours: 'A1, C2 (O/L: A7, B2)',
+      institution: "St. Peter's College, Colombo - 4",
+      duration: '2008 - 2021',
+      color: 'var(--neon-blue)',
+      details: 'Combined Mathematics stream with strong foundation in advanced algebra, calculus, physics.',
     },
   ];
 
   return (
     <section id="education" className="section">
       <div className="container">
-        
+
         <h2 className="section-title">
           Education
         </h2>
 
         <div style={styles.grid}>
           {degrees.map((item, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`glass-card ${item.color === 'var(--neon-pink)' ? 'glass-card-pink' : ''}`}
               style={{
                 ...styles.card,
@@ -39,9 +55,9 @@ export default function Education() {
               }}
             >
               <div className="scanline"></div>
-              
+
               <div style={styles.header}>
-                <div 
+                <div
                   style={{
                     ...styles.iconContainer,
                     borderColor: item.color,
@@ -58,7 +74,7 @@ export default function Education() {
 
               <div style={styles.content}>
                 <h3 style={styles.degreeTitle}>{item.degree}</h3>
-                
+
                 <div style={styles.honoursContainer}>
                   <Award size={14} style={{ color: item.color, marginRight: '6px' }} />
                   <span style={{ ...styles.honours, color: item.color }}>{item.honours}</span>

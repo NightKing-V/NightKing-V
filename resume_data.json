@@ -1,0 +1,197 @@
+{
+  "personal_info": {
+    "name": "Valenteno Lenora",
+    "title": "AI/ML Engineer | Fullstack Developer | Data Engineer",
+    "email": "valentenocavlenora@gmail.com",
+    "phone": "+94 76 311 4242",
+    "portfolio": "night-king-v.vercel.app",
+    "github": "github.com/NightKing-V",
+    "linkedin": "linkedin.com/in/valentenolenora",
+    "location": "Colombo, Sri Lanka"
+  },
+  "summary": "Currently developing AI systems at AiRentoSoft and WaveSkill, with expertise spanning Agentic Systems, Deep learning, Machine learning and scalable infrastructure. Dual-degree background in Computer Science (First Class Honours) and Information Systems provides both technical depth in AI/ML and Business systems perspective. Published a research paper and Open Source package for community. Passionate about transforming complex AI innovations into deployed solutions that deliver measurable real-world impact.",
+  "experience": [
+    {
+      "role": "AI/ML Engineer - Freelance",
+      "company": "WaveSkill Pvt. Ltd.",
+      "duration": "2025 (December) - Present",
+      "bullets": [
+        "Designed and Engineered the AI-powered financial document extraction pipeline with computer vision models and helper agents to extract financial data from company statements.",
+        "Developed the fundamental analysis engine for the Stock Market API to give users stats and AI-powered insights on companies regarding their financial positions.",
+        "Developed an Agentic Shopping assistant for Baby Care products e-commerce website (TOGO).",
+        "Developed a TTS dataset and trained a VITS Model for Sinhala."
+      ]
+    },
+    {
+      "role": "AI/ML Engineer - Intern",
+      "company": "AiRentoSoft Pvt. Ltd.",
+      "duration": "2026 (March) - 2026 (September) | 6 months",
+      "bullets": [
+        "Developed a vehicle damage detection system with DL models, API and Mobile app.",
+        "Collaborated in further developing the AiRentoSoft System which includes the Web app, Mobile app, Reservations Plugin and AI Caller Agent.",
+        "Assisted in business leads extraction for potential clients for improving business opportunities.",
+        "Collaborated with the developers, business support team and QA engineers via Jira with scheduled sprints and meetings."
+      ]
+    },
+    {
+      "role": "AI/ML Engineer - Intern",
+      "company": "Residue Solutions Pvt. Ltd.",
+      "duration": "2025 (September) - 2026 (February) | 6 months",
+      "bullets": [
+        "Engineered an AI-powered shopping assistant (FashionHub.ai) for customers to get assistance on product search, Virtual Try-On, Cart management, Payment assistance, QnA and Size matching.",
+        "Leader of the AI/ML Intern team of five, providing technical guidance on project architecture, code reviews, and implementation strategies and regular meetings to ensure milestones were met.",
+        "Conducted research and integration by collaborating and leading the team members with LLM orchestration techniques, reasoning and multi-model pipelines that enabled complex product recommendations and Virtual Try-On features."
+      ]
+    },
+    {
+      "role": "System Support Officer - IT",
+      "company": "Mercantile Investments FPLC",
+      "duration": "2022 | 3 months",
+      "bullets": [
+        "Assisted in hardware, network maintenance and repairs, significantly reducing issues for users through proactive diagnostics and component-level troubleshooting. Resolved technical queries in Help Desk support, providing rapid software, OS, and peripheral solutions for diverse end-user requirements."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Plymouth, UK (NSBM Green University)",
+      "degree": "BSc (Hons) Computer Science",
+      "duration": "2022 - 2025",
+      "grade": "First Class Honours"
+    },
+    {
+      "institution": "University of Sri Jayewardenepura",
+      "degree": "BComp (Hons) Information Systems",
+      "duration": "2023 - Present",
+      "grade": "4th Year"
+    },
+    {
+      "institution": "Esoft Metro Campus",
+      "degree": "Dip. in Technology",
+      "duration": "2019"
+    },
+    {
+      "institution": "St. Peter's College, Colombo - 4",
+      "degree": "A/L - Math Stream",
+      "duration": "2008 - 2021",
+      "grade": "A1, C2 (O/L: A7, B2)"
+    }
+  ],
+  "projects": {
+    "work": [
+      {
+        "name": "Vehicle Damage Detection System",
+        "technologies": "YOLO, PyTorch, FastAPI, React, HuggingFace, WandB, Kaggle, MLOps, Roboflow",
+        "description": "Developed a Vehicle Damage Detection system consisting of a combination of YOLO models with a FastAPI wrapper hosted in Huggingface spaces. Pre-trained the models on Image datasets, versioned and deployed using MLOps tools. Also further developed the live mobile app to support new features which is in Playstore and Appstore."
+      },
+      {
+        "name": "AiRentoSoft System",
+        "technologies": "React, Node.js, .NET, Retel.ai, OCR, Azure DevOps",
+        "description": "Collaborated in Developing and Implementing new features including AI Integrations. Worked on the React Web application, Reservations Plugin, .NET API, and developed the 2.0 version of the Mobile app with similar features to the main system and released documentation in AZURE Devops. Added AI Integrated features like document scanning, card scanning using OCR models in both web and mobile apps. Also managed and worked on the AI Caller agent in Retel.ai for client requirements."
+      },
+      {
+        "name": "Business Leads Extraction",
+        "technologies": "Playwright, Selenium, Python, ETL",
+        "description": "Implemented a business leads extraction pipeline for extracting potential clients in USA based car rental businesses using Automation scripts and web scraping and using ETL pipelines to process data into understandable formats for business support division to use."
+      },
+      {
+        "name": "Sinhala TTS Model",
+        "technologies": "Coqui VITS, PyTorch, Kaggle",
+        "description": "Developed a research purpose private TTS model with support for Sinhala language. Created a private dataset from scratch for VITS format to train the Speech Model. Trained on Kaggle dual T4 GPUs and gained research level quality output for product pitching and further development with funds."
+      },
+      {
+        "name": "TOGO - AI Shopping Assistant",
+        "technologies": "FastAPI, Postgres, CrewAI, LangGraph, Langfuse",
+        "description": "Developed an Agentic Shopping assistant for e-commerce website for baby care products. Implemented features in Product search, QnA using store policies and customer support. This is live on the TOGO website."
+      },
+      {
+        "name": "FashionHub.ai",
+        "technologies": "Next.js, FastAPI, Weaviate, Ollama, LangGraph, LangChain, Kafka, Groq, Gemini, MongoDB, Google Vertex AI",
+        "description": "Developed an intelligent AI shopping assistant that revolutionises the retail experience by utilising a ReAct capable Agent with DAG-based task execution. The platform features a high-throughput MongoDB to Weaviate Kafka pipeline for real-time data synchronization. Built on a scalable FastAPI microservices infrastructure, the system integrates a modular multi-LLM factory (Gemini, Llama) and Google Vertex AI for generative Virtual Try-On capabilities, delivering a seamless and context-aware customer assistance. Used LangChain & LangGraph for LLM orchestration and agent state management."
+      },
+      {
+        "name": "Stock Market API",
+        "technologies": "FastAPI, LlamaIndex, OpenCV, Groq, MongoDB, LLMs, OCR",
+        "description": "Designed and engineered a scalable financial intelligence API using FastAPI for Fundamental analysis of Colombo Stock Exchange (CSE) filings. Built the analysis engine that can calculate core financial ratios and growth metrics, integrating AI-driven insights to provide comprehensive qualitative and quantitative evaluations of corporate performance. Additionally, developed an extraction engine that utilizes hybrid OCR and semantic mapping with Large Language Models (LLMs) to transform unstructured quarterly statements into standardized datasets."
+      }
+    ],
+    "personal": [
+      {
+        "name": "Accordo.ai - Music Analysis Platform",
+        "technologies": "TensorFlow, RNN, Bi-LSTM, Flutter, FastAPI, Celery, Redis, MongoDB, TensorFlow Serving, GCP, MinIO S3",
+        "description": "Developed an intelligent system that performs musical analysis on audio for musicians. The project explored advanced deep learning techniques, including Bi-LSTM networks and time-frequency feature extraction, trained on real-world music datasets and achieved +80% accuracy. Focused on research and development of robust music information retrieval (MIR) model, with a practical Implementation using FastAPI, MongoDB, and TensorFlow Serving with a Flutter-based mobile UI for real-time analysis and playback integration. Deployed using a CI/CD pipeline to GCP."
+      },
+      {
+        "name": "Univize - University Social App",
+        "technologies": "Django, FastAPI, Next.js, Neo4j, PostgreSQL (Supabase), MongoDB, Redis, Supabase, Azure, GitHub Actions, Azure Bicep",
+        "description": "Developed an Social application for university students with features including, medial sharing, direct messaging and forum based discussions. Led the development team in system design to development, testing and deployment. Used Azure as the hosting platform with services like container registry, secret management and containerized apps. Developed the main backend in Django and FastAPI with PostgreSQL (Supabase), MongoDB, Neo4J, Redis and Supabase. Built the CI/CD pipeline with GitHub Actions and Azure Bicep scripts for infrastructure provisioning and Integration. This was done as the Group project for USJP."
+      },
+      {
+        "name": "EduAgent - AI-powered Research Assistant",
+        "technologies": "CrewAI, LangChain, Ollama, Mistral LLM, ChromaDB, HuggingFace",
+        "description": "Developed a Research assistant leveraging LangChain, CrewAI, and Mistral LLM (via Ollama) for research paper analysis and academic Q&A. Implemented document ingestion, summarization, topic extraction, and semantic retrieval using HuggingFace sentence-transformer embeddings with ChromaDB. Designed modular agent architecture and session-aware chat interface."
+      },
+      {
+        "name": "AI-Powered Recruitment Platform",
+        "technologies": "Streamlit, LangChain, Groq, Qdrant, HuggingFace, MongoDB, Llama LLMs, RAG",
+        "description": "Developed an AI-powered recruitment platform that streamlines candidate screening using semantic resume-job matching with RAG technology. Built with Streamlit, Qdrant vector database, MongoDB, and Groq/Llama LLMs to automatically analyze resumes, generate job descriptions, and provide ranked job recommendations with similarity scores, transforming the hiring process for recruiters."
+      },
+      {
+        "name": "Vision Reasoning Surveillance System",
+        "technologies": "PyTorch, OpenCV, YOLO, LangChain, Ollama, LLM, Streamlit, Telegram Bot",
+        "description": "Developed a surveillance system to detect threats from real-time camera feed with the use of YOLO, and notify users with a detailed description of suspicious objects and scenes using LLM, LangChain and Telegram Bot. This project was done to gain experience with computer vision models, large language models and Intelligent systems."
+      },
+      {
+        "name": "Brain Tumour Detection Model",
+        "technologies": "PyTorch, TensorFlow, OpenCV, U-Net, CNN, Albumentations, Kaggle",
+        "description": "Developed a brain tumour detection model using the U-Net encoder-decoder architecture on MRI images. Implemented separate versions in PyTorch and Tensorflow. Used two popular 2D and 3D MRI image datasets from Kaggle. Used data augmentation methods using the albumentations library. Trained and evaluated on DICE, IoU and custom loss functions. Achieved ~90% accuracy."
+      },
+      {
+        "name": "Data Analytics Dashboard",
+        "technologies": "Python, SQL, Snowflake, ETL, XGBoost, Streamlit",
+        "description": "Analysed LinkedIn job posting data using a real-time ETL pipeline using python, into Snowflake for storage and processing. Built regression and classification models using XGBoost to derive insights from job trends and requirements. Implemented real-time data feeds and visualized analytics through an interactive dashboard."
+      }
+    ]
+  },
+  "publications": [
+    {
+      "title": "Musical Chord Recognition using Deep Learning",
+      "detail": "Research paper published in the journal at the NSRSIT'25 Conference."
+    },
+    {
+      "title": "accordo.ai",
+      "detail": "Published PYPI package with the developed DL Models for community use."
+    }
+  ],
+  "skills": {
+    "Languages": "Python, C#, Java, C, PHP, JS, Dart",
+    "AI / ML": "TensorFlow, PyTorch, Transformer, LangChain, LangGraph, ScikitLearn, CrewAI, XGBoost, Groq, Gemini, HuggingFace, OpenCV, Kafka, Ollama, LlamaIndex, Unsloth, VITS, n8n, Make, Retel.ai",
+    "Full Stack": "FastAPI, Node.js, Django, Streamlit, Next.js, React, React Expo, Flutter, .NET, Codeigniter",
+    "Dev / ML / AIOps": "Docker, GitHub Actions, WandB, Ansible, Terraform, Langfuse, Azure Bicep, Azure DevOps",
+    "Databases": "MongoDB, PostgreSQL, MySQL, ChromaDB, Qdrant, Weaviate, Neo4j, PGvector, Supabase, MinIO S3",
+    "Cloud & Data": "GCP, Azure, Snowflake, Streamlit Cloud, Google Vertex AI, Huggingface, Kaggle, Roboflow",
+    "Soft Skills": "Critical thinking, Problem solving, Collaboration, Time management, Teamwork, Leadership, Adaptability"
+  },
+  "activities": [
+    "Bassist at In the Zone Band (2025 - Present), Unstoppable Band (2023 - 2025)",
+    "Choir / Music Director at Music Club of NSBM (2023 - 2024)",
+    "Member of the ICT Club, Maths & Science Society of St. Peter's College (2019 - 2021)",
+    "Keyboardist / Choir Leader at Our Lady of Lourdes Choir",
+    "Member of the College Under 13 Div. 1 & 3 Cricket team (2013 - 2014)",
+    "President of the YCS Movement (2020 - 2021) & DH. Prefect of Our Lady of Lourdes Church (2017 - 2018)"
+  ],
+  "references": [
+    {
+      "name": "Dr. Mohamed Shafraz",
+      "title": "Senior Lecturer - NSBM",
+      "phone": "+94 77 351 2845",
+      "email": "shaf_hi@yahoo.com"
+    },
+    {
+      "name": "Kapila Malalasinghe",
+      "title": "Sen. System Admin. - CAMBIO IT",
+      "phone": "+94 71 461 4588",
+      "email": "damienkm@gmail.com"
+    }
+  ]
+}

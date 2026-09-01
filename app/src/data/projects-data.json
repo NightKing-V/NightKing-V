@@ -4,13 +4,13 @@
     "category": "work",
     "role": "AI/ML Engineer - Intern",
     "company": "AiRentoSoft Pvt. Ltd.",
-    "timeline": "March 2026 - Present",
-    "tech": ["YOLO", "Kaggle", "Weights & Biases", "FastAPI", "React", "Hugging Face", "PyTorch"],
-    "description": "Computer vision system utilizing YOLO models with a FastAPI wrapper hosted on Hugging Face Spaces. Models pre-trained on custom image datasets, versioned and deployed using MLOps tools. Live mobile app on Google Play Store and Apple App Store supporting real-time vehicle inspection.",
+    "timeline": "March 2026 - September 2026",
+    "tech": ["YOLO", "PyTorch", "FastAPI", "React", "HuggingFace", "WandB", "Kaggle", "MLOps", "Roboflow"],
+    "description": "Developed a Vehicle Damage Detection system consisting of a combination of YOLO models with a FastAPI wrapper hosted in Huggingface spaces. Pre-trained the models on Image datasets, versioned and deployed using MLOps tools. Also further developed the live mobile app to support new features which is in Playstore and Appstore.",
     "deliverables": [
-      "Developed a vehicle damage detection system using YOLO deep learning models, FastAPI wrapper, and a mobile application.",
-      "Pre-trained models on specialized image datasets, versioning and deploying them using MLOps tools like Weights & Biases.",
-      "Further developed and integrated the live mobile app to support new inspection features, published in the Play Store and App Store."
+      "Developed a vehicle damage detection system with DL models, API and Mobile app.",
+      "Pre-trained the models on specialized image datasets, versioned and deployed using MLOps tools like Weights & Biases and Roboflow.",
+      "Further developed the live mobile app to support new inspection features, published in the Play Store and App Store."
     ],
     "screenshots": [
       "/images/projects/vehicledamage/damagemobileapp-appstore.png",
@@ -22,15 +22,15 @@
     "category": "work",
     "role": "AI/ML Engineer - Intern",
     "company": "AiRentoSoft Pvt. Ltd.",
-    "timeline": "March 2026 - Present",
+    "timeline": "March 2026 - September 2026",
     "tech": ["React", "Node.js", ".NET", "Retel.ai", "OCR", "Azure DevOps"],
-    "description": "Integrated AI-driven features including document and card scanning using OCR models in web and mobile apps. Managed and enhanced the Retel.ai AI Caller Agent for customer inquiry automation. Scaled React web applications, reservations plugins, and .NET APIs, managing documentation in Azure DevOps.",
+    "description": "Collaborated in Developing and Implementing new features including AI Integrations. Worked on the React Web application, Reservations Plugin, .NET API, and developed the 2.0 version of the Mobile app with similar features to the main system and released documentation in AZURE Devops. Added AI Integrated features like document scanning, card scanning using OCR models in both web and mobile apps. Also managed and worked on the AI Caller agent in Retel.ai for client requirements.",
     "deliverables": [
       "Collaborated in developing and implementing new features including AI integrations across web and mobile systems.",
       "Worked on the React web application, Reservations Plugin, .NET API, and developed the 2.0 version of the mobile application.",
-      "Released system documentation in Azure DevOps and collaborated with developers, business support, and QA teams via Jira sprints.",
-      "Added AI-integrated features like document scanning and card scanning using custom OCR models.",
-      "Managed and configured the AI Caller Agent on Retel.ai to meet client requirements."
+      "Released documentation in Azure DevOps and collaborated with developers, business support, and QA teams via Jira sprints.",
+      "Added AI-integrated features like document scanning and card scanning using custom OCR models in web and mobile apps.",
+      "Managed and configured the AI Caller agent on Retel.ai to automate client inquiry workflows."
     ],
     "screenshots": [
       "/images/projects/airento/airentomobile-appstore.png",
@@ -42,9 +42,9 @@
     "category": "work",
     "role": "AI/ML Engineer - Intern",
     "company": "AiRentoSoft Pvt. Ltd.",
-    "timeline": "March 2026 - Present",
+    "timeline": "March 2026 - September 2026",
     "tech": ["Playwright", "Selenium", "Python", "ETL"],
-    "description": "Automated pipeline to extract potential clients for US-based car rental businesses. Processed scraped data through custom ETL pipelines to deliver structured formats for sales and support.",
+    "description": "Implemented a business leads extraction pipeline for extracting potential clients in USA based car rental businesses using Automation scripts and web scraping and using ETL pipelines to process data into understandable formats for business support division to use.",
     "deliverables": [
       "Assisted in extracting business leads for potential USA-based car rental clients using automation scripts to improve business opportunities.",
       "Developed web scraping workflows utilizing Playwright and Selenium to reliably collect lead data.",
@@ -61,12 +61,12 @@
     "role": "AI/ML Engineer - Freelance",
     "company": "WaveSkill Pvt. Ltd.",
     "timeline": "December 2025 - Present",
-    "tech": ["Coqui VITS", "Kaggle", "PyTorch"],
-    "description": "Research-focused custom Text-to-Speech (TTS) model supporting the Sinhala language. Built a Sinhala speech dataset from scratch and trained the VITS model on Kaggle dual T4 GPUs. Achieved high-fidelity research-level speech output ready for product pitches.",
+    "tech": ["Coqui VITS", "PyTorch", "Kaggle"],
+    "description": "Developed a research purpose private TTS model with support for Sinhala language. Created a private dataset from scratch for VITS format to train the Speech Model. Trained on Kaggle dual T4 GPUs and gained research level quality output for product pitching and further development with funds.",
     "deliverables": [
       "Developed a research-purpose private TTS model supporting the Sinhala language.",
-      "Created a private dataset from scratch formatted for VITS neural networks.",
-      "Trained the speech model using Kaggle dual T4 GPUs, achieving research-level quality.",
+      "Created a private dataset from scratch formatted for VITS format to train the speech model.",
+      "Trained on Kaggle dual T4 GPUs, achieving research-level quality output for product pitching.",
       "Utilized outputs for product pitching, gaining support for further funded development."
     ],
     "screenshots": [
@@ -79,11 +79,12 @@
     "role": "AI/ML Engineer - Freelance",
     "company": "WaveSkill Pvt. Ltd.",
     "timeline": "December 2025 - Present",
-    "tech": ["FastAPI", "PostgreSQL", "CrewAI", "LangGraph"],
-    "description": "Agentic shopping assistant designed for a baby care products e-commerce website. Implemented features for intelligent product search, QnA based on store policies, and automated customer support.",
+    "tech": ["FastAPI", "Postgres", "CrewAI", "LangGraph", "Langfuse"],
+    "description": "Developed an Agentic Shopping assistant for e-commerce website for baby care products. Implemented features in Product search, QnA using store policies and customer support. This is live on the TOGO website.",
     "deliverables": [
       "Developed an Agentic Shopping Assistant for a baby care products e-commerce website (TOGO).",
       "Implemented multi-agent orchestration for product search and interactive QnA using store policies.",
+      "Integrated Langfuse for observability, tracking agent traces, and optimizing LLM latency.",
       "Engineered real-time customer support capabilities, deployed live on the TOGO website."
     ],
     "screenshots": [
@@ -97,13 +98,13 @@
     "company": "Residue Solutions Pvt. Ltd.",
     "timeline": "September 2025 - February 2026",
     "tech": ["Next.js", "FastAPI", "Weaviate", "Ollama", "LangGraph", "LangChain", "Kafka", "Groq", "Gemini", "MongoDB", "Google Vertex AI"],
-    "description": "Intelligent retail assistant utilizing a ReAct agent with DAG-based task execution. High-throughput MongoDB-to-Weaviate Kafka pipeline built for real-time data synchronization. Integrates modular multi-LLM factory (Gemini, Llama) and Google Vertex AI for Virtual Try-On.",
+    "description": "Developed an intelligent AI shopping assistant that revolutionises the retail experience by utilising a ReAct capable Agent with DAG-based task execution. The platform features a high-throughput MongoDB to Weaviate Kafka pipeline for real-time data synchronization. Built on a scalable FastAPI microservices infrastructure, the system integrates a modular multi-LLM factory (Gemini, Llama) and Google Vertex AI for generative Virtual Try-On capabilities, delivering a seamless and context-aware customer assistance. Used LangChain & LangGraph for LLM orchestration and agent state management.",
     "deliverables": [
-      "Engineered an intelligent AI shopping assistant (FashionHub.ai) featuring product search, Virtual Try-On, cart management, payment assistance, QnA, and size matching.",
+      "Engineered an AI-powered shopping assistant (FashionHub.ai) for customers to get assistance on product search, Virtual Try-On, Cart management, Payment assistance, QnA and Size matching.",
+      "Leader of the AI/ML Intern team of five, providing technical guidance on project architecture, code reviews, and implementation strategies and regular meetings to ensure milestones were met.",
+      "Conducted research and integration by collaborating and leading the team members with LLM orchestration techniques, reasoning and multi-model pipelines that enabled complex product recommendations and Virtual Try-On features.",
       "Built a high-throughput MongoDB-to-Weaviate Kafka pipeline for real-time data synchronization.",
-      "Implemented a modular multi-LLM factory supporting Gemini, local Llama via Ollama, and Google Vertex AI for Virtual Try-On.",
-      "Engineered stateful multi-agent orchestration and reasoning graphs using LangGraph and LangChain.",
-      "Developed interactive user interfaces with Next.js integrated with FastAPI asynchronous backend services."
+      "Implemented a modular multi-LLM factory supporting Gemini, local Llama via Ollama, and Google Vertex AI for Virtual Try-On."
     ],
     "screenshots": [
       "/images/projects/fashionhub/image.png"
@@ -115,14 +116,14 @@
     "role": "Lead Developer & System Designer",
     "company": "University of Sri Jayewardenepura",
     "timeline": "2024",
-    "tech": ["Django", "FastAPI", "Next.js", "Neo4j", "PostgreSQL", "MongoDB", "Redis", "Azure", "GitHub Actions", "Azure Bicep"],
-    "description": "University social platform featuring media sharing, direct messaging, interactive forums, and collaborative academic threads. Implemented containerized microservices hosted on Azure with automated CI/CD pipelines via GitHub Actions and Azure Bicep.",
+    "tech": ["Django", "FastAPI", "Next.js", "Neo4j", "PostgreSQL (Supabase)", "MongoDB", "Redis", "Supabase", "Azure", "GitHub Actions", "Azure Bicep"],
+    "description": "Developed an Social application for university students with features including, medial sharing, direct messaging and forum based discussions. Led the development team in system design to development, testing and deployment. Used Azure as the hosting platform with services like container registry, secret management and containerized apps. Developed the main backend in Django and FastAPI with PostgreSQL (Supabase), MongoDB, Neo4J, Redis and Supabase. Built the CI/CD pipeline with GitHub Actions and Azure Bicep scripts for infrastructure provisioning and Integration. This was done as the Group project for USJP.",
     "deliverables": [
       "Developed a social application for university students with features including media sharing, direct messaging, and forum-based discussions.",
-      "Led the development team in system design, project scheduling, testing, and deployment.",
-      "Used Azure as the hosting platform with services like container registries, secret management, and containerized apps.",
-      "Developed the backend backed by Django and FastAPI with a polyglot database architecture: PostgreSQL, MongoDB, Neo4J, and Redis.",
-      "Built full CI/CD pipelines using GitHub Actions and Azure Bicep scripts for automated infrastructure provisioning."
+      "Led the development team in system design to development, testing, and deployment.",
+      "Used Azure as the hosting platform with services like container registry, secret management, and containerized apps.",
+      "Developed the main backend in Django and FastAPI with PostgreSQL (Supabase), MongoDB, Neo4J, Redis, and Supabase.",
+      "Built the CI/CD pipeline with GitHub Actions and Azure Bicep scripts for infrastructure provisioning and integration."
     ],
     "screenshots": [
       "/images/projects/univize/page.png"

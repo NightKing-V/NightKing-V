@@ -6,28 +6,28 @@ export default function Experience() {
 
   const experiences = [
     {
-      role: 'AI/ML Engineer - Intern',
-      company: 'AiRentoSoft Pvt. Ltd.',
-      duration: 'March 2026 - Present',
-      location: 'Sri Lanka',
-      details: [
-        'Developed a vehicle damage detection system using Deep Learning models, API, and a mobile application.',
-        'Collaborated in further developing the core AiRentoSoft system, encompassing the web app, mobile app, reservations plugin, and an AI Caller Agent.',
-        'Assisted in extracting business leads for potential USA-based car rental clients using automation scripts to improve business opportunities.',
-        'Collaborated with developers, business support, and QA teams via Jira within scheduled sprints.',
-      ],
-      color: 'var(--neon-cyan)',
-    },
-    {
       role: 'AI/ML Engineer - Freelance',
       company: 'WaveSkill Pvt. Ltd.',
       duration: 'December 2025 - Present',
       location: 'Sri Lanka',
       details: [
-        'Designed and engineered an AI-powered financial document extraction pipeline combining computer vision models and helper agents to extract financial data from company statements.',
-        'Developed a fundamental analysis engine integrated with a Stock Market API to compute financial ratios and provide AI-powered company insights.',
-        'Developed an Agentic Shopping Assistant for a baby care e-commerce platform (TOGO).',
-        'Created a custom dataset and trained a VITS model for Sinhala Text-to-Speech (TTS).',
+        'Designed and Engineered the AI-powered financial document extraction pipeline with computer vision models and helper agents to extract financial data from company statements.',
+        'Developed the fundamental analysis engine for the Stock Market API to give users stats and AI-powered insights on companies regarding their financial positions.',
+        'Developed an Agentic Shopping assistant for Baby Care products e-commerce website (TOGO).',
+        'Developed a TTS dataset and trained a VITS Model for Sinhala.',
+      ],
+      color: 'var(--neon-cyan)',
+    },
+    {
+      role: 'AI/ML Engineer - Intern',
+      company: 'AiRentoSoft Pvt. Ltd.',
+      duration: 'March 2026 - September 2026',
+      location: 'Sri Lanka (6 Months)',
+      details: [
+        'Developed a vehicle damage detection system with DL models, API and Mobile app.',
+        'Collaborated in further developing the AiRentoSoft System which includes the Web app, Mobile app, Reservations Plugin and AI Caller Agent.',
+        'Assisted in business leads extraction for potential clients for improving business opportunities.',
+        'Collaborated with the developers, business support team and QA engineers via Jira with scheduled sprints and meetings.',
       ],
       color: 'var(--neon-pink)',
     },
@@ -37,9 +37,9 @@ export default function Experience() {
       duration: 'September 2025 - February 2026',
       location: 'Sri Lanka (6 Months)',
       details: [
-        'Engineered an intelligent AI shopping assistant (FashionHub.ai) featuring product search, Virtual Try-On, cart management, payment assistance, QnA, and size matching.',
-        'Led the AI/ML intern team of five, providing technical guidance on project architecture, code reviews, and implementation strategies.',
-        'Conducted research and integration of LLM orchestration techniques, reasoning frameworks, and multi-model pipelines.',
+        'Engineered an AI-powered shopping assistant (FashionHub.ai) for customers to get assistance on product search, Virtual Try-On, Cart management, Payment assistance, QnA and Size matching.',
+        'Leader of the AI/ML Intern team of five, providing technical guidance on project architecture, code reviews, and implementation strategies and regular meetings to ensure milestones were met.',
+        'Conducted research and integration by collaborating and leading the team members with LLM orchestration techniques, reasoning and multi-model pipelines that enabled complex product recommendations and Virtual Try-On features.',
       ],
       color: 'var(--neon-purple)',
     },
@@ -49,8 +49,7 @@ export default function Experience() {
       duration: '2022',
       location: 'Sri Lanka (3 Months)',
       details: [
-        'Assisted in hardware, network maintenance, and repairs, reducing issues for users through proactive diagnostics and component-level troubleshooting.',
-        'Resolved technical queries in Help Desk support, providing rapid software, OS, and peripheral solutions.',
+        'Assisted in hardware, network maintenance and repairs, significantly reducing issues for users through proactive diagnostics and component-level troubleshooting. Resolved technical queries in Help Desk support, providing rapid software, OS, and peripheral solutions for diverse end-user requirements.',
       ],
       color: 'var(--neon-blue)',
     },

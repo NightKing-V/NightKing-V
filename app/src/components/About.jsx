@@ -11,8 +11,9 @@ export default function About() {
   const [typingText, setTypingText] = useState('AI/ML Engineer');
   const titles = [
     'AI/ML Engineer 🤖',
-    'Full Stack Developer 💻',
-    'Researcher & Innovater 🔬',
+    'Fullstack Developer 💻',
+    'Data Engineer ⚙️',
+    'Researcher & Innovator 🔬',
   ];
 
   useEffect(() => {
@@ -86,7 +87,7 @@ export default function About() {
             </div>
 
             <p style={styles.bio}>
-              Currently developing AI systems at <strong>AiRentoSoft</strong> and <strong>WaveSkill</strong>, with expertise spanning Agentic Systems, Deep Learning, Machine Learning, and scalable infrastructure. My dual-degree background in <strong>Computer Science (First Class Honours)</strong> and <strong>Information Systems (4th Year)</strong> provides both technical depth in AI/ML and a business systems perspective.
+              Currently developing AI systems at <strong>WaveSkill</strong> and <strong>AiRentoSoft</strong>, with expertise spanning Agentic Systems, Deep Learning, Machine Learning, and scalable infrastructure. Dual-degree background in <strong>Computer Science (First Class Honours)</strong> and <strong>Information Systems (4th Year)</strong> provides both technical depth in AI/ML and a business systems perspective. Published a research paper and Open Source package for community. Passionate about transforming complex AI innovations into deployed solutions that deliver measurable real-world impact.
             </p>
 
             <div style={styles.detailsGrid}>

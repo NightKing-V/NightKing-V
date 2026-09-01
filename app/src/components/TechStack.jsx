@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Code, Database, Cpu, Shield, HelpCircle, Terminal, Layers } from 'lucide-react';
+import { Code, Database, Cpu, Shield, Terminal, Layers } from 'lucide-react';
 
 export default function TechStack() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -23,6 +23,7 @@ export default function TechStack() {
         'PyTorch',
         'Scikit-learn',
         'Transformers',
+        'HuggingFace',
         'LangChain',
         'LangGraph',
         'LlamaIndex',
@@ -64,7 +65,7 @@ export default function TechStack() {
     },
     {
       id: 'devops',
-      title: 'DevOps & MLOps',
+      title: 'DevOps, MLOps & AIOps',
       icon: <Shield size={18} />,
       color: 'var(--neon-purple)',
       skills: [
@@ -72,6 +73,8 @@ export default function TechStack() {
         'GitHub Actions',
         'Terraform',
         'Ansible',
+        'Langfuse',
+        'Azure DevOps',
         'Azure Bicep',
         'Weights & Biases (WandB)',
         'Roboflow',
@@ -90,12 +93,16 @@ export default function TechStack() {
         'Qdrant',
         'Weaviate',
         'Neo4j',
+        'PGvector',
+        'Supabase',
+        'MinIO S3',
         'Google Cloud (GCP)',
         'Microsoft Azure',
         'Snowflake',
         'Google Vertex AI',
         'Streamlit Cloud',
         'Hugging Face Spaces',
+        'Kaggle',
       ],
     },
   ];
@@ -116,6 +123,7 @@ export default function TechStack() {
     PyTorch: { desc: 'Computer vision segmentation, Speech Synthesis (VITS), and deep neural network fine-tuning.', projects: ['Vehicle Damage Detection System', 'Sinhala TTS Model', 'Vision Reasoning Surveillance', 'Brain Tumour Detection Model'], level: 90 },
     'Scikit-learn': { desc: 'Classical machine learning pipelines, classification, regression, and data analytics.', projects: ['AI-Recruitment Platform', 'Data Analytics Dashboard'], level: 88 },
     Transformers: { desc: 'NLP sequence-to-sequence model fine-tuning (MBart50) and quantization.', projects: ['Subtitle Translation Model', 'AI-Recruitment Platform'], level: 85 },
+    HuggingFace: { desc: 'Platform for hosting ML models, datasets, spaces, and pre-trained transformers.', projects: ['Vehicle Damage Detection System', 'EduAgent', 'AI-Recruitment Platform', 'Subtitle Translation Model'], level: 90 },
     LangChain: { desc: 'AI orchestration, document ingestion agents, prompt formatting, and cognitive chains.', projects: ['FashionHub.ai', 'EduAgent', 'AI-Recruitment Platform', 'Vision Reasoning Surveillance'], level: 92 },
     LangGraph: { desc: 'Stateful multi-agent systems, circular task execution graphs, and robust flow controls.', projects: ['FashionHub.ai', 'TOGO'], level: 90 },
     LlamaIndex: { desc: 'RAG index structures, semantic document mapping, and vector metadata queries.', projects: ['Stock Market API'], level: 85 },
@@ -146,6 +154,8 @@ export default function TechStack() {
     'GitHub Actions': { desc: 'CI/CD workflow automation, build pipelines, and automated package deploys.', projects: ['Accordo.ai', 'Univize / JConnect'], level: 85 },
     Terraform: { desc: 'Infrastructure as Code for provisioning and configuring cloud computing networks.', projects: ['Cloud Deployments'], level: 75 },
     Ansible: { desc: 'IT automation, machine provisioning, and server orchestration scripts.', projects: ['Server Configs'], level: 75 },
+    Langfuse: { desc: 'Open source LLM engineering platform for tracing, evaluations, and prompt management.', projects: ['TOGO'], level: 85 },
+    'Azure DevOps': { desc: 'Enterprise DevOps platform for sprint tracking, CI/CD pipelines, and project documentation.', projects: ['AiRentoSoft System'], level: 85 },
     'Azure Bicep': { desc: 'Declarative language for provisioning Azure resources using infrastructure as code (IaC).', projects: ['Univize / JConnect'], level: 80 },
     'Weights & Biases (WandB)': { desc: 'MLOps model parameter logging, loss curve visualization, and validation.', projects: ['Vehicle Damage Detection System', 'Brain Tumour Detection Model'], level: 80 },
     Roboflow: { desc: 'Computer vision developer platform for dataset management, labeling, and model deployment workflows.', projects: ['Vehicle Damage Detection System'], level: 85 },
@@ -165,12 +175,16 @@ export default function TechStack() {
     Qdrant: { desc: 'Dedicated vector search engine for similarity metrics matching in RAG pipelines.', projects: ['AI-Recruitment Platform'], level: 85 },
     Weaviate: { desc: 'Vector database engine for context indexing and semantic searches.', projects: ['FashionHub.ai'], level: 85 },
     Neo4j: { desc: 'Graph DBMS mapping interconnected social network node profiles.', projects: ['Univize / JConnect'], level: 80 },
+    PGvector: { desc: 'Vector similarity search extension for PostgreSQL used in semantic data retrieval.', projects: ['TOGO'], level: 80 },
+    Supabase: { desc: 'Open source Firebase alternative with PostgreSQL, real-time subscriptions, and auth.', projects: ['Univize / JConnect'], level: 85 },
+    'MinIO S3': { desc: 'High-performance S3 compatible object storage for audio files and deep learning models.', projects: ['Accordo.ai'], level: 85 },
     'Google Cloud (GCP)': { desc: 'Cloud storage, virtual compute systems, and package repository deploys.', projects: ['Accordo.ai'], level: 80 },
     'Microsoft Azure': { desc: 'Hosting containerized microservices, setting up registries, and bicep scripts.', projects: ['Univize / JConnect', 'AiRentoSoft System'], level: 85 },
     Snowflake: { desc: 'Enterprise data warehousing, query processing, and loading ETL pipes.', projects: ['Data Analytics Dashboard'], level: 80 },
     'Google Vertex AI': { desc: 'Generative machine learning models API, fine-tuning, and model evaluations.', projects: ['FashionHub.ai'], level: 85 },
     'Streamlit Cloud': { desc: 'Deploying data analytics dashboard applications to the web.', projects: ['AI-Recruitment Platform'], level: 80 },
     'Hugging Face Spaces': { desc: 'Model hosting space for computer vision YOLO wrappers and public apps.', projects: ['Vehicle Damage Detection System'], level: 85 },
+    Kaggle: { desc: 'Cloud GPU environment used for training deep learning and audio synthesis models.', projects: ['Sinhala TTS Model', 'Brain Tumour Detection Model', 'Vehicle Damage Detection System'], level: 90 },
   };
 
   const filteredCategories = selectedCategory === 'all' 

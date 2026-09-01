@@ -131,7 +131,7 @@ export default function Contact() {
           <div style={styles.locationContainer}>
             <MapPin size={16} style={{ color: 'var(--neon-cyan)', marginRight: '8px' }} />
             <span style={styles.locationText}>
-              Based in: <strong>Piliyandala, Western Province, Sri Lanka</strong>
+              Based in: <strong>Colombo, Sri Lanka</strong>
             </span>
           </div>
         </div>

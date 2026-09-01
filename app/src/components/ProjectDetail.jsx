@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowLeft, Briefcase, Calendar, Building, Layers, CheckCircle2, ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
+import { ArrowLeft, Briefcase, Calendar, Building, CheckCircle2, ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
 import projectsData from '../data/projects-data.json';
 
 export default function ProjectDetail({ projectId }) {
