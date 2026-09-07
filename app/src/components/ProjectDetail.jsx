@@ -2,6 +2,22 @@ import { useState, useEffect } from 'react';
 import { ArrowLeft, Briefcase, Calendar, Building, CheckCircle2, ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
 import projectsData from '../data/projects-data.json';
 
+const Github = ({ size = 20, ...props }) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    stroke="currentColor"
+    strokeWidth="2"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+  </svg>
+);
+
 export default function ProjectDetail({ projectId }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -43,19 +59,47 @@ export default function ProjectDetail({ projectId }) {
   const isWork = project.category === 'work';
   const accentColor = isWork ? 'var(--neon-pink)' : 'var(--neon-cyan)';
   const borderGradient = isWork ? 'var(--glass-border-pink)' : 'var(--glass-border)';
+  const githubUrl = project.github || (project.link && project.link !== 'https://github.com/NightKing-V/' ? project.link : null);
 
   return (
     <section className="section secondary-page" style={styles.section}>
       <div className="container">
         
-        {/* Back Link */}
+        {/* Back Link & GitHub Action */}
         <div style={styles.headerNav}>
           <a href="#projects" className="btn-neon" style={{ ...styles.backBtn, color: accentColor, borderColor: accentColor }}>
             <ArrowLeft size={16} /> Back to Portfolio
           </a>
-          <span style={styles.projectIdText}>
-            PROJECT_ID // {projectId.toUpperCase()}
-          </span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+            {githubUrl && (
+              <a 
+                href={githubUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-neon"
+                style={{
+                  ...styles.backBtn,
+                  color: 'var(--neon-cyan)',
+                  borderColor: 'var(--neon-cyan)',
+                  padding: '0.45rem 1rem',
+                  fontSize: '0.85rem',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'var(--neon-cyan)';
+                  e.currentTarget.style.color = '#000';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent';
+                  e.currentTarget.style.color = 'var(--neon-cyan)';
+                }}
+              >
+                <Github size={16} /> View on GitHub
+              </a>
+            )}
+            <span style={styles.projectIdText}>
+              PROJECT_ID // {projectId.toUpperCase()}
+            </span>
+          </div>
         </div>
 
         {/* Project Layout Single Column Document */}
@@ -189,6 +233,38 @@ export default function ProjectDetail({ projectId }) {
                 </span>
               ))}
             </div>
+
+            {/* GitHub Repository Action Link */}
+            {githubUrl && (
+              <div style={{ marginTop: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.05)', display: 'flex', justifyContent: 'flex-start' }}>
+                <a 
+                  href={githubUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn-neon"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    padding: '0.75rem 1.5rem',
+                    fontSize: '0.95rem',
+                    fontWeight: '700',
+                    color: 'var(--neon-cyan)',
+                    borderColor: 'var(--neon-cyan)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'var(--neon-cyan)';
+                    e.currentTarget.style.color = '#000';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                    e.currentTarget.style.color = 'var(--neon-cyan)';
+                  }}
+                >
+                  <Github size={20} /> Explore Repository on GitHub
+                </a>
+              </div>
+            )}
           </div>
         </div>
 

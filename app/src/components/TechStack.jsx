@@ -109,7 +109,7 @@ export default function TechStack() {
 
   const skillDetails = {
     // Languages
-    Python: { desc: 'Primary language for AI, data pipelines, web scraping, and machine learning models.', projects: ['Accordo.ai', 'Stock Market API', 'EduAgent', 'AI-Recruitment Platform', 'Vision Reasoning Surveillance', 'Data Analytics Dashboard'], level: 95 },
+    Python: { desc: 'Primary language for AI, data pipelines, web scraping, and machine learning models.', projects: ['Weekly Report Generator & Team Dashboard', 'Accordo.ai', 'Stock Market API', 'EduAgent', 'AI-Recruitment Platform', 'Vision Reasoning Surveillance', 'Data Analytics Dashboard'], level: 95 },
     Java: { desc: 'Used for object-oriented software engineering, data structures, and academic project backends.', projects: ['Coursework Systems'], level: 80 },
     'C#': { desc: 'Used for XAML desktop apps and full-stack development with .NET.', projects: ['Vehicle Rental System', 'AiRentoSoft System'], level: 85 },
     C: { desc: 'System programming foundation, memory allocation, and performance benchmarking.', projects: ['Academic systems'], level: 75 },
@@ -124,33 +124,33 @@ export default function TechStack() {
     'Scikit-learn': { desc: 'Classical machine learning pipelines, classification, regression, and data analytics.', projects: ['AI-Recruitment Platform', 'Data Analytics Dashboard'], level: 88 },
     Transformers: { desc: 'NLP sequence-to-sequence model fine-tuning (MBart50) and quantization.', projects: ['Subtitle Translation Model', 'AI-Recruitment Platform'], level: 85 },
     HuggingFace: { desc: 'Platform for hosting ML models, datasets, spaces, and pre-trained transformers.', projects: ['Vehicle Damage Detection System', 'EduAgent', 'AI-Recruitment Platform', 'Subtitle Translation Model'], level: 90 },
-    LangChain: { desc: 'AI orchestration, document ingestion agents, prompt formatting, and cognitive chains.', projects: ['FashionHub.ai', 'EduAgent', 'AI-Recruitment Platform', 'Vision Reasoning Surveillance'], level: 92 },
-    LangGraph: { desc: 'Stateful multi-agent systems, circular task execution graphs, and robust flow controls.', projects: ['FashionHub.ai', 'TOGO'], level: 90 },
+    LangChain: { desc: 'AI orchestration, document ingestion agents, prompt formatting, and cognitive chains.', projects: ['Weekly Report Generator & Team Dashboard', 'FashionHub.ai', 'EduAgent', 'AI-Recruitment Platform', 'Vision Reasoning Surveillance'], level: 92 },
+    LangGraph: { desc: 'Stateful multi-agent systems, circular task execution graphs, and robust flow controls.', projects: ['Weekly Report Generator & Team Dashboard', 'FashionHub.ai', 'TOGO'], level: 90 },
     LlamaIndex: { desc: 'RAG index structures, semantic document mapping, and vector metadata queries.', projects: ['Stock Market API'], level: 85 },
     Unsloth: { desc: 'Accelerated low-memory LLM fine-tuning using LoRA adapters on dual T4 GPUs.', projects: ['Subtitle Translation Model'], level: 85 },
     VITS: { desc: 'Variational Inference Text-to-Speech (TTS) voice modeling for the Sinhala language.', projects: ['Sinhala TTS Model'], level: 80 },
     XGBoost: { desc: 'Gradient boosted trees used to analyze job market trends and predict classifications.', projects: ['Data Analytics Dashboard'], level: 80 },
     CrewAI: { desc: 'Multi-agent role-playing structures, task divisions, and autonomous tool bindings.', projects: ['TOGO', 'EduAgent', 'AI-Pasala'], level: 88 },
-    Groq: { desc: 'Ultra-low latency cloud LPU inference server setups for RAG systems.', projects: ['FashionHub.ai', 'Stock Market API', 'AI-Recruitment Platform'], level: 90 },
+    Groq: { desc: 'Ultra-low latency cloud LPU inference server setups for RAG systems.', projects: ['Weekly Report Generator & Team Dashboard', 'FashionHub.ai', 'Stock Market API', 'AI-Recruitment Platform'], level: 90 },
     Gemini: { desc: 'Google Multimodal LLM integration for layout extraction and vision analysis.', projects: ['FashionHub.ai', 'AI-Pasala'], level: 90 },
     Ollama: { desc: 'Local LLM serving infrastructure (Llama3, Mistral) for agent privacy.', projects: ['FashionHub.ai', 'EduAgent', 'Vision Reasoning Surveillance'], level: 90 },
     OpenCV: { desc: 'Image preprocessing, thresholding, contour detection, and frame analysis streams.', projects: ['Brain Tumour Detection Model', 'Vision Reasoning Surveillance', 'Stock Market API'], level: 85 },
     'Apache Kafka': { desc: 'Real-time high-throughput message streaming pipeline for database synchronization.', projects: ['FashionHub.ai'], level: 80 },
 
     // FullStack
-    FastAPI: { desc: 'High-performance async Python backend APIs with built-in Pydantic verification.', projects: ['FashionHub.ai', 'Accordo.ai', 'Stock Market API', 'TOGO', 'Vehicle Damage Detection System'], level: 92 },
+    FastAPI: { desc: 'High-performance async Python backend APIs with built-in Pydantic verification.', projects: ['Weekly Report Generator & Team Dashboard', 'FashionHub.ai', 'Accordo.ai', 'Stock Market API', 'TOGO', 'Vehicle Damage Detection System'], level: 92 },
     'Node.js': { desc: 'Asynchronous event-driven backend services and API gateways.', projects: ['AiRentoSoft System', 'Univize / JConnect', 'AI-Pasala'], level: 85 },
     Django: { desc: 'Python web framework, ORM, REST API integrations, and database migrations.', projects: ['Univize / JConnect'], level: 80 },
     Streamlit: { desc: 'Rapid prototyping tool for creating AI web interfaces and dashboards.', projects: ['AI-Recruitment Platform', 'Vision Reasoning Surveillance', 'EduAgent'], level: 90 },
     'Next.js': { desc: 'React meta-framework for serverless API endpoints, SSR, and dynamic rendering.', projects: ['FashionHub.ai', 'AI-Pasala', 'Univize / JConnect'], level: 88 },
-    React: { desc: 'Modular web layouts, custom hooks, context state management, and component lifecycles.', projects: ['AiRentoSoft System', 'Univize / JConnect', 'Vehicle Damage Detection System'], level: 90 },
+    React: { desc: 'Modular web layouts, custom hooks, context state management, and component lifecycles.', projects: ['Weekly Report Generator & Team Dashboard', 'AiRentoSoft System', 'Univize / JConnect', 'Vehicle Damage Detection System'], level: 90 },
     'Expo (React Native)': { desc: 'Used to compile and ship Android/iOS mobile application interfaces.', projects: ['AiRentoSoft System', 'Vehicle Damage Detection System'], level: 80 },
     Flutter: { desc: 'Cross-platform app compiles, material rendering, and real-time audio playback.', projects: ['Accordo.ai', 'AiRentoSoft System'], level: 85 },
     '.NET (C#)': { desc: 'Enterprise desktop services, booking system databases, and REST APIs.', projects: ['AiRentoSoft System', 'Vehicle Rental System'], level: 80 },
     CodeIgniter: { desc: 'Lightweight PHP MVC web system used to handle relational database operations.', projects: ['PricePal'], level: 80 },
 
     // DevOps
-    Docker: { desc: 'Containerizing application packages and setting up multi-stage deployment builds.', projects: ['AI-Pasala', 'Univize / JConnect'], level: 85 },
+    Docker: { desc: 'Containerizing application packages and setting up multi-stage deployment builds.', projects: ['Weekly Report Generator & Team Dashboard', 'AI-Pasala', 'Univize / JConnect'], level: 85 },
     'GitHub Actions': { desc: 'CI/CD workflow automation, build pipelines, and automated package deploys.', projects: ['Accordo.ai', 'Univize / JConnect'], level: 85 },
     Terraform: { desc: 'Infrastructure as Code for provisioning and configuring cloud computing networks.', projects: ['Cloud Deployments'], level: 75 },
     Ansible: { desc: 'IT automation, machine provisioning, and server orchestration scripts.', projects: ['Server Configs'], level: 75 },
@@ -168,7 +168,7 @@ export default function TechStack() {
     Playwright: { desc: 'Modern end-to-end testing and web scraping framework for fast and reliable browser automation.', projects: ['Business Leads Extraction Pipeline'], level: 90 },
 
     // Databases
-    MongoDB: { desc: 'NoSQL document storage for flexible schemas, e-commerce products, and social feeds.', projects: ['Accordo.ai', 'Stock Market API', 'FashionHub.ai', 'AI-Recruitment Platform', 'Univize / JConnect', 'PricePal'], level: 90 },
+    MongoDB: { desc: 'NoSQL document storage for flexible schemas, e-commerce products, and social feeds.', projects: ['Weekly Report Generator & Team Dashboard', 'Accordo.ai', 'Stock Market API', 'FashionHub.ai', 'AI-Recruitment Platform', 'Univize / JConnect', 'PricePal'], level: 90 },
     PostgreSQL: { desc: 'Relational DBMS used for complex transaction flows, indexing, and joins.', projects: ['TOGO', 'Univize / JConnect'], level: 88 },
     MySQL: { desc: 'Relational database schema design and transactional management.', projects: ['Academic projects'], level: 80 },
     ChromaDB: { desc: 'Lightweight vector database for sentence-transformer embeddings storage.', projects: ['EduAgent', 'AI-Pasala'], level: 85 },

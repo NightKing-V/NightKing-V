@@ -147,6 +147,11 @@
         "description": "Developed a brain tumour detection model using the U-Net encoder-decoder architecture on MRI images. Implemented separate versions in PyTorch and Tensorflow. Used two popular 2D and 3D MRI image datasets from Kaggle. Used data augmentation methods using the albumentations library. Trained and evaluated on DICE, IoU and custom loss functions. Achieved ~90% accuracy."
       },
       {
+        "name": "Weekly Report Generator & Team Dashboard",
+        "technologies": "FastAPI, MongoDB, React 19, TypeScript, Zustand 5, Tailwind CSS, LangChain, LangGraph, Groq, Docker",
+        "description": "Engineered an asynchronous Weekly Report Generator and Team Dashboard with RBAC (Contributors, Managers, Admins), ISO calendar week management, immutable version snapshots, and live KPI analytics. Built an AI Assistant using LangGraph StateGraph, LangChain RAG, and Groq LLM with a 5-response rolling summarizer and session memory. Containerized with Docker Compose."
+      },
+      {
         "name": "Data Analytics Dashboard",
         "technologies": "Python, SQL, Snowflake, ETL, XGBoost, Streamlit",
         "description": "Analysed LinkedIn job posting data using a real-time ETL pipeline using python, into Snowflake for storage and processing. Built regression and classification models using XGBoost to derive insights from job trends and requirements. Implemented real-time data feeds and visualized analytics through an interactive dashboard."
@@ -164,9 +169,9 @@
     }
   ],
   "skills": {
-    "Languages": "Python, C#, Java, C, PHP, JS, Dart",
+    "Languages": "Python, TypeScript, JS, C#, Java, C, PHP, Dart",
     "AI / ML": "TensorFlow, PyTorch, Transformer, LangChain, LangGraph, ScikitLearn, CrewAI, XGBoost, Groq, Gemini, HuggingFace, OpenCV, Kafka, Ollama, LlamaIndex, Unsloth, VITS, n8n, Make, Retel.ai",
-    "Full Stack": "FastAPI, Node.js, Django, Streamlit, Next.js, React, React Expo, Flutter, .NET, Codeigniter",
+    "Full Stack": "FastAPI, React, Next.js, Node.js, Zustand, Tailwind CSS, Django, Streamlit, React Expo, Flutter, .NET, Codeigniter",
     "Dev / ML / AIOps": "Docker, GitHub Actions, WandB, Ansible, Terraform, Langfuse, Azure Bicep, Azure DevOps",
     "Databases": "MongoDB, PostgreSQL, MySQL, ChromaDB, Qdrant, Weaviate, Neo4j, PGvector, Supabase, MinIO S3",
     "Cloud & Data": "GCP, Azure, Snowflake, Streamlit Cloud, Google Vertex AI, Huggingface, Kaggle, Roboflow",

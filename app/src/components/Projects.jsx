@@ -80,6 +80,14 @@ export default function Projects() {
     
     // Personal Projects
     {
+      id: 'reportingdashboard',
+      title: 'Weekly Report Generator & Team Dashboard',
+      category: 'personal',
+      tech: ['FastAPI', 'MongoDB', 'React 19', 'TypeScript', 'Zustand 5', 'Tailwind CSS', 'LangChain', 'LangGraph', 'Groq', 'Docker', 'Recharts'],
+      description: 'Asynchronous Weekly Report Generator and Team Dashboard with RBAC (Contributors, Managers, Admins), ISO calendar week management, and live KPI analytics. Features an AI Assistant powered by LangGraph, LangChain, and Groq LLM with rolling summarization.',
+      link: 'https://github.com/NightKing-V/Weekly-Report-Generator-Team-Dashboard',
+    },
+    {
       title: 'Accordo.ai - Music Analysis Platform',
       category: 'personal',
       tech: ['TensorFlow', 'RNN', 'Bi-LSTM', 'Flutter', 'FastAPI', 'Celery', 'Redis', 'MongoDB', 'TensorFlow Serving', 'GCP', 'MinIO S3'],
@@ -257,27 +265,55 @@ export default function Projects() {
               {(proj.id || (proj.link && proj.link !== 'https://github.com/NightKing-V/')) && (
                 <div style={styles.cardFooter}>
                   {proj.id ? (
-                    <a 
-                      href={`#/project/${proj.id}`} 
-                      className="btn-neon"
-                      style={{
-                        ...styles.actionLink,
-                        width: '100%',
-                        justifyContent: 'center',
-                        color: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
-                        borderColor: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.background = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
-                        e.currentTarget.style.color = proj.category === 'work' ? '#fff' : '#000';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.background = 'transparent';
-                        e.currentTarget.style.color = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
-                      }}
-                    >
-                      See More Info
-                    </a>
+                    <div style={{ display: 'flex', gap: '8px', width: '100%' }}>
+                      <a 
+                        href={`#/project/${proj.id}`} 
+                        className="btn-neon"
+                        style={{
+                          ...styles.actionLink,
+                          flex: 1,
+                          justifyContent: 'center',
+                          color: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
+                          borderColor: proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
+                          e.currentTarget.style.color = proj.category === 'work' ? '#fff' : '#000';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = 'transparent';
+                          e.currentTarget.style.color = proj.category === 'work' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
+                        }}
+                      >
+                        See More Info
+                      </a>
+                      {proj.link && proj.link !== 'https://github.com/NightKing-V/' && (
+                        <a 
+                          href={proj.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="btn-neon"
+                          title="Explore GitHub Repository"
+                          style={{
+                            ...styles.actionLink,
+                            padding: '0.6rem 0.8rem',
+                            justifyContent: 'center',
+                            color: 'var(--neon-cyan)',
+                            borderColor: 'var(--neon-cyan)',
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = 'var(--neon-cyan)';
+                            e.currentTarget.style.color = '#000';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = 'transparent';
+                            e.currentTarget.style.color = 'var(--neon-cyan)';
+                          }}
+                        >
+                          <Github size={16} />
+                        </a>
+                      )}
+                    </div>
                   ) : (
                     <a 
                       href={proj.link} 

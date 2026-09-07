@@ -171,6 +171,13 @@ My dual-degree background in **Computer Science (First Class Honours)** and **In
 
 ## 🚀 Personal & Academic Projects
 
+### 📊 [Weekly Report Generator & Team Dashboard](https://github.com/NightKing-V/Weekly-Report-Generator-Team-Dashboard)
+- 🧠 **Tech**: FastAPI, MongoDB, React 19, TypeScript, Zustand 5, Tailwind CSS, LangChain, LangGraph, Groq, Docker, Recharts, Pydantic v2
+- 🎯 Enterprise-grade, asynchronous reporting system and analytics dashboard with Role-Based Access Control (Contributors, Managers, Admins) and ISO calendar standardization.
+- 🤖 Intelligent AI assistant powered by LangGraph and LangChain with Groq LLM featuring a 5-response rolling summarizer and grounded MongoDB RAG.
+- 📈 Real-time KPI tracking, compliance rate metrics, and interactive charts built with Recharts.
+- 🐳 Containerized with Docker Compose for seamless multi-service orchestration.
+
 ### 🎵 [Accordo.ai - Music Analysis Platform](https://github.com/NightKing-V/Chord-Classification-Model-accordo.ai-)
 **Final Year Research Project**
 - 🧠 **Tech**: TensorFlow, RNN, Bi-LSTM, Flutter, FastAPI, Celery, Redis, MongoDB, TensorFlow Serving, GCP, MinIO S3
