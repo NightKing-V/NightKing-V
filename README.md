@@ -31,6 +31,8 @@ My dual-degree background in **Computer Science (First Class Honours)** and **In
 #### AI/ML & Data Science
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)
+![LightGBM](https://img.shields.io/badge/LightGBM-brightgreen?style=for-the-badge)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Transformers](https://img.shields.io/badge/Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=white)
 ![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-FFD21E?style=for-the-badge)
@@ -69,6 +71,9 @@ My dual-degree background in **Computer Science (First Class Honours)** and **In
 #### DevOps, MLOps & AIOps
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![Ansible](https://img.shields.io/badge/ansible-%23000000.svg?style=for-the-badge&logo=ansible&logoColor=white)
 ![Langfuse](https://img.shields.io/badge/Langfuse-18181B?style=for-the-badge)
@@ -81,6 +86,8 @@ My dual-degree background in **Computer Science (First Class Honours)** and **In
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![Google Cloud BigQuery](https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Apache NiFi](https://img.shields.io/badge/Apache%20NiFi-7298A6?style=for-the-badge&logo=apache&logoColor=white)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6B35?style=for-the-badge&logo=chroma&logoColor=white)
 ![Qdrant](https://img.shields.io/badge/Qdrant-DC382D?style=for-the-badge&logo=qdrant&logoColor=white)
 ![Weaviate](https://img.shields.io/badge/Weaviate-1C1E24?style=for-the-badge)
@@ -184,6 +191,15 @@ My dual-degree background in **Computer Science (First Class Honours)** and **In
 - 🎯 Intelligent system performing musical analysis on audio for musicians, exploring Bi-LSTM networks and time-frequency feature extraction (+80% accuracy).
 - 📱 Practical implementation using FastAPI, MongoDB, and TensorFlow Serving with a Flutter-based mobile UI for real-time analysis and playback integration.
 - 📦 Published as a PyPI package with CI/CD deployment to Google Cloud Platform.
+
+### 🛡️ [Real-Time Fraud Prevention & Intelligent Analytics Engine](https://github.com/NightKing-V/Real-Time-Fraud-Prevention-Intelligent-Analytics-Engine)
+- 🧠 **Tech**: Apache Spark 3.5, Apache Kafka, Apache NiFi, MLflow, LightGBM, Prometheus, Grafana, Google Cloud BigQuery, PySpark, Python, Docker, Pandas / PyArrow
+- 🎯 Enterprise-grade distributed streaming intelligence pipeline scoring transactions and detecting fraudulent checkout events in real time (< 50ms SLA).
+- 🧹 Dropped 339 proprietary V-columns and 38 obscured masks across 590k+ IEEE-CIS records, building a 30-feature reproducible engineering pipeline with cyclical temporal encodings and interaction keys.
+- ⚡ Vectorized PyArrow / Pandas UDF inference on PySpark Structured Streaming with singleton LightGBM Booster caching (sub-5ms scoring).
+- 💰 Formulated financial cost-matrix optimization ($\tau^* = 0.10$) balancing False Negative chargebacks (\$150) against False Positive operational friction (\$10).
+- 🔄 Dual-sink micro-batch routing dispatching high-risk alerts to Kafka (`transactions.alerts`) and complete audit logs to Google Cloud BigQuery (`fraud_analytics.transactions_log`).
+- 📊 Full observability stack with Prometheus scraping metrics and a pre-configured Grafana telemetry dashboard tracking throughput, consumer lag, and model drift.
 
 ### 👥 [Univize - University Social App](https://github.com/NightKing-V/)
 **Group Project for USJP** 

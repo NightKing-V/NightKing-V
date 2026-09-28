@@ -1,0 +1,591 @@
+Delivered-To: valentenocavlenora@gmail.com
+Received: by 2002:a05:7300:79c2:b0:335:7d2a:1e55 with SMTP id b2csp209827dyi;
+        Fri, 11 Sep 2026 02:41:19 -0700 (PDT)
+X-Received: by 2002:a05:6870:b4a8:b0:47d:c7ac:58d7 with SMTP id 586e51a60fabf-47de9c8de50mr1899199fac.2.1789119679625;
+        Fri, 11 Sep 2026 02:41:19 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1789119679; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=Ms5p3iw9JEy45hn5vbGcGSj3KRgjNptwyxtba9jlVJHh8zDq3yykEjsKbWa/uvxTKr
+         2eVwZrJyELLHeQeZ/4J8/A98AJM9AV4PTpb7oJgMF/5bm+rBo9COFKXBK3gRlenivFx2
+         ApNemJlVnUxiTbQZGxJlnzrw62ITqzg2KwmwFermgIlOOBQdkYR9A/ctVCQs8T5q9/bL
+         MLpij24QwyoJQEbAwvkcmAR1NRFctrq1CsbUj1ACqmzE+M4A78/1tPTfro8lZeXl9sWK
+         DThoE7lLxubPYX/3/pf4HwtJTIWoDFHulF+IJNVgc5sHJSW61hx/0YSWepX/jd7c1OO0
+         WKZw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=652bTNsMUHUYHh2ufJtoxmJySM/WCpqkzZaWWTHJQi4=;
+        fh=MXD5aKKSH3QkWvmWVlOuOD0nv6AD8OiYxlBghFOIvHU=;
+        b=eTCVaqZ+hC81qHtNL9vJ4kfHC18vgtIKPgfIWt66Q/uYT2v1uI6M2Dtc/rFa12SEwE
+         NTOAHB9QiXlE6JsqZAL24cOhremDoSHxaqK9ZhyZLmekzyUzC3ZvBst73sl2qifW0agj
+         y1wDMlp3VkyCO3Q/RrfwJgDmhGNsYltg52Df4uExWiaM409dYfz9HYuYhLsZQR/CG+Ox
+         /Ty4Pam6HpS+DZ0tdDA5yKzQoZ2Ht8WmgHNU0b2WbuMIqqKRqWJ0UGQLmUiYyFAokv6l
+         NkV+YlJQF7MI4PP9MKxrXO9J02ONvc1CmxR5D7MS/M+kAoQ4kDjkDTp1OPmqA3zo79mo
+         oLYA==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=Vx6k0WQa;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of medjobs263@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=medjobs263@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <medjobs263@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 586e51a60fabf-47dfb22080esor701916fac.15.2026.09.11.02.41.19
+        for <valentenocavlenora@gmail.com>
+        (Google Transport Security);
+        Fri, 11 Sep 2026 02:41:19 -0700 (PDT)
+Received-SPF: pass (google.com: domain of medjobs263@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=Vx6k0WQa;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of medjobs263@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=medjobs263@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1789119679; cv=none;
+        d=google.com; s=arc-20260327;
+        b=KvynYhM8qGreIf7xlJ6M68fo3+Pu0z2+MRpnWp6IBXWgMd7QtHn6UADt/sueedabKZ
+         QuMf+yVwPVu2vcr6UFOCY3GbzIu26LR6+MLoYLvmtqAXfXfzMjU6QVvU2CDvXfFP4tib
+         cqUO485LLSh49XS0mQIde9p3Nz9EYe/L+NV/S0g3zoekepdnHMEDeo8/OlqIXk7E4v/c
+         tgXwYqZE6TxJ6V8kvmhHrKgZRz8H5SCcviCKmV2M9T30bzNKrwVhCz8P6arZylctryH0
+         5FLGHrfDLFsZCQFUKsU+aa8k04FyiQgL5lp0HpBvCyC5NbWEJRtFk2ou4KvvhrpjC7pA
+         vvFg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=652bTNsMUHUYHh2ufJtoxmJySM/WCpqkzZaWWTHJQi4=;
+        fh=MXD5aKKSH3QkWvmWVlOuOD0nv6AD8OiYxlBghFOIvHU=;
+        b=ExhQ1e+Fo2aLuvYYvOSZA5NgDOARVJFxO4dcSj51zORDR4Ook3gnotD0D8pGeD1Lkv
+         A9b3nGaiGEJIuAEPZtH0OhNG/i70fEE1bOpCQJVu3mMkRBQKJk4Q182WIHXQ+H1WvDLR
+         QlqFFvg5o7cznrMKqcUs+clKHESOayFblZ6JNtVmvOZ6b9RCI2WIMetHbirV/GebZXBw
+         aw67dGLjy9t6SyO4VCMiq7pn91ZrmcsuYblgQobI8eqrom/sGi5p8u4fxKjBAX1g28yT
+         q+blJvclxiVmSn9d/3+V6OO6negR8PUfB/fv1GKd7lAt68oi1ZkwG/fi6eCh1Zz35Cx6
+         mImQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1789119679; x=1789724479; dara=google.com;
+        h=content-type:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=652bTNsMUHUYHh2ufJtoxmJySM/WCpqkzZaWWTHJQi4=;
+        b=Vx6k0WQakAQXzKRi85joeLflfGlCsvhWKiKzKTCbyT4d73B5A45eC53fJ7IzBQmbmp
+         u/+yJdd85rtruXTCRkoimS3oarK6b70NJKa4wPS+G8wZf0A/rkMkeYqjZf8cLAHKfDEO
+         4xXTHW9bgiv587U924aCxwSoouCk4+kPk3h0PNx7p/2nzj0UwGUydG66jRFDl5IvCMPs
+         4BVA6WbDCc7T1EldRs/Oe8pbN/yVTgM4HdeKzRK+pSD18i1WdYOg5C3E36qKqevXU/P2
+         LbgErPdv48fP0H9NzuKbLs6BiquFL0a2plT3pAbH9H0+QDzy4tLH+7eXlqGL1fV1au1X
+         cBZA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1789119679; x=1789724479;
+        h=content-type:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to:content-type;
+        bh=652bTNsMUHUYHh2ufJtoxmJySM/WCpqkzZaWWTHJQi4=;
+        b=jqwG5e1zu7mGZvKI0MNeqEwtXZBXgzWOk+p+iUYzE1ewHm88Lxapv3frL1SCOQzO/h
+         p0f3V+eZ0f4wEOcrcKNRCBrXLRXZHsq6HidCw3wonOHwc2Yt5oYIXcnl6VC+yCD8EIgM
+         yvPGV26eyw9gINv6dvXqXie/sn6DTXKyVqL/Lp8uCQjKVGB+hUIZLr59M2Llwo4HWs8d
+         NT9mmPZldNEAJBiE7lGAqp55PDJhbXl2tGFaBjYT5Z9vpLL72P64siiL0uFoo3uToJ9B
+         DWECZE4n8yDBIfjeFGR9bq1Q3ICuIHrAUkakb2YQapt9BwjdbbS9QMjB0WVRmvCliJRb
+         58zQ==
+X-Gm-Message-State: AFuF++nc1U5Mw72ezzWml2H53ugkHnnFyDtUUGl4LDR2HCw20OAp1ONM
+	tNQ2gmYid2QHc9xiTX1mqBSgit5MtME1ykZ4Wx/3X0vScEwXNvoLMsV2P5S7n/ZzscpGE6U7QNZ
+	Bgx7cO0qouoR/P8/QCmKDApSnSgHInMjOfoJxmVE=
+X-Gm-Gg: AYBFou0LGtVuH8cIvfqZNsel/CLjMfb/cqe+4eVoQ4hQA7EJycZbxi0FpihCDVIkko0
+	97TNFUqYPdvU2D0IZLCrSwA8sauqz+hSBRrJjuPQ2uEwUDE9UyycryKwhPsE+2gJYc/nbotsxCW
+	txNptDDuN9ZWFQ3CT0QTJzHsa5DNyfcY7uED4EsHp83Coe7VEgUuvSJ1uR0/7dJadx805RwoS05
+	3i5RRUFGuJm9m2PgUoMHOM5P/ngEI8AxcRA9I2/m5jLvvot7+KroNa7jsrRSDw9U1fafTXiDYGN
+	GcOADSTM+wANy8kI6iPm1xbcBlRyeCotr3rB2byWeediKqV0SKTFjb8Q37Li5D4ppRZ0Z1My3/R
+	Cdlkee0ofsFYYsLOwCWtKWDm8hYxvGO4SsYlZkRUAM/DJY0lFvueiP3SkQfrj8TFb1ANyJg==
+X-Received: by 2002:a05:6870:6111:b0:475:e235:902 with SMTP id
+ 586e51a60fabf-47dea515f36mr2143588fac.32.1789119679056; Fri, 11 Sep 2026
+ 02:41:19 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAA5MLK1JHpLOgCSXRgNKGE4d+uOW8Lw9orGUGOpwhqTrutzw2g@mail.gmail.com>
+In-Reply-To: <CAA5MLK1JHpLOgCSXRgNKGE4d+uOW8Lw9orGUGOpwhqTrutzw2g@mail.gmail.com>
+From: Peter Vase <medjobs263@gmail.com>
+Date: Fri, 11 Sep 2026 19:41:08 +1000
+X-Gm-Features: AcwNN1UGz0fCPq9JhOKw1MPhFxSbVvSloPHoer5UlqCCWdGmkaIuIBB6seUqM2s
+Message-ID: <CAFiaQVfp140QWKfnNoKYdPLyt02scVE_aVMy4UdveerppWD6UQ@mail.gmail.com>
+Subject: Re: Application for Software Engineer - AI
+To: Valenteno Lenora <valentenocavlenora@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000ee4e03065b31e26a"
+
+--000000000000ee4e03065b31e26a
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Software Engineer =E2=80=93 Production Experience Questionnaire
+
+Please answer the following questions based on your *actual hands-on
+experience with applications running in production environments*.
+1. Production Deployment Experience
+
+   1.  Have you personally deployed a software application into a *live
+   production environment*?
+      - =E2=98=90 Yes
+      - =E2=98=90 No
+
+Have you deployed AI Applications; if so pls send AI application details,
+URLs:
+
+*Please provide the URL of this site; if you cannot pls DO NOT SEND ANY
+INFORMATION.: *
+
+   1. How many applications have you deployed or helped deploy into
+   production?
+      - =E2=98=90 None
+      - =E2=98=90 1=E2=80=932
+      - =E2=98=90 3=E2=80=935
+      - =E2=98=90 6=E2=80=9310
+      - =E2=98=90 More than 10
+   2. Briefly describe one production application you deployed. What was
+   the application, what technology stack did it use, and what was your rol=
+e?
+   3. Which environments have you worked with?
+      - =E2=98=90 Development
+      - =E2=98=90 Testing/QA
+      - =E2=98=90 Staging/UAT
+      - =E2=98=90 Production
+
+2. PHP / Laravel Production Experience
+
+   5. Have you developed and supported *PHP/Laravel applications running in
+   production*?
+      - =E2=98=90 Yes
+      - =E2=98=90 No
+   6. How many years of commercial PHP/Laravel experience do you have?
+   7. Have you personally performed production deployments of Laravel
+   applications?
+      - =E2=98=90 Yes
+      - =E2=98=90 No
+   8. Please describe a Laravel application you have implemented and
+   supported in production, including your responsibilities.
+
+3. Python / Java Production Experience
+
+   9. Have you developed applications using *Python and/or Java* that were
+   deployed into production?
+      - =E2=98=90 Python
+      - =E2=98=90 Java
+      - =E2=98=90 Both
+      - =E2=98=90 Neither
+   10. How many years of commercial production experience do you have with:
+
+
+   - Python: ______ years
+   - Java: ______ years
+
+
+   11. Briefly describe a Python or Java application you personally helped
+   implement, deploy and support in production.
+
+4. Production Support & Troubleshooting
+
+   12. Have you provided ongoing support for live production applications?
+
+
+   - =E2=98=90 Yes
+   - =E2=98=90 No
+
+
+   13. Have you personally handled any of the following?
+
+
+   - =E2=98=90 Production incidents/outages
+   - =E2=98=90 Application bugs
+   - =E2=98=90 Database issues
+   - =E2=98=90 Performance problems
+   - =E2=98=90 Server/Linux issues
+   - =E2=98=90 API/integration failures
+   - =E2=98=90 Security issues
+   - =E2=98=90 Application monitoring/log analysis
+   - =E2=98=90 Production hotfixes
+   - =E2=98=90 Rollbacks
+
+
+   14. Describe a serious production issue you personally resolved. What
+   happened, how did you diagnose it, and how did you fix it?
+
+5. DevOps & Infrastructure
+
+   15. Which technologies have you personally used in production?
+
+
+   - =E2=98=90 Linux
+   - =E2=98=90 Nginx
+   - =E2=98=90 Apache
+   - =E2=98=90 MySQL/MariaDB
+   - =E2=98=90 PostgreSQL
+   - =E2=98=90 Redis
+   - =E2=98=90 Docker
+   - =E2=98=90 Kubernetes
+   - =E2=98=90 AWS
+   - =E2=98=90 Microsoft Azure
+   - =E2=98=90 CI/CD pipelines
+   - =E2=98=90 GitLab CI/CD
+   - =E2=98=90 GitHub Actions
+   - =E2=98=90 Jenkins
+   - =E2=98=90 Other: __________
+
+
+   16. Have you configured or maintained a CI/CD pipeline that
+   automatically deploys applications?
+
+
+   - =E2=98=90 Yes
+   - =E2=98=90 No
+
+
+   17. Explain the steps you normally follow when deploying a new
+   application version into production.
+
+6. Production Ownership
+
+   18. After deploying an application, have you been responsible for
+   monitoring and supporting it?
+
+
+   - =E2=98=90 Yes
+   - =E2=98=90 No
+
+
+   19. Have you worked directly with customers or users to investigate
+   production problems?
+
+
+   - =E2=98=90 Yes
+   - =E2=98=90 No
+
+
+   20. Have you been responsible for an application outside normal business
+   hours when a critical production problem occurred?
+
+
+   - =E2=98=90 Yes
+   - =E2=98=90 No
+
+7. Practical Assessment
+
+Please provide a brief example of *one real application that you personally
+worked on in production*, including:
+
+   - Application purpose
+   - Your role
+   - Number of users/customers, if known
+   - Technology stack
+   - PHP/Laravel, Python or Java components
+   - Database
+   - Hosting/cloud environment
+   - Deployment method
+   - CI/CD process
+   - Monitoring/logging tools
+   - Production support responsibilities
+   - One significant production problem you personally diagnosed and
+   resolved
+
+*Important:* We are specifically assessing *hands-on production experience*=
+,
+not only development experience. Please clearly distinguish between work
+you personally performed and work completed by other members of your team.
+
+On Wed, Sep 9, 2026 at 4:50=E2=80=AFPM Valenteno Lenora <
+valentenocavlenora@gmail.com> wrote:
+
+> Dear Hiring Team,
+>
+> I am writing to express my strong interest in the Software Engineer
+> position. As a developer focussed on building resilient, scalable
+> applications, I specialise in modern full-stack architectures complemente=
+d
+> by seamless AI integrations to drive commercial value.
+>
+> In my current and previous roles, my core expertise lies in engineering
+> robust backend microservices, complex database schemas, and modern fronte=
+nd
+> clients. For instance, I architected a comprehensive full-stack applicati=
+on
+> (Univize) utilising a Next.js <http://next.js/> frontend, supported by
+> Django and FastAPI backends, and managed via Azure container registries
+> with automated GitHub Actions CI/CD pipelines. At AiRentoSoft, I develope=
+d
+> robust enterprise web and mobile applications leveraging React, Node.js
+> <http://node.js/>, and .NET, deployed through Azure DevOps. Furthermore,
+> I engineered the scalable FastAPI microservices and Kafka data pipelines
+> that powered the FashionHub.ai <http://fashionhub.ai/> platform.
+>
+>
+>
+> Whilst my foundation is deeply rooted in pure software
+> engineering=E2=80=94commanding frameworks such as React and Django, along=
+side
+> Docker containerisation and advanced databases like PostgreSQL, Neo4j, an=
+d
+> MongoDB=E2=80=94I possess the practical expertise to weave intelligent fe=
+atures
+> into these systems. Whether orchestrating LLMs via LangChain or integrati=
+ng
+> OCR and computer vision modules into web clients, I ensure these AI
+> components operate efficiently within a secure, production-ready web
+> infrastructure.
+>
+>
+>
+> Holding a First Class BSc (Hons) in Computer Science from the University
+> of Plymouth and currently completing a BComp (Hons) in Information System=
+s,
+> I am immensely passionate about writing clean, maintainable code. I shoul=
+d
+> welcome the opportunity to discuss how my systems-driven approach aligns
+> with your technical requirements.
+>
+> Yours faithfully,
+>
+> Valenteno Lenora
+>
+> Email: valentenocavlenora@gmail.com
+>
+> Phone: +94 76 311 4242 <+94%2076%20311%204242>
+>
+> Portfolio: https://night-king-v.vercel.app/
+>
+> LinkedIn: https://linkedin.com/in/valentenolenora
+>
+> GitHub: https://github.com/NightKing-V
+>
+
+--000000000000ee4e03065b31e26a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><h1 style=3D"font-size:small">Software Engineer =E2=80=93 =
+Production Experience Questionnaire</h1><p>Please answer the following ques=
+tions based on your=C2=A0<strong>actual hands-on experience with applicatio=
+ns running in production environments</strong>.</p><h3 style=3D"font-size:s=
+mall">1. Production Deployment Experience</h3><ol start=3D"1"><li style=3D"=
+margin-left:15px">=C2=A0Have you personally deployed a software application=
+ into a=C2=A0<strong>live production environment</strong>?</li><ul><li styl=
+e=3D"margin-left:15px">=E2=98=90 Yes</li><li style=3D"margin-left:15px">=E2=
+=98=90 No</li></ul></ol><div><font size=3D"4" color=3D"#0000ff">Have you de=
+ployed AI Applications; if so pls send AI application details, URLs:=C2=A0=
+=C2=A0</font></div><div><br></div><div><b><font size=3D"4" color=3D"#0000ff=
+">Please provide the URL of this site; if you cannot pls DO NOT SEND ANY IN=
+FORMATION.:=C2=A0</font></b></div><ol start=3D"1"><li style=3D"margin-left:=
+15px">How many applications have you deployed or helped deploy into product=
+ion?<ul><li style=3D"margin-left:15px">=E2=98=90 None</li><li style=3D"marg=
+in-left:15px">=E2=98=90 1=E2=80=932</li><li style=3D"margin-left:15px">=E2=
+=98=90 3=E2=80=935</li><li style=3D"margin-left:15px">=E2=98=90 6=E2=80=931=
+0</li><li style=3D"margin-left:15px">=E2=98=90 More than 10</li></ul></li><=
+li style=3D"margin-left:15px">Briefly describe one production application y=
+ou deployed. What was the application, what technology stack did it use, an=
+d what was your role?</li><li style=3D"margin-left:15px">Which environments=
+ have you worked with?<ul><li style=3D"margin-left:15px">=E2=98=90 Developm=
+ent</li><li style=3D"margin-left:15px">=E2=98=90 Testing/QA</li><li style=
+=3D"margin-left:15px">=E2=98=90 Staging/UAT</li><li style=3D"margin-left:15=
+px">=E2=98=90 Production</li></ul></li></ol><h3 style=3D"font-size:small">2=
+. PHP / Laravel Production Experience</h3><ol start=3D"5"><li style=3D"marg=
+in-left:15px">Have you developed and supported=C2=A0<strong>PHP/Laravel app=
+lications running in production</strong>?<ul><li style=3D"margin-left:15px"=
+>=E2=98=90 Yes</li><li style=3D"margin-left:15px">=E2=98=90 No</li></ul></l=
+i><li style=3D"margin-left:15px">How many years of commercial PHP/Laravel e=
+xperience do you have?</li><li style=3D"margin-left:15px">Have you personal=
+ly performed production deployments of Laravel applications?<ul><li style=
+=3D"margin-left:15px">=E2=98=90 Yes</li><li style=3D"margin-left:15px">=E2=
+=98=90 No</li></ul></li><li style=3D"margin-left:15px">Please describe a La=
+ravel application you have implemented and supported in production, includi=
+ng your responsibilities.</li></ol><h3 style=3D"font-size:small">3. Python =
+/ Java Production Experience</h3><ol start=3D"9"><li style=3D"margin-left:1=
+5px">Have you developed applications using=C2=A0<strong>Python and/or Java<=
+/strong>=C2=A0that were deployed into production?<ul><li style=3D"margin-le=
+ft:15px">=E2=98=90 Python</li><li style=3D"margin-left:15px">=E2=98=90 Java=
+</li><li style=3D"margin-left:15px">=E2=98=90 Both</li><li style=3D"margin-=
+left:15px">=E2=98=90 Neither</li></ul></li><li style=3D"margin-left:15px">H=
+ow many years of commercial production experience do you have with:</li></o=
+l><ul><li style=3D"margin-left:15px">Python: ______ years</li><li style=3D"=
+margin-left:15px">Java: ______ years</li></ul><ol start=3D"11"><li style=3D=
+"margin-left:15px">Briefly describe a Python or Java application you person=
+ally helped implement, deploy and support in production.</li></ol><h3 style=
+=3D"font-size:small">4. Production Support &amp; Troubleshooting</h3><ol st=
+art=3D"12"><li style=3D"margin-left:15px">Have you provided ongoing support=
+ for live production applications?</li></ol><ul><li style=3D"margin-left:15=
+px">=E2=98=90 Yes</li><li style=3D"margin-left:15px">=E2=98=90 No</li></ul>=
+<ol start=3D"13"><li style=3D"margin-left:15px">Have you personally handled=
+ any of the following?</li></ol><ul><li style=3D"margin-left:15px">=E2=98=
+=90 Production incidents/outages</li><li style=3D"margin-left:15px">=E2=98=
+=90 Application bugs</li><li style=3D"margin-left:15px">=E2=98=90 Database =
+issues</li><li style=3D"margin-left:15px">=E2=98=90 Performance problems</l=
+i><li style=3D"margin-left:15px">=E2=98=90 Server/Linux issues</li><li styl=
+e=3D"margin-left:15px">=E2=98=90 API/integration failures</li><li style=3D"=
+margin-left:15px">=E2=98=90 Security issues</li><li style=3D"margin-left:15=
+px">=E2=98=90 Application monitoring/log analysis</li><li style=3D"margin-l=
+eft:15px">=E2=98=90 Production hotfixes</li><li style=3D"margin-left:15px">=
+=E2=98=90 Rollbacks</li></ul><ol start=3D"14"><li style=3D"margin-left:15px=
+">Describe a serious production issue you personally resolved. What happene=
+d, how did you diagnose it, and how did you fix it?</li></ol><h3 style=3D"f=
+ont-size:small">5. DevOps &amp; Infrastructure</h3><ol start=3D"15"><li sty=
+le=3D"margin-left:15px">Which technologies have you personally used in prod=
+uction?</li></ol><ul><li style=3D"margin-left:15px">=E2=98=90 Linux</li><li=
+ style=3D"margin-left:15px">=E2=98=90 Nginx</li><li style=3D"margin-left:15=
+px">=E2=98=90 Apache</li><li style=3D"margin-left:15px">=E2=98=90 MySQL/Mar=
+iaDB</li><li style=3D"margin-left:15px">=E2=98=90 PostgreSQL</li><li style=
+=3D"margin-left:15px">=E2=98=90 Redis</li><li style=3D"margin-left:15px">=
+=E2=98=90 Docker</li><li style=3D"margin-left:15px">=E2=98=90 Kubernetes</l=
+i><li style=3D"margin-left:15px">=E2=98=90 AWS</li><li style=3D"margin-left=
+:15px">=E2=98=90 Microsoft Azure</li><li style=3D"margin-left:15px">=E2=98=
+=90 CI/CD pipelines</li><li style=3D"margin-left:15px">=E2=98=90 GitLab CI/=
+CD</li><li style=3D"margin-left:15px">=E2=98=90 GitHub Actions</li><li styl=
+e=3D"margin-left:15px">=E2=98=90 Jenkins</li><li style=3D"margin-left:15px"=
+>=E2=98=90 Other: __________</li></ul><ol start=3D"16"><li style=3D"margin-=
+left:15px">Have you configured or maintained a CI/CD pipeline that automati=
+cally deploys applications?</li></ol><ul><li style=3D"margin-left:15px">=E2=
+=98=90 Yes</li><li style=3D"margin-left:15px">=E2=98=90 No</li></ul><ol sta=
+rt=3D"17"><li style=3D"margin-left:15px">Explain the steps you normally fol=
+low when deploying a new application version into production.</li></ol><h3 =
+style=3D"font-size:small">6. Production Ownership</h3><ol start=3D"18"><li =
+style=3D"margin-left:15px">After deploying an application, have you been re=
+sponsible for monitoring and supporting it?</li></ol><ul><li style=3D"margi=
+n-left:15px">=E2=98=90 Yes</li><li style=3D"margin-left:15px">=E2=98=90 No<=
+/li></ul><ol start=3D"19"><li style=3D"margin-left:15px">Have you worked di=
+rectly with customers or users to investigate production problems?</li></ol=
+><ul><li style=3D"margin-left:15px">=E2=98=90 Yes</li><li style=3D"margin-l=
+eft:15px">=E2=98=90 No</li></ul><ol start=3D"20"><li style=3D"margin-left:1=
+5px">Have you been responsible for an application outside normal business h=
+ours when a critical production problem occurred?</li></ol><ul><li style=3D=
+"margin-left:15px">=E2=98=90 Yes</li><li style=3D"margin-left:15px">=E2=98=
+=90 No</li></ul><h3 style=3D"font-size:small">7. Practical Assessment</h3><=
+p>Please provide a brief example of=C2=A0<strong>one real application that =
+you personally worked on in production</strong>, including:</p><ul><li styl=
+e=3D"margin-left:15px">Application purpose</li><li style=3D"margin-left:15p=
+x">Your role</li><li style=3D"margin-left:15px">Number of users/customers, =
+if known</li><li style=3D"margin-left:15px">Technology stack</li><li style=
+=3D"margin-left:15px">PHP/Laravel, Python or Java components</li><li style=
+=3D"margin-left:15px">Database</li><li style=3D"margin-left:15px">Hosting/c=
+loud environment</li><li style=3D"margin-left:15px">Deployment method</li><=
+li style=3D"margin-left:15px">CI/CD process</li><li style=3D"margin-left:15=
+px">Monitoring/logging tools</li><li style=3D"margin-left:15px">Production =
+support responsibilities</li><li style=3D"margin-left:15px">One significant=
+ production problem you personally diagnosed and resolved</li></ul><p><stro=
+ng>Important:</strong>=C2=A0We are specifically assessing=C2=A0<strong>hand=
+s-on production experience</strong>, not only development experience. Pleas=
+e clearly distinguish between work you personally performed and work comple=
+ted by other members of your team.</p></div><br><div class=3D"gmail_quote g=
+mail_quote_container"><div dir=3D"ltr" class=3D"gmail_attr">On Wed, Sep 9, =
+2026 at 4:50=E2=80=AFPM Valenteno Lenora &lt;<a href=3D"mailto:valentenocav=
+lenora@gmail.com">valentenocavlenora@gmail.com</a>&gt; wrote:<br></div><blo=
+ckquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left=
+:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><p dir=3D"lt=
+r" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=
+=3D"font-size:11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0=
+);background-color:transparent;font-variant:normal;vertical-align:baseline;=
+white-space:pre-wrap">Dear Hiring Team,</span></p><br><p dir=3D"ltr" style=
+=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-=
+size:11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0);backgro=
+und-color:transparent;font-variant:normal;vertical-align:baseline;white-spa=
+ce:pre-wrap">I am writing to express my strong interest in the Software Eng=
+ineer position. As a developer focussed on building resilient, scalable app=
+lications, I specialise in modern full-stack architectures complemented by =
+seamless AI integrations to drive commercial value.=C2=A0=C2=A0</span></p><=
+br><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0p=
+t"><span style=3D"font-size:11pt;font-family:&quot;Google Sans Text&quot;;c=
+olor:rgb(0,0,0);background-color:transparent;font-variant:normal;vertical-a=
+lign:baseline;white-space:pre-wrap">In my current and previous roles, my co=
+re expertise lies in engineering robust backend microservices, complex data=
+base schemas, and modern frontend clients. For instance, I architected a co=
+mprehensive full-stack application (Univize) utilising a </span><a href=3D"=
+http://next.js/" target=3D"_blank"><span style=3D"font-size:11pt;font-famil=
+y:&quot;Google Sans Text&quot;;color:rgb(0,0,0);background-color:transparen=
+t;font-variant:normal;text-decoration:none;vertical-align:baseline;white-sp=
+ace:pre-wrap">Next.js</span></a><span style=3D"font-size:11pt;font-family:&=
+quot;Google Sans Text&quot;;color:rgb(0,0,0);background-color:transparent;f=
+ont-variant:normal;vertical-align:baseline;white-space:pre-wrap"> frontend,=
+ supported by Django and FastAPI backends, and managed via Azure container =
+registries with automated GitHub Actions CI/CD pipelines. At AiRentoSoft, I=
+ developed robust enterprise web and mobile applications leveraging React, =
+</span><a href=3D"http://node.js/" target=3D"_blank"><span style=3D"font-si=
+ze:11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0);backgroun=
+d-color:transparent;font-variant:normal;text-decoration:none;vertical-align=
+:baseline;white-space:pre-wrap">Node.js</span></a><span style=3D"font-size:=
+11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0);background-c=
+olor:transparent;font-variant:normal;vertical-align:baseline;white-space:pr=
+e-wrap">, and .NET, deployed through Azure DevOps. Furthermore, I engineere=
+d the scalable FastAPI microservices and Kafka data pipelines that powered =
+the </span><a href=3D"http://fashionhub.ai/" target=3D"_blank"><span style=
+=3D"font-size:11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0=
+);background-color:transparent;font-variant:normal;text-decoration:none;ver=
+tical-align:baseline;white-space:pre-wrap">FashionHub.ai</span></a><span st=
+yle=3D"font-size:11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,=
+0,0);background-color:transparent;font-variant:normal;vertical-align:baseli=
+ne;white-space:pre-wrap"> platform.=C2=A0</span></p><p dir=3D"ltr" style=3D=
+"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-siz=
+e:11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0);background=
+-color:transparent;font-variant:normal;vertical-align:baseline;white-space:=
+pre-wrap">=C2=A0</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-=
+top:0pt;margin-bottom:0pt"><span style=3D"font-size:11pt;font-family:&quot;=
+Google Sans Text&quot;;color:rgb(0,0,0);background-color:transparent;font-v=
+ariant:normal;vertical-align:baseline;white-space:pre-wrap">Whilst my found=
+ation is deeply rooted in pure software engineering=E2=80=94commanding fram=
+eworks such as React and Django, alongside Docker containerisation and adva=
+nced databases like PostgreSQL, Neo4j, and MongoDB=E2=80=94I possess the pr=
+actical expertise to weave intelligent features into these systems. Whether=
+ orchestrating LLMs via LangChain or integrating OCR and computer vision mo=
+dules into web clients, I ensure these AI components operate efficiently wi=
+thin a secure, production-ready web infrastructure.</span></p><p dir=3D"ltr=
+" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=
+=3D"font-size:11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0=
+);background-color:transparent;font-variant:normal;vertical-align:baseline;=
+white-space:pre-wrap">=C2=A0=C2=A0</span></p><p dir=3D"ltr" style=3D"line-h=
+eight:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:11pt;=
+font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0);background-color:=
+transparent;font-variant:normal;vertical-align:baseline;white-space:pre-wra=
+p">Holding a First Class BSc (Hons) in Computer Science from the University=
+ of Plymouth and currently completing a BComp (Hons) in Information Systems=
+, I am immensely passionate about writing clean, maintainable code. I shoul=
+d welcome the opportunity to discuss how my systems-driven approach aligns =
+with your technical requirements.=C2=A0=C2=A0</span></p><br><p dir=3D"ltr" =
+style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"=
+font-size:11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0);ba=
+ckground-color:transparent;font-variant:normal;vertical-align:baseline;whit=
+e-space:pre-wrap">Yours faithfully,</span></p><br><p dir=3D"ltr" style=3D"l=
+ine-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:=
+11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0);background-c=
+olor:transparent;font-variant:normal;vertical-align:baseline;white-space:pr=
+e-wrap">Valenteno Lenora</span></p><p dir=3D"ltr" style=3D"line-height:1.38=
+;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:11pt;font-famil=
+y:&quot;Google Sans Text&quot;;color:rgb(0,0,0);background-color:transparen=
+t;font-variant:normal;vertical-align:baseline;white-space:pre-wrap">Email: =
+</span><a href=3D"mailto:valentenocavlenora@gmail.com" target=3D"_blank"><s=
+pan style=3D"font-size:11pt;font-family:&quot;Google Sans Text&quot;;color:=
+rgb(0,0,0);background-color:transparent;font-variant:normal;text-decoration=
+:none;vertical-align:baseline;white-space:pre-wrap">valentenocavlenora@gmai=
+l.com</span></a></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt=
+;margin-bottom:0pt"><span style=3D"font-size:11pt;font-family:&quot;Google =
+Sans Text&quot;;color:rgb(0,0,0);background-color:transparent;font-variant:=
+normal;vertical-align:baseline;white-space:pre-wrap">Phone: <a href=3D"tel:=
++94%2076%20311%204242" value=3D"+94763114242" target=3D"_blank">+94 76 311 =
+4242</a></span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;=
+margin-bottom:0pt"><span style=3D"font-size:11pt;font-family:&quot;Google S=
+ans Text&quot;;color:rgb(0,0,0);background-color:transparent;font-variant:n=
+ormal;vertical-align:baseline;white-space:pre-wrap">Portfolio: </span><a hr=
+ef=3D"https://night-king-v.vercel.app/" target=3D"_blank"><span style=3D"fo=
+nt-size:11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0);back=
+ground-color:transparent;font-variant:normal;text-decoration:none;vertical-=
+align:baseline;white-space:pre-wrap">https://night-king-v.vercel.app/</span=
+></a></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bot=
+tom:0pt"><span style=3D"font-size:11pt;font-family:&quot;Google Sans Text&q=
+uot;;color:rgb(0,0,0);background-color:transparent;font-variant:normal;vert=
+ical-align:baseline;white-space:pre-wrap">LinkedIn: </span><a href=3D"https=
+://linkedin.com/in/valentenolenora" target=3D"_blank"><span style=3D"font-s=
+ize:11pt;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0);backgrou=
+nd-color:transparent;font-variant:normal;text-decoration:none;vertical-alig=
+n:baseline;white-space:pre-wrap">https://linkedin.com/in/valentenolenora</s=
+pan></a></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-=
+bottom:0pt"><span style=3D"font-size:11pt;font-family:&quot;Google Sans Tex=
+t&quot;;color:rgb(0,0,0);background-color:transparent;font-variant:normal;v=
+ertical-align:baseline;white-space:pre-wrap">GitHub: </span><a href=3D"http=
+s://github.com/NightKing-V" target=3D"_blank"><span style=3D"font-size:11pt=
+;font-family:&quot;Google Sans Text&quot;;color:rgb(0,0,0);background-color=
+:transparent;font-variant:normal;text-decoration:none;vertical-align:baseli=
+ne;white-space:pre-wrap">https://github.com/NightKing-V</span></a></p></div=
+>
+</blockquote></div>
+
+--000000000000ee4e03065b31e26a--

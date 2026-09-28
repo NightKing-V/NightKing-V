@@ -5,7 +5,17 @@
     "role": "AI/ML Engineer - Intern",
     "company": "AiRentoSoft Pvt. Ltd.",
     "timeline": "March 2026 - September 2026",
-    "tech": ["YOLO", "PyTorch", "FastAPI", "React", "HuggingFace", "WandB", "Kaggle", "MLOps", "Roboflow"],
+    "tech": [
+      "YOLO",
+      "PyTorch",
+      "FastAPI",
+      "React",
+      "HuggingFace",
+      "WandB",
+      "Kaggle",
+      "MLOps",
+      "Roboflow"
+    ],
     "description": "Developed a Vehicle Damage Detection system consisting of a combination of YOLO models with a FastAPI wrapper hosted in Huggingface spaces. Pre-trained the models on Image datasets, versioned and deployed using MLOps tools. Also further developed the live mobile app to support new features which is in Playstore and Appstore.",
     "deliverables": [
       "Developed a vehicle damage detection system with DL models, API and Mobile app.",
@@ -23,7 +33,14 @@
     "role": "AI/ML Engineer - Intern",
     "company": "AiRentoSoft Pvt. Ltd.",
     "timeline": "March 2026 - September 2026",
-    "tech": ["React", "Node.js", ".NET", "Retel.ai", "OCR", "Azure DevOps"],
+    "tech": [
+      "React",
+      "Node.js",
+      ".NET",
+      "Retel.ai",
+      "OCR",
+      "Azure DevOps"
+    ],
     "description": "Collaborated in Developing and Implementing new features including AI Integrations. Worked on the React Web application, Reservations Plugin, .NET API, and developed the 2.0 version of the Mobile app with similar features to the main system and released documentation in AZURE Devops. Added AI Integrated features like document scanning, card scanning using OCR models in both web and mobile apps. Also managed and worked on the AI Caller agent in Retel.ai for client requirements.",
     "deliverables": [
       "Collaborated in developing and implementing new features including AI integrations across web and mobile systems.",
@@ -43,7 +60,12 @@
     "role": "AI/ML Engineer - Intern",
     "company": "AiRentoSoft Pvt. Ltd.",
     "timeline": "March 2026 - September 2026",
-    "tech": ["Playwright", "Selenium", "Python", "ETL"],
+    "tech": [
+      "Playwright",
+      "Selenium",
+      "Python",
+      "ETL"
+    ],
     "description": "Implemented a business leads extraction pipeline for extracting potential clients in USA based car rental businesses using Automation scripts and web scraping and using ETL pipelines to process data into understandable formats for business support division to use.",
     "deliverables": [
       "Assisted in extracting business leads for potential USA-based car rental clients using automation scripts to improve business opportunities.",
@@ -61,7 +83,11 @@
     "role": "AI/ML Engineer - Freelance",
     "company": "WaveSkill Pvt. Ltd.",
     "timeline": "December 2025 - Present",
-    "tech": ["Coqui VITS", "PyTorch", "Kaggle"],
+    "tech": [
+      "Coqui VITS",
+      "PyTorch",
+      "Kaggle"
+    ],
     "description": "Developed a research purpose private TTS model with support for Sinhala language. Created a private dataset from scratch for VITS format to train the Speech Model. Trained on Kaggle dual T4 GPUs and gained research level quality output for product pitching and further development with funds.",
     "deliverables": [
       "Developed a research-purpose private TTS model supporting the Sinhala language.",
@@ -79,7 +105,13 @@
     "role": "AI/ML Engineer - Freelance",
     "company": "WaveSkill Pvt. Ltd.",
     "timeline": "December 2025 - Present",
-    "tech": ["FastAPI", "Postgres", "CrewAI", "LangGraph", "Langfuse"],
+    "tech": [
+      "FastAPI",
+      "Postgres",
+      "CrewAI",
+      "LangGraph",
+      "Langfuse"
+    ],
     "description": "Developed an Agentic Shopping assistant for e-commerce website for baby care products. Implemented features in Product search, QnA using store policies and customer support. This is live on the TOGO website.",
     "deliverables": [
       "Developed an Agentic Shopping Assistant for a baby care products e-commerce website (TOGO).",
@@ -97,7 +129,19 @@
     "role": "AI/ML Engineer - Intern",
     "company": "Residue Solutions Pvt. Ltd.",
     "timeline": "September 2025 - February 2026",
-    "tech": ["Next.js", "FastAPI", "Weaviate", "Ollama", "LangGraph", "LangChain", "Kafka", "Groq", "Gemini", "MongoDB", "Google Vertex AI"],
+    "tech": [
+      "Next.js",
+      "FastAPI",
+      "Weaviate",
+      "Ollama",
+      "LangGraph",
+      "LangChain",
+      "Kafka",
+      "Groq",
+      "Gemini",
+      "MongoDB",
+      "Google Vertex AI"
+    ],
     "description": "Developed an intelligent AI shopping assistant that revolutionises the retail experience by utilising a ReAct capable Agent with DAG-based task execution. The platform features a high-throughput MongoDB to Weaviate Kafka pipeline for real-time data synchronization. Built on a scalable FastAPI microservices infrastructure, the system integrates a modular multi-LLM factory (Gemini, Llama) and Google Vertex AI for generative Virtual Try-On capabilities, delivering a seamless and context-aware customer assistance. Used LangChain & LangGraph for LLM orchestration and agent state management.",
     "deliverables": [
       "Engineered an AI-powered shopping assistant (FashionHub.ai) for customers to get assistance on product search, Virtual Try-On, Cart management, Payment assistance, QnA and Size matching.",
@@ -117,7 +161,20 @@
     "company": "Personal Project",
     "timeline": "September 2026",
     "github": "https://github.com/NightKing-V/Weekly-Report-Generator-Team-Dashboard",
-    "tech": ["FastAPI", "MongoDB", "React 19", "TypeScript", "Zustand 5", "Tailwind CSS", "LangChain", "LangGraph", "Groq", "Docker", "Recharts", "Pydantic v2"],
+    "tech": [
+      "FastAPI",
+      "MongoDB",
+      "React 19",
+      "TypeScript",
+      "Zustand 5",
+      "Tailwind CSS",
+      "LangChain",
+      "LangGraph",
+      "Groq",
+      "Docker",
+      "Recharts",
+      "Pydantic v2"
+    ],
     "description": "Engineered an asynchronous Weekly Report Generator and Team Dashboard built with FastAPI, MongoDB, React 19 (TypeScript), Zustand 5, and Tailwind CSS. Features role-based access control (RBAC) across Contributors, Managers, and Admins, real ISO calendar standardization, immutable report versioning, and live KPI analytics. Integrated an intelligent AI layer using LangGraph and LangChain with Groq LLM for real-time team deliverable insights, automated blocker analysis, and conversational rolling summarization.",
     "deliverables": [
       "Architected a scalable 3-tier system using FastAPI (async Motor MongoDB driver) and React 19 + TypeScript with Zustand 5 for zero-redundancy client caching.",
@@ -132,13 +189,61 @@
       "/images/projects/reportingdashboard/2.png"
     ]
   },
+  "fraudtranspipeline": {
+    "title": "Real-Time Fraud Prevention & Intelligent Analytics Engine",
+    "category": "personal",
+    "role": "Distributed Systems & MLOps Engineer",
+    "company": "Personal Project",
+    "timeline": "September 2026",
+    "github": "https://github.com/NightKing-V/Real-Time-Fraud-Prevention-Intelligent-Analytics-Engine",
+    "tech": [
+      "Apache Spark 3.5",
+      "Apache Kafka",
+      "Apache NiFi",
+      "MLflow",
+      "LightGBM",
+      "Prometheus",
+      "Grafana",
+      "Google Cloud BigQuery",
+      "PySpark"
+    ],
+    "description": "Enterprise-grade, distributed streaming intelligence pipeline designed to score financial transactions, detect fraudulent checkout events in real time (< 50ms SLA), and route dual-sink analytical telemetry across Google Cloud BigQuery and Kafka alert topics. Eliminates non-reproducible feature anti-patterns from 590k+ IEEE-CIS records, applies financial cost-matrix threshold optimization, and serves vectorized PyArrow / Pandas UDF inference with full Prometheus and Grafana observability.",
+    "deliverables": [
+      "Architected an end-to-end 10-container distributed streaming pipeline with Apache NiFi ingestion, Kafka messaging, Spark Structured Streaming, MLflow registry, and dual-sink outputs.",
+      "Eliminated IEEE-CIS dataset anti-patterns by pruning 339 proprietary V-columns and 38 obscured masks, building a 30-feature reproducible engineering pipeline with cyclical temporal encodings and interaction keys.",
+      "Trained a high-performance LightGBM booster with MLflow experiment tracking, and deployed it into Spark using vectorized PyArrow / Pandas UDFs achieving sub-5ms inference.",
+      "Formulated a financial cost-matrix optimization function balancing False Negative chargeback losses ($150) against False Positive operational friction ($10), establishing an optimal decision threshold of tau* = 0.10.",
+      "Engineered a dual-sink micro-batch router concurrently dispatching high-risk events (P >= 0.10) to Kafka 'transactions.alerts' and streaming all transactions to GCP BigQuery for continuous audit.",
+      "Configured end-to-end telemetry and observability with Prometheus scraping Spark driver metrics (:8000) and Kafka exporter (:9308), paired with a pre-configured Grafana dashboard for live throughput, lag, and model drift tracking."
+    ],
+    "screenshots": [
+      "/images/projects/FraudTransPipeline/1.png",
+      "/images/projects/FraudTransPipeline/2.png",
+      "/images/projects/FraudTransPipeline/3.png",
+      "/images/projects/FraudTransPipeline/4.png",
+      "/images/projects/FraudTransPipeline/5.png",
+      "/images/projects/FraudTransPipeline/6.png"
+    ]
+  },
   "univize": {
     "title": "Univize - University Social App",
     "category": "personal",
     "role": "Lead Developer & System Designer",
     "company": "University of Sri Jayewardenepura",
     "timeline": "2024",
-    "tech": ["Django", "FastAPI", "Next.js", "Neo4j", "PostgreSQL (Supabase)", "MongoDB", "Redis", "Supabase", "Azure", "GitHub Actions", "Azure Bicep"],
+    "tech": [
+      "Django",
+      "FastAPI",
+      "Next.js",
+      "Neo4j",
+      "PostgreSQL (Supabase)",
+      "MongoDB",
+      "Redis",
+      "Supabase",
+      "Azure",
+      "GitHub Actions",
+      "Azure Bicep"
+    ],
     "description": "Developed an Social application for university students with features including, medial sharing, direct messaging and forum based discussions. Led the development team in system design to development, testing and deployment. Used Azure as the hosting platform with services like container registry, secret management and containerized apps. Developed the main backend in Django and FastAPI with PostgreSQL (Supabase), MongoDB, Neo4J, Redis and Supabase. Built the CI/CD pipeline with GitHub Actions and Azure Bicep scripts for infrastructure provisioning and Integration. This was done as the Group project for USJP.",
     "deliverables": [
       "Developed a social application for university students with features including media sharing, direct messaging, and forum-based discussions.",

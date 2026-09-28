@@ -5,8 +5,8 @@ from fpdf import FPDF
 class ATSResumePDF(FPDF):
     def __init__(self, use_system_fonts=True):
         super().__init__(orientation="P", unit="mm", format="A4")
-        self.set_margins(14, 10, 14)  # 14mm left/right, 10mm top/bottom
-        self.set_auto_page_break(auto=True, margin=8)
+        self.set_margins(12, 7.5, 12)  # 12mm left/right, 7.5mm top/bottom
+        self.set_auto_page_break(auto=True, margin=6.5)
         
         # Load Arial system font if available for full Unicode support
         self.font_name = "Helvetica"
@@ -21,35 +21,35 @@ class ATSResumePDF(FPDF):
                 self.font_name = "Helvetica"
 
     def footer(self):
-        self.set_y(-7)
-        self.set_font(self.font_name, "I", 8)
+        self.set_y(-6.5)
+        self.set_font(self.font_name, "I", 7.8)
         self.set_text_color(120, 120, 120)
-        self.cell(0, 5, f"Page {self.page_no()} of {{nb}}", align="C")
+        self.cell(0, 4.5, f"Page {self.page_no()} of {{nb}}", align="C")
 
     def draw_section_header(self, title):
         self.ln(2.8)
         self.set_font(self.font_name, "B", 10.5)
         self.set_text_color(15, 76, 129)  # Deep blue accent
-        self.cell(0, 4.5, title.upper(), align="L")
-        self.ln(4.5)
+        self.cell(0, 4.6, title.upper(), align="L")
+        self.ln(4.6)
         # Draw horizontal divider
-        y = self.get_y() - 0.5
+        y = self.get_y() - 0.4
         self.set_draw_color(180, 180, 180)
         self.set_line_width(0.35)
-        self.line(14, y, 196, y)
-        self.ln(2.2)
+        self.line(12, y, 198, y)
+        self.ln(2.0)
 
     def draw_header(self, info):
-        self.set_y(10.5)
+        self.set_y(8.0)
         self.set_font(self.font_name, "B", 18)
         self.set_text_color(33, 33, 33)
-        self.cell(0, 8, info["name"].upper(), align="C")
-        self.ln(8)
+        self.cell(0, 7.5, info["name"].upper(), align="C")
+        self.ln(7.5)
         
-        self.set_font(self.font_name, "B", 10.5)
+        self.set_font(self.font_name, "B", 10.2)
         self.set_text_color(15, 76, 129)
-        self.cell(0, 5, info["title"].upper(), align="C")
-        self.ln(5.5)
+        self.cell(0, 4.8, info["title"].upper(), align="C")
+        self.ln(5.0)
         
         items = [
             (info.get('email', ''), f"mailto:{info.get('email', '')}"),
@@ -69,67 +69,67 @@ class ATSResumePDF(FPDF):
         
         for idx, (txt, url) in enumerate(items):
             self.set_text_color(85, 85, 85)
-            self.cell(self.get_string_width(txt), 4, txt, link=url)
+            self.cell(self.get_string_width(txt), 3.9, txt, link=url)
             if idx < len(items) - 1:
                 self.set_text_color(150, 150, 150)
-                self.cell(self.get_string_width(divider), 4, divider)
-        self.ln(5)
+                self.cell(self.get_string_width(divider), 3.9, divider)
+        self.ln(4.5)
 
     def draw_summary(self, text):
         self.draw_section_header("Profile Summary")
-        self.set_font(self.font_name, "", 9.2)
+        self.set_font(self.font_name, "", 9.0)
         self.set_text_color(51, 51, 51)
-        self.multi_cell(0, 4.3, text)
-        self.ln(1.5)
+        self.multi_cell(0, 4.0, text)
+        self.ln(1.2)
 
     def draw_experience(self, exp_list):
         self.draw_section_header("Work Experience")
         for item in exp_list:
-            if self.get_y() > 256:
+            if self.get_y() > 262:
                 self.add_page()
             
             # Role & Duration
             self.set_font(self.font_name, "B", 9.5)
             self.set_text_color(51, 51, 51)
-            self.cell(130, 4.8, f"{item['role']} - {item['company']}")
+            self.cell(135, 4.6, f"{item['role']} - {item['company']}")
             
             # Duration on right
             self.set_font(self.font_name, "B", 8.8)
             self.set_text_color(102, 102, 102)
-            self.cell(0, 4.8, item["duration"], align="R")
-            self.ln(4.8)
+            self.cell(0, 4.6, item["duration"], align="R")
+            self.ln(4.6)
             
             # Bullets
-            self.set_font(self.font_name, "", 9.0)
+            self.set_font(self.font_name, "", 8.8)
             self.set_text_color(68, 68, 68)
             for bullet in item["bullets"]:
-                self.set_x(17)
-                self.cell(3.5, 4.1, "-")
-                self.multi_cell(0, 4.1, bullet)
-            self.ln(2.0)
+                self.set_x(15)
+                self.cell(3.2, 3.9, "-")
+                self.multi_cell(0, 3.9, bullet)
+            self.ln(1.6)
 
     def draw_education(self, edu_list):
         self.draw_section_header("Education")
         for item in edu_list:
-            if self.get_y() > 258:
+            if self.get_y() > 262:
                 self.add_page()
                 
-            self.set_font(self.font_name, "B", 9.5)
+            self.set_font(self.font_name, "B", 9.4)
             self.set_text_color(51, 51, 51)
             degree_str = item["degree"]
             if "grade" in item:
                 degree_str += f" ({item['grade']})"
-            self.cell(130, 4.5, f"{degree_str}")
+            self.cell(135, 4.4, f"{degree_str}")
             
             self.set_font(self.font_name, "B", 8.8)
             self.set_text_color(102, 102, 102)
-            self.cell(0, 4.5, item["duration"], align="R")
-            self.ln(4.5)
+            self.cell(0, 4.4, item["duration"], align="R")
+            self.ln(4.4)
             
-            self.set_font(self.font_name, "I", 8.8)
+            self.set_font(self.font_name, "I", 8.6)
             self.set_text_color(88, 88, 88)
-            self.cell(0, 4.0, item["institution"])
-            self.ln(4.5)
+            self.cell(0, 3.8, item["institution"])
+            self.ln(4.0)
 
     def draw_projects(self, projects_dict):
         self.draw_section_header("Projects")
@@ -143,13 +143,13 @@ class ATSResumePDF(FPDF):
             if not proj_list:
                 continue
                 
-            if self.get_y() > 256:
+            if self.get_y() > 260:
                 self.add_page()
 
             self.set_font(self.font_name, "B", 9.5)
             self.set_text_color(15, 76, 129)
-            self.cell(0, 4.4, cat_name)
-            self.ln(4.4)
+            self.cell(0, 4.3, cat_name)
+            self.ln(4.3)
             
             for proj in proj_list:
                 # Check for page boundary
@@ -157,80 +157,80 @@ class ATSResumePDF(FPDF):
                     self.add_page()
                     
                 # Project Name
-                self.set_font(self.font_name, "B", 9.2)
+                self.set_font(self.font_name, "B", 9.1)
                 self.set_text_color(51, 51, 51)
-                self.cell(0, 4.3, proj["name"])
-                self.ln(4.3)
+                self.cell(0, 4.0, proj["name"])
+                self.ln(4.0)
                 
                 # Tech Stack (Italic, colored)
-                self.set_font(self.font_name, "I", 8.2)
+                self.set_font(self.font_name, "I", 8.0)
                 self.set_text_color(102, 102, 102)
-                self.cell(0, 3.7, proj['technologies'])
-                self.ln(3.7)
+                self.cell(0, 3.5, proj['technologies'])
+                self.ln(3.5)
                 
                 # Description
-                self.set_font(self.font_name, "", 8.7)
+                self.set_font(self.font_name, "", 8.6)
                 self.set_text_color(68, 68, 68)
-                self.multi_cell(0, 3.9, proj["description"])
-                self.ln(2.8)
-            self.ln(0.8)
+                self.multi_cell(0, 3.8, proj["description"])
+                self.ln(1.8)
+            self.ln(0.5)
 
     def draw_skills(self, skills_dict):
-        if self.get_y() > 255:
+        if self.get_y() > 260:
             self.add_page()
             
         self.draw_section_header("Skills")
         
         for category, skill_list in skills_dict.items():
-            self.set_font(self.font_name, "B", 8.7)
+            self.set_font(self.font_name, "B", 8.8)
             self.set_text_color(51, 51, 51)
-            self.write(4.1, f"{category}: ")
+            self.write(4.2, f"{category}: ")
             
-            self.set_font(self.font_name, "", 8.7)
+            self.set_font(self.font_name, "", 8.8)
             self.set_text_color(68, 68, 68)
-            self.write(4.1, skill_list)
-            self.ln(4.6)
-        self.ln(1.6)
+            self.write(4.2, skill_list)
+            self.ln(4.5)
+        self.ln(1.4)
 
     def draw_publications(self, pub_list):
-        if self.get_y() > 256:
+        if self.get_y() > 260:
             self.add_page()
             
         self.draw_section_header("Publications & Contributions")
         for pub in pub_list:
-            self.set_font(self.font_name, "B", 9.2)
+            self.set_font(self.font_name, "B", 9.1)
             self.set_text_color(51, 51, 51)
-            self.cell(0, 4.2, pub["title"])
-            self.ln(4.2)
-            self.set_font(self.font_name, "", 8.7)
+            self.cell(0, 4.1, pub["title"])
+            self.ln(4.1)
+            self.set_font(self.font_name, "", 8.6)
             self.set_text_color(68, 68, 68)
             self.cell(0, 3.7, pub["detail"])
-            self.ln(4.4)
+            self.ln(4.0)
 
     def draw_activities(self, act_list):
-        if self.get_y() > 256:
+        if self.get_y() > 260:
             self.add_page()
             
         self.draw_section_header("Activities & Extracurriculars")
         self.set_font(self.font_name, "", 8.7)
         self.set_text_color(68, 68, 68)
         for act in act_list:
-            self.set_x(17)
-            self.cell(3.5, 4.0, "-")
-            self.multi_cell(0, 4.0, act)
-        self.ln(1.6)
+            self.set_x(15)
+            self.cell(3.2, 3.9, "-")
+            self.multi_cell(0, 3.9, act)
+        self.ln(1.4)
 
     def draw_references(self, ref_list):
-        if self.get_y() > 254:
+        if self.get_y() > 265:
             self.add_page()
             
         self.draw_section_header("References")
         
         start_y = self.get_y()
-        col_width = 85
+        col_width = 88
         
         for idx, ref in enumerate(ref_list):
-            x_pos = 14 if idx == 0 else 108
+            x_pos = 12 if idx == 0 else 105
             y_pos = start_y
             
             self.set_xy(x_pos, y_pos)
@@ -238,7 +238,7 @@ class ATSResumePDF(FPDF):
             self.set_text_color(51, 51, 51)
             self.cell(col_width, 4.1, ref["name"])
             
-            y_pos += 4.3
+            y_pos += 4.4
             self.set_xy(x_pos, y_pos)
             self.set_font(self.font_name, "I", 8.5)
             self.set_text_color(88, 88, 88)
@@ -248,11 +248,13 @@ class ATSResumePDF(FPDF):
             self.set_xy(x_pos, y_pos)
             self.set_font(self.font_name, "", 8.2)
             self.set_text_color(102, 102, 102)
-            self.cell(col_width, 3.7, f"Phone: {ref['phone']}")
+            self.cell(col_width, 3.5, f"Phone: {ref['phone']}")
             
-            y_pos += 3.6
+            y_pos += 3.5
             self.set_xy(x_pos, y_pos)
-            self.cell(col_width, 3.7, f"Email: {ref['email']}")
+            self.cell(col_width, 3.5, f"Email: {ref['email']}")
+            
+        self.set_y(start_y + 17.0)
 
 def generate_pdf_resume(data, filepath):
     pdf = ATSResumePDF()
@@ -270,7 +272,7 @@ def generate_pdf_resume(data, filepath):
     pdf.draw_references(data["references"])
         
     pdf.output(filepath)
-    print(f"Generated PDF Resume: {filepath} ({pdf.page_no()} pages, Page 3 Y={pdf.get_y():.1f}mm / ~280mm)")
+    print(f"Generated PDF Resume: {filepath} ({pdf.page_no()} pages, Page {pdf.page_no()} End Y={pdf.get_y():.1f}mm / ~280mm)")
 
 def generate_html_resume(data, filepath):
     style = """
@@ -609,13 +611,8 @@ def main():
     with open("resume_data.json", "r", encoding="utf-8") as f:
         data = json.load(f)
         
-    # Generate standard master resume
-    generate_html_resume(data, "resume.html")
-    generate_pdf_resume(data, "resume.pdf")
-
-    # Also keep resume_full aliases
-    generate_html_resume(data, "resume_full.html")
-    generate_pdf_resume(data, "resume_full.pdf")
+    # Generate CV PDF directly
+    generate_pdf_resume(data, "CV_ValentenoLenora.pdf")
 
 if __name__ == "__main__":
     main()

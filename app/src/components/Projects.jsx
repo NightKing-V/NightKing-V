@@ -95,6 +95,14 @@ export default function Projects() {
       link: 'https://github.com/NightKing-V/Chord-Classification-Model-accordo.ai-',
     },
     {
+      id: 'fraudtranspipeline',
+      title: 'Real-Time Fraud Prevention & Intelligent Analytics Engine',
+      category: 'personal',
+      tech: ['Apache Spark', 'Apache Kafka', 'Apache NiFi', 'MLflow', 'LightGBM', 'Prometheus', 'Grafana', 'GCP BigQuery', 'Docker'],
+      description: 'Distributed streaming intelligence pipeline scoring financial transactions and detecting fraud in real time (<50ms SLA). Vectorized PyArrow/Pandas UDF inference on Spark, cost-matrix optimization (tau*=0.10), dual-sink routing to Kafka and GCP BigQuery, and full Prometheus/Grafana observability.',
+      link: 'https://github.com/NightKing-V/Real-Time-Fraud-Prevention-Intelligent-Analytics-Engine',
+    },
+    {
       id: 'univize',
       title: 'Univize - University Social App',
       category: 'personal',

@@ -16,10 +16,10 @@
       "company": "WaveSkill Pvt. Ltd.",
       "duration": "2025 (December) - Present",
       "bullets": [
-        "Designed and Engineered the AI-powered financial document extraction pipeline with computer vision models and helper agents to extract financial data from company statements.",
-        "Developed the fundamental analysis engine for the Stock Market API to give users stats and AI-powered insights on companies regarding their financial positions.",
-        "Developed an Agentic Shopping assistant for Baby Care products e-commerce website (TOGO).",
-        "Developed a TTS dataset and trained a VITS Model for Sinhala."
+        "Designed and engineered AI-powered financial document extraction pipelines integrating hybrid OCR and multimodal LLMs to parse tabular data and financial statements.",
+        "Built the fundamental analysis and metrics calculation engine for Colombo Stock Exchange (CSE) filings, generating automated corporate valuation insights.",
+        "Architected an agentic e-commerce conversational assistant for TOGO with multi-agent orchestration (CrewAI, LangGraph) and observability via Langfuse.",
+        "Created a custom phonetic dataset from scratch and trained a research-grade Coqui VITS Text-to-Speech (TTS) model for the Sinhala language."
       ]
     },
     {
@@ -27,10 +27,11 @@
       "company": "AiRentoSoft Pvt. Ltd.",
       "duration": "2026 (March) - 2026 (September) | 6 months",
       "bullets": [
-        "Developed a vehicle damage detection system with DL models, API and Mobile app.",
-        "Collaborated in further developing the AiRentoSoft System which includes the Web app, Mobile app, Reservations Plugin and AI Caller Agent.",
-        "Assisted in business leads extraction for potential clients for improving business opportunities.",
-        "Collaborated with the developers, business support team and QA engineers via Jira with scheduled sprints and meetings."
+        "Engineered an automated Vehicle Damage Detection system combining fine-tuned YOLO computer vision models with FastAPI microservices and mobile inspection app integration.",
+        "Collaborated on core features across the AiRentoSoft ecosystem (React web portal, reservations plugin, .NET backend, and v2.0 mobile app released on App Store & Play Store).",
+        "Designed custom OCR document scanning and credit card extraction modules to streamline customer onboarding and verification workflows.",
+        "Implemented an automated B2B lead generation pipeline utilizing Playwright, Selenium, and custom ETL workflows to process targeted car rental business prospects.",
+        "Managed sprint deliverables, code reviews, and cross-functional feature planning using Jira and Azure DevOps."
       ]
     },
     {
@@ -38,9 +39,9 @@
       "company": "Residue Solutions Pvt. Ltd.",
       "duration": "2025 (September) - 2026 (February) | 6 months",
       "bullets": [
-        "Engineered an AI-powered shopping assistant (FashionHub.ai) for customers to get assistance on product search, Virtual Try-On, Cart management, Payment assistance, QnA and Size matching.",
-        "Leader of the AI/ML Intern team of five, providing technical guidance on project architecture, code reviews, and implementation strategies and regular meetings to ensure milestones were met.",
-        "Conducted research and integration by collaborating and leading the team members with LLM orchestration techniques, reasoning and multi-model pipelines that enabled complex product recommendations and Virtual Try-On features."
+        "Technical Lead for a 5-member AI engineering intern team, driving system architecture, agile sprint planning, code reviews, and delivery milestones.",
+        "Architected FashionHub.ai, an intelligent shopping platform featuring ReAct DAG-based agent execution, real-time Weaviate vector retrieval, and Kafka event streaming.",
+        "Integrated a modular multi-LLM factory (Gemini 1.5, Llama 3 via Ollama) and Google Vertex AI Virtual Try-On pipelines for context-aware customer personalization."
       ]
     },
     {
@@ -48,7 +49,8 @@
       "company": "Mercantile Investments FPLC",
       "duration": "2022 | 3 months",
       "bullets": [
-        "Assisted in hardware, network maintenance and repairs, significantly reducing issues for users through proactive diagnostics and component-level troubleshooting. Resolved technical queries in Help Desk support, providing rapid software, OS, and peripheral solutions for diverse end-user requirements."
+        "Executed enterprise hardware diagnostics, LAN/WAN maintenance, and component-level repairs across distributed corporate workstation infrastructures.",
+        "Delivered Tier-1/Tier-2 Help Desk technical support, rapidly diagnosing OS, software, networking, and peripheral issues to ensure seamless business continuity."
       ]
     }
   ],
@@ -127,34 +129,39 @@
         "description": "Developed an Social application for university students with features including, medial sharing, direct messaging and forum based discussions. Led the development team in system design to development, testing and deployment. Used Azure as the hosting platform with services like container registry, secret management and containerized apps. Developed the main backend in Django and FastAPI with PostgreSQL (Supabase), MongoDB, Neo4J, Redis and Supabase. Built the CI/CD pipeline with GitHub Actions and Azure Bicep scripts for infrastructure provisioning and Integration. This was done as the Group project for USJP."
       },
       {
+        "name": "Real-Time Fraud Prevention & Intelligent Analytics Engine",
+        "technologies": "Apache Spark 3.5, Apache Kafka, Apache NiFi, MLflow, LightGBM, Prometheus, Grafana, Google Cloud BigQuery, PySpark",
+        "description": "Architected an enterprise distributed streaming intelligence pipeline to detect fraudulent transactions in real time (<50ms SLA). Pruned 339 proprietary V-features from 590k+ IEEE-CIS records to engineer a 30-feature reproducible pipeline. Formulated financial cost-matrix threshold optimization (tau* = 0.10) to minimize chargeback losses vs false friction. Deployed vectorized PyArrow/Pandas UDF scoring on Spark Structured Streaming with dual-sink routing to Kafka alerts and GCP BigQuery, instrumented with Prometheus metrics and a pre-configured Grafana telemetry dashboard."
+      },
+      {
         "name": "EduAgent - AI-powered Research Assistant",
         "technologies": "CrewAI, LangChain, Ollama, Mistral LLM, ChromaDB, HuggingFace",
-        "description": "Developed a Research assistant leveraging LangChain, CrewAI, and Mistral LLM (via Ollama) for research paper analysis and academic Q&A. Implemented document ingestion, summarization, topic extraction, and semantic retrieval using HuggingFace sentence-transformer embeddings with ChromaDB. Designed modular agent architecture and session-aware chat interface."
+        "description": "Engineered an autonomous multi-agent research assistant using CrewAI, LangChain, and Mistral LLM (via Ollama) for academic paper ingestion, synthesis, and Q&A. Implemented hybrid semantic retrieval with ChromaDB vector store and HuggingFace embeddings, automated paper section summarization, topic extraction, and citation-grounded conversational search."
       },
       {
         "name": "AI-Powered Recruitment Platform",
         "technologies": "Streamlit, LangChain, Groq, Qdrant, HuggingFace, MongoDB, Llama LLMs, RAG",
-        "description": "Developed an AI-powered recruitment platform that streamlines candidate screening using semantic resume-job matching with RAG technology. Built with Streamlit, Qdrant vector database, MongoDB, and Groq/Llama LLMs to automatically analyze resumes, generate job descriptions, and provide ranked job recommendations with similarity scores, transforming the hiring process for recruiters."
+        "description": "Built an AI-powered talent acquisition platform streamlining candidate screening via semantic resume-to-job matching with RAG architecture. Utilized Streamlit, Qdrant vector database, MongoDB, and Groq/Llama LLMs to parse multilingual resumes, generate tailored JD requirements, compute similarity rankings, and accelerate candidate shortlisting."
       },
       {
         "name": "Vision Reasoning Surveillance System",
         "technologies": "PyTorch, OpenCV, YOLO, LangChain, Ollama, LLM, Streamlit, Telegram Bot",
-        "description": "Developed a surveillance system to detect threats from real-time camera feed with the use of YOLO, and notify users with a detailed description of suspicious objects and scenes using LLM, LangChain and Telegram Bot. This project was done to gain experience with computer vision models, large language models and Intelligent systems."
+        "description": "Engineered an end-to-end intelligent video surveillance and threat detection system combining real-time YOLO computer vision with Multimodal LLM reasoning. Automated live RTSP stream object detection, temporal anomaly localization, and structured scene analysis, dispatching instantaneous contextual alerts via Telegram Bot API."
       },
       {
         "name": "Brain Tumour Detection Model",
         "technologies": "PyTorch, TensorFlow, OpenCV, U-Net, CNN, Albumentations, Kaggle",
-        "description": "Developed a brain tumour detection model using the U-Net encoder-decoder architecture on MRI images. Implemented separate versions in PyTorch and Tensorflow. Used two popular 2D and 3D MRI image datasets from Kaggle. Used data augmentation methods using the albumentations library. Trained and evaluated on DICE, IoU and custom loss functions. Achieved ~90% accuracy."
+        "description": "Developed high-precision medical imaging segmentation models using U-Net encoder-decoder architectures in PyTorch and TensorFlow across 2D/3D MRI Kaggle datasets. Applied Albumentations pipelines for data augmentation, optimized composite DICE/IoU loss functions, and achieved ~90% segmentation accuracy with volumetric lesion quantification."
       },
       {
         "name": "Weekly Report Generator & Team Dashboard",
         "technologies": "FastAPI, MongoDB, React 19, TypeScript, Zustand 5, Tailwind CSS, LangChain, LangGraph, Groq, Docker",
-        "description": "Engineered an asynchronous Weekly Report Generator and Team Dashboard with RBAC (Contributors, Managers, Admins), ISO calendar week management, immutable version snapshots, and live KPI analytics. Built an AI Assistant using LangGraph StateGraph, LangChain RAG, and Groq LLM with a 5-response rolling summarizer and session memory. Containerized with Docker Compose."
+        "description": "Engineered an asynchronous Weekly Report Generator and Team Dashboard with RBAC (Contributors, Managers, Admins), ISO calendar week management, immutable version snapshots, and live KPI analytics. Built an AI Assistant using LangGraph StateGraph, LangChain RAG, and Groq LLM with a 5-response rolling summarizer and session memory. Containerized full stack with Docker Compose."
       },
       {
         "name": "Data Analytics Dashboard",
         "technologies": "Python, SQL, Snowflake, ETL, XGBoost, Streamlit",
-        "description": "Analysed LinkedIn job posting data using a real-time ETL pipeline using python, into Snowflake for storage and processing. Built regression and classification models using XGBoost to derive insights from job trends and requirements. Implemented real-time data feeds and visualized analytics through an interactive dashboard."
+        "description": "Built an end-to-end real-time data engineering and intelligence pipeline extracting LinkedIn job market datasets via Python ETL into Snowflake cloud data warehouse. Trained XGBoost regression and classification models to identify emerging skill demand trends and salary benchmarks, visualizing live predictive insights on an interactive Streamlit dashboard."
       }
     ]
   },
@@ -169,13 +176,14 @@
     }
   ],
   "skills": {
-    "Languages": "Python, TypeScript, JS, C#, Java, C, PHP, Dart",
-    "AI / ML": "TensorFlow, PyTorch, Transformer, LangChain, LangGraph, ScikitLearn, CrewAI, XGBoost, Groq, Gemini, HuggingFace, OpenCV, Kafka, Ollama, LlamaIndex, Unsloth, VITS, n8n, Make, Retel.ai",
-    "Full Stack": "FastAPI, React, Next.js, Node.js, Zustand, Tailwind CSS, Django, Streamlit, React Expo, Flutter, .NET, Codeigniter",
-    "Dev / ML / AIOps": "Docker, GitHub Actions, WandB, Ansible, Terraform, Langfuse, Azure Bicep, Azure DevOps",
-    "Databases": "MongoDB, PostgreSQL, MySQL, ChromaDB, Qdrant, Weaviate, Neo4j, PGvector, Supabase, MinIO S3",
-    "Cloud & Data": "GCP, Azure, Snowflake, Streamlit Cloud, Google Vertex AI, Huggingface, Kaggle, Roboflow",
-    "Soft Skills": "Critical thinking, Problem solving, Collaboration, Time management, Teamwork, Leadership, Adaptability"
+    "Languages": "Python, TypeScript, JavaScript, SQL, C#, Java, C, PHP, Dart, Bash",
+    "AI / ML & LLMs": "TensorFlow, PyTorch, Transformers, LangChain, LangGraph, CrewAI, LlamaIndex, Scikit-Learn, LightGBM, XGBoost, Groq, Gemini, HuggingFace, OpenCV, Ollama, Unsloth, Coqui VITS, Retel.ai, Langfuse",
+    "Full Stack": "FastAPI, React 19, Next.js, Node.js, TypeScript, Zustand 5, Tailwind CSS, Django, Streamlit, React Expo, Flutter, .NET, RESTful APIs",
+    "Distributed & Data": "Apache Spark 3.5, Apache Kafka, Apache NiFi, Google Cloud BigQuery, Snowflake, PySpark, PyArrow, Real-time Streaming ETL",
+    "DevOps & MLOps": "Docker, Docker Compose, MLflow, Prometheus, Grafana, GitHub Actions, WandB, Ansible, Terraform, Azure Bicep, Azure DevOps, CI/CD",
+    "Databases & Vector": "MongoDB, PostgreSQL, MySQL, Supabase, BigQuery, ChromaDB, Qdrant, Weaviate, Neo4j, PGvector, Redis, MinIO S3",
+    "Cloud Platforms": "Google Cloud Platform (GCP), Microsoft Azure, Streamlit Cloud, Google Vertex AI, HuggingFace Spaces, Kaggle, Roboflow",
+    "Soft Skills": "Technical Leadership, Problem Solving, Agile / Scrum, Cross-functional Collaboration, System Design, Time Management"
   },
   "activities": [
     "Bassist at In the Zone Band (2025 - Present), Unstoppable Band (2023 - 2025)",
@@ -188,13 +196,13 @@
   "references": [
     {
       "name": "Dr. Mohamed Shafraz",
-      "title": "Senior Lecturer - NSBM",
+      "title": "Senior Lecturer - Faculty of Computing, NSBM Green University",
       "phone": "+94 77 351 2845",
       "email": "shaf_hi@yahoo.com"
     },
     {
       "name": "Kapila Malalasinghe",
-      "title": "Sen. System Admin. - CAMBIO IT",
+      "title": "Senior System Administrator - CAMBIO Software Engineering",
       "phone": "+94 71 461 4588",
       "email": "damienkm@gmail.com"
     }

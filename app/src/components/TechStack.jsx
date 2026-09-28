@@ -22,6 +22,8 @@ export default function TechStack() {
         'TensorFlow',
         'PyTorch',
         'Scikit-learn',
+        'LightGBM',
+        'Apache Spark',
         'Transformers',
         'HuggingFace',
         'LangChain',
@@ -71,6 +73,9 @@ export default function TechStack() {
       skills: [
         'Docker',
         'GitHub Actions',
+        'MLflow',
+        'Prometheus',
+        'Grafana',
         'Terraform',
         'Ansible',
         'Langfuse',
@@ -89,6 +94,8 @@ export default function TechStack() {
         'MongoDB',
         'PostgreSQL',
         'MySQL',
+        'Google Cloud BigQuery',
+        'Apache NiFi',
         'ChromaDB',
         'Qdrant',
         'Weaviate',
@@ -109,19 +116,21 @@ export default function TechStack() {
 
   const skillDetails = {
     // Languages
-    Python: { desc: 'Primary language for AI, data pipelines, web scraping, and machine learning models.', projects: ['Weekly Report Generator & Team Dashboard', 'Accordo.ai', 'Stock Market API', 'EduAgent', 'AI-Recruitment Platform', 'Vision Reasoning Surveillance', 'Data Analytics Dashboard'], level: 95 },
+    Python: { desc: 'Primary language for AI, distributed streaming pipelines, web scraping, and machine learning models.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine', 'Weekly Report Generator & Team Dashboard', 'Accordo.ai', 'Stock Market API', 'EduAgent', 'AI-Recruitment Platform', 'Vision Reasoning Surveillance', 'Data Analytics Dashboard'], level: 95 },
     Java: { desc: 'Used for object-oriented software engineering, data structures, and academic project backends.', projects: ['Coursework Systems'], level: 80 },
     'C#': { desc: 'Used for XAML desktop apps and full-stack development with .NET.', projects: ['Vehicle Rental System', 'AiRentoSoft System'], level: 85 },
     C: { desc: 'System programming foundation, memory allocation, and performance benchmarking.', projects: ['Academic systems'], level: 75 },
     Dart: { desc: 'Cross-platform app development language, primarily used with the Flutter framework.', projects: ['Accordo.ai', 'AiRentoSoft System'], level: 80 },
     PHP: { desc: 'Server-side scripting used for MVC web platforms with MySQL and MongoDB databases.', projects: ['PricePal'], level: 80 },
     JavaScript: { desc: 'Dynamic UI scripting, React layouts, and web application frontend logic.', projects: ['FashionHub.ai', 'Univize / JConnect', 'PricePal', 'AiRentoSoft System'], level: 90 },
-    SQL: { desc: 'Database schema architecture, query optimization, joins, and ETL indexing pipelines.', projects: ['Data Analytics Dashboard', 'Vehicle Rental System', 'Univize / JConnect'], level: 85 },
+    SQL: { desc: 'Database schema architecture, query optimization, joins, and ETL indexing pipelines.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine', 'Data Analytics Dashboard', 'Vehicle Rental System', 'Univize / JConnect'], level: 85 },
 
     // AI/ML
     TensorFlow: { desc: 'Deep learning frameworks, neural network model training, and web model serving.', projects: ['Accordo.ai', 'Brain Tumour Detection Model'], level: 85 },
     PyTorch: { desc: 'Computer vision segmentation, Speech Synthesis (VITS), and deep neural network fine-tuning.', projects: ['Vehicle Damage Detection System', 'Sinhala TTS Model', 'Vision Reasoning Surveillance', 'Brain Tumour Detection Model'], level: 90 },
     'Scikit-learn': { desc: 'Classical machine learning pipelines, classification, regression, and data analytics.', projects: ['AI-Recruitment Platform', 'Data Analytics Dashboard'], level: 88 },
+    LightGBM: { desc: 'High-speed gradient boosting framework optimized for low-latency scoring and cost-matrix evaluation.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine'], level: 90 },
+    'Apache Spark': { desc: 'Distributed stream processing, PySpark structured streaming, and vectorized PyArrow Pandas UDFs.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine'], level: 88 },
     Transformers: { desc: 'NLP sequence-to-sequence model fine-tuning (MBart50) and quantization.', projects: ['Subtitle Translation Model', 'AI-Recruitment Platform'], level: 85 },
     HuggingFace: { desc: 'Platform for hosting ML models, datasets, spaces, and pre-trained transformers.', projects: ['Vehicle Damage Detection System', 'EduAgent', 'AI-Recruitment Platform', 'Subtitle Translation Model'], level: 90 },
     LangChain: { desc: 'AI orchestration, document ingestion agents, prompt formatting, and cognitive chains.', projects: ['Weekly Report Generator & Team Dashboard', 'FashionHub.ai', 'EduAgent', 'AI-Recruitment Platform', 'Vision Reasoning Surveillance'], level: 92 },
@@ -135,7 +144,7 @@ export default function TechStack() {
     Gemini: { desc: 'Google Multimodal LLM integration for layout extraction and vision analysis.', projects: ['FashionHub.ai', 'AI-Pasala'], level: 90 },
     Ollama: { desc: 'Local LLM serving infrastructure (Llama3, Mistral) for agent privacy.', projects: ['FashionHub.ai', 'EduAgent', 'Vision Reasoning Surveillance'], level: 90 },
     OpenCV: { desc: 'Image preprocessing, thresholding, contour detection, and frame analysis streams.', projects: ['Brain Tumour Detection Model', 'Vision Reasoning Surveillance', 'Stock Market API'], level: 85 },
-    'Apache Kafka': { desc: 'Real-time high-throughput message streaming pipeline for database synchronization.', projects: ['FashionHub.ai'], level: 80 },
+    'Apache Kafka': { desc: 'Real-time high-throughput message streaming pipeline for dual-sink alert routing and sync.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine', 'FashionHub.ai'], level: 88 },
 
     // FullStack
     FastAPI: { desc: 'High-performance async Python backend APIs with built-in Pydantic verification.', projects: ['Weekly Report Generator & Team Dashboard', 'FashionHub.ai', 'Accordo.ai', 'Stock Market API', 'TOGO', 'Vehicle Damage Detection System'], level: 92 },
@@ -150,8 +159,11 @@ export default function TechStack() {
     CodeIgniter: { desc: 'Lightweight PHP MVC web system used to handle relational database operations.', projects: ['PricePal'], level: 80 },
 
     // DevOps
-    Docker: { desc: 'Containerizing application packages and setting up multi-stage deployment builds.', projects: ['Weekly Report Generator & Team Dashboard', 'AI-Pasala', 'Univize / JConnect'], level: 85 },
+    Docker: { desc: 'Containerizing application packages, multi-container stacks, and multi-stage deployment builds.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine', 'Weekly Report Generator & Team Dashboard', 'AI-Pasala', 'Univize / JConnect'], level: 88 },
     'GitHub Actions': { desc: 'CI/CD workflow automation, build pipelines, and automated package deploys.', projects: ['Accordo.ai', 'Univize / JConnect'], level: 85 },
+    MLflow: { desc: 'End-to-end MLOps platform for experiment tracking, model registry, versioning, and booster deployment.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine'], level: 88 },
+    Prometheus: { desc: 'Time-series telemetry collection, scrape target configurations, and stream metrics monitoring.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine'], level: 85 },
+    Grafana: { desc: 'Interactive observability dashboards for real-time throughput, consumer lag, and model drift.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine'], level: 88 },
     Terraform: { desc: 'Infrastructure as Code for provisioning and configuring cloud computing networks.', projects: ['Cloud Deployments'], level: 75 },
     Ansible: { desc: 'IT automation, machine provisioning, and server orchestration scripts.', projects: ['Server Configs'], level: 75 },
     Langfuse: { desc: 'Open source LLM engineering platform for tracing, evaluations, and prompt management.', projects: ['TOGO'], level: 85 },
@@ -171,6 +183,8 @@ export default function TechStack() {
     MongoDB: { desc: 'NoSQL document storage for flexible schemas, e-commerce products, and social feeds.', projects: ['Weekly Report Generator & Team Dashboard', 'Accordo.ai', 'Stock Market API', 'FashionHub.ai', 'AI-Recruitment Platform', 'Univize / JConnect', 'PricePal'], level: 90 },
     PostgreSQL: { desc: 'Relational DBMS used for complex transaction flows, indexing, and joins.', projects: ['TOGO', 'Univize / JConnect'], level: 88 },
     MySQL: { desc: 'Relational database schema design and transactional management.', projects: ['Academic projects'], level: 80 },
+    'Google Cloud BigQuery': { desc: 'Enterprise cloud data warehouse for streaming transaction telemetry and continuous model audit.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine'], level: 88 },
+    'Apache NiFi': { desc: 'Scalable dataflow automation and HTTP event ingestion into distributed messaging brokers.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine'], level: 85 },
     ChromaDB: { desc: 'Lightweight vector database for sentence-transformer embeddings storage.', projects: ['EduAgent', 'AI-Pasala'], level: 85 },
     Qdrant: { desc: 'Dedicated vector search engine for similarity metrics matching in RAG pipelines.', projects: ['AI-Recruitment Platform'], level: 85 },
     Weaviate: { desc: 'Vector database engine for context indexing and semantic searches.', projects: ['FashionHub.ai'], level: 85 },
@@ -178,7 +192,7 @@ export default function TechStack() {
     PGvector: { desc: 'Vector similarity search extension for PostgreSQL used in semantic data retrieval.', projects: ['TOGO'], level: 80 },
     Supabase: { desc: 'Open source Firebase alternative with PostgreSQL, real-time subscriptions, and auth.', projects: ['Univize / JConnect'], level: 85 },
     'MinIO S3': { desc: 'High-performance S3 compatible object storage for audio files and deep learning models.', projects: ['Accordo.ai'], level: 85 },
-    'Google Cloud (GCP)': { desc: 'Cloud storage, virtual compute systems, and package repository deploys.', projects: ['Accordo.ai'], level: 80 },
+    'Google Cloud (GCP)': { desc: 'Cloud storage, BigQuery analytics, virtual compute systems, and package repository deploys.', projects: ['Real-Time Fraud Prevention & Intelligent Analytics Engine', 'Accordo.ai'], level: 85 },
     'Microsoft Azure': { desc: 'Hosting containerized microservices, setting up registries, and bicep scripts.', projects: ['Univize / JConnect', 'AiRentoSoft System'], level: 85 },
     Snowflake: { desc: 'Enterprise data warehousing, query processing, and loading ETL pipes.', projects: ['Data Analytics Dashboard'], level: 80 },
     'Google Vertex AI': { desc: 'Generative machine learning models API, fine-tuning, and model evaluations.', projects: ['FashionHub.ai'], level: 85 },
